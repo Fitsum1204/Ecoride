@@ -1,62 +1,96 @@
 import React from 'react';
 import Ecoride from '../assets/EcoRide.png';
-/*import { FaHiking, FaShuttleVan, FaLeaf } from 'react-icons/fa';*/
+import s1 from '../assets/s1.jpeg';
+import s2 from '../assets/s2.jpeg';
+import s3 from '../assets/s3.jpeg';
+import s4 from '../assets/s4.jpeg';
+import s5 from '../assets/s5.jpeg';
+import s6 from '../assets/s6.jpeg';
+import s7 from '../assets/s7.jpeg';
+const  Services = () => {
+  const destinations = [
+    {
+      name: "Poás	Volcano	Lodge	-	SJO	Airport",
+      price: "$75",
+      image: s1,
+      description: "Enjoy a serene stay at the base of the majestic Poás Volcano.",
+    },
+    {
+      name: "Poás	Volcano	Lodge	-	Arenal/La	Fortuna",
+      price: "$170",
+      image: s2,
+      description: "Explore the lush cloud forest with diverse flora and fauna.",
+    },
+    {
+      name: "Poás	Volcano	Lodge	-	Manuel	Antonio",
+      price: "$270",
+      image: s3,
+      description: "Marvel at the iconic Arenal Volcano and its hot springs.",
+    },
+    {
+      name: "Poás	Volcano	Lodge	-	Monteverde	Cloud Forest",
+      price: "$290",
+      image: s4,
+      description: "Witness the nesting of sea turtles in this natural haven.",
+    },
+    {
+      name: "Poás	Volcano	Lodge	-	Guanacaste",
+      price: "$380",
+      image: s5,
+      description: "Relax at the picturesque beach surrounded by wildlife.",
+    },
+    {
+      name: "Poás	Volcano	Lodge	-	La	Pavona",
+      price: "$250",
+      image:s6,
+      description: "Experience Costa Rica's most biodiverse national park.",
+    },
+    {
+      name: "Poás	Volcano	Lodge	-	Puerto	Viejo,Limón",
+      price: "$380",
+      image: s7,
+      description: "Discover stunning waterfalls and vibrant wildlife exhibits.",
+    },
+  ];
 
-
-const Services = () => {
   return (
-    <main class="mx-auto max-w-4xl">
-   
-   <section id="rockets" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
-      <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-        Our Rockets
-      </h2>
-      <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
-        <li
-          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
-          <img src="./img/rocketman.png" alt="Explorer" class="mb-6 w-1/2" />
-          <h3 class="text-center text-3xl text-slate-900 dark:text-white">
-            Explorer
-          </h3>
-          <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
-            $
-          </p>
-          <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
-            Affordable Exploration
-          </p>
-        </li>
-        <li
-          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
-          <img src="./img/rocketride.png" alt="Adventurer" class="mb-6 w-1/2" />
-          <h3 class="text-center text-3xl text-slate-900 dark:text-white">
-            Adventurer
-          </h3>
-          <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
-            $$
-          </p>
-          <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
-            Best Selling Rocket!
-          </p>
-        </li>
-        <li
-          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
-          <img src="./img/rocketlaunch.png" alt="Infinity" class="mb-6 w-1/2" />
-          <h3 class="text-center text-3xl text-slate-900 dark:text-white">
-            Infinity
-          </h3>
-          <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
-            $$$
-          </p>
-          <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
-            Luxury Starship
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
-</main>
+    <div className="bg-gray-100 p-6">
+      <header className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-green-700">EcoRide Shuttle Service Rates</h1>
+        <p className="text-lg mt-2 text-gray-600">Michael +506 8549 9997</p>
+      </header>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {destinations.map((destination, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+          >
+            <img
+              src={destination.image}
+              alt={destination.name}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-semibold text-gray-800">{destination.name}</h2>
+              <p className="text-gray-600 mt-2">{destination.description}</p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="text-green-700 font-bold text-lg">{destination.price}</span>
+                <button className="bg-green-700 text-white px-4 py-2 rounded shadow">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
+
+
+
+
+
+
 
 export default Services;
