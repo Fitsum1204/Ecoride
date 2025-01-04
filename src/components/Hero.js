@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useState } from 'react';
+import emailjs from 'emailjs-com'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faYoutube, faTelegram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
@@ -6,7 +7,38 @@ import Ecoride from '../assets/EcoRide.png';
 import F1 from '../assets/pexels-justin-shaifer-501272-1222271.jpg'
 import F2 from '../assets/pexels-simon-robben-55958-614810.jpg'
 import F3 from '../assets/face3.png'
+import { useNavigate } from 'react-router-dom';
 const Hero = () => {
+  const navigate = useNavigate();
+  const handelClick = () => {navigate('/services')}
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        'service_0i9ov4m', // Replace with your EmailJS Service ID
+        'template_ydugj3g', // Replace with your EmailJS Template ID
+        e.target,
+        'tcIhGsDKIFHRbn4Q3' // Replace with your EmailJS User ID
+      )
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent! We will get back to you soon.');
+        },
+        (error) => {
+          console.error('Error sending email:', error.text);
+          alert('Failed to send message. Please try again later.');
+        }
+      );
+
+    e.target.reset(); // Reset the form after submission
+    };
+const [formData, setFormData] = useState({
+name: '',
+email: '',
+message: '',
+});
+
   return (
     <Fragment>
       {/* Hero Section */}
@@ -25,12 +57,12 @@ const Hero = () => {
             Discover eco-friendly accommodations and unforgettable eco-tourism activities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <button className="py-2 px-4 bg-green-700 text-white font-bold rounded hover:bg-green-800">
-              Explore Tours
+            <button className="py-2 px-4 bg-green-700 text-white font-bold rounded hover:bg-green-800" onClick={handelClick}>
+              View Services
             </button>
-            <button className="py-2 px-4 bg-green-700 text-white font-bold rounded hover:bg-green-800">
+            {/* <button className="py-2 px-4 bg-green-700 text-white font-bold rounded hover:bg-green-800">
               Book Now
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
@@ -51,7 +83,7 @@ const Hero = () => {
             preserving the beauty of our planet, one adventure at a time. Based in a location that
             values nature, EcoRide is your partner in exploring responsibly.
           </p>
-          <a href="#service" className="underline hover:text-green-800">
+          <a href="#contactUs" className="underline hover:text-green-800">
             Get in touch
           </a>
         </div>
@@ -135,7 +167,7 @@ const Hero = () => {
   <div className="w-full lg:w-1/2">
     <h3 className="text-lg font-semibold text-green-700 mb-2">Contact Us</h3>
     <h2 className="text-3xl font-bold mb-6">We’d love to hear from you</h2>
-    <form className="space-y-4">
+    <form className="space-y-4" onSubmit={sendEmail}>
       {/* Name */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">
@@ -208,7 +240,7 @@ const Hero = () => {
   </div>
 
   {/* Get in Touch */}
-  <div className="w-full lg:w-1/2 bg-white rounded-lg shadow-lg p-6 space-y-6">
+  <div id="contactUs"className="w-full lg:w-1/2 bg-white rounded-lg shadow-lg p-6 space-y-6">
     <h2 className="text-2xl font-bold text-green-700">Get in Touch</h2>
     <p>
       <span className="font-semibold">Email:</span>{' '}

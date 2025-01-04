@@ -1,5 +1,4 @@
 import React from 'react';
-import Ecoride from '../assets/EcoRide.png';
 import s1 from '../assets/s1.jpeg';
 import s2 from '../assets/s2.jpeg';
 import s3 from '../assets/s3.jpeg';

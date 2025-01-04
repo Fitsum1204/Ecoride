@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logolast.png';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleClick = () =>{
+    navigate('/services')
+    setIsMenuOpen(false)
+  }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -48,16 +53,19 @@ const Navbar = () => {
 
   return (
     <section className="sticky top-0 z-50 w-full bg-gray-100 shadow-md">
-      <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 bg-gray-100 shadow-md w-full">
+      <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 xl:px-64 py-4 bg-gray-100 shadow-md w-full">
         {/* Logo */}
+        <button onClick={() => handleScroll("home")}
+              className="no-underline text-gray-800 font-bold hover:text-green-700"
+            >
         <img src={logo} alt="EcoTours Logo" className="h-16 md:h-20 lg:h-24" />
-
+        </button>
         {/* Navigation Links */}
         <ul className="hidden md:flex list-none gap-4 lg:gap-6">
           <li>
             <button
               onClick={() => handleScroll("home")}
-              className="no-underline text-gray-800 font-bold hover:text-green-700"
+              className="font-normal hover:underline text-gray-800  hover:text-green-700"
             >
               Home
             </button>
@@ -65,7 +73,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => handleScroll("about")}
-              className="no-underline text-gray-800 font-bold hover:text-green-700"
+              className="font-normal hover:underline text-gray-800  hover:text-green-700"
             >
               About
             </button>
@@ -73,7 +81,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => handleScroll("testimonials")}
-              className="no-underline text-gray-800 font-bold hover:text-green-700"
+              className="font-normal hover:underline text-gray-800  hover:text-green-700"
             >
               Testimonials
             </button>
@@ -81,7 +89,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/services"
-              className="no-underline text-gray-800 font-bold hover:text-green-700"
+              className=" text-gray-800 font-normal hover:underline hover:text-green-700 "
             >
               Services
             </Link>
@@ -89,7 +97,8 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => handleScroll("contact")}
-              className="no-underline text-gray-800 font-bold hover:text-green-700"
+              className="font-normal hover:underlinetext-gray-800 hover:border-green-600
+              hover:text-white hover:bg-green-600 border-2 border-gray-950 px-4 mb-1.5"
             >
               Contact
             </button>
@@ -166,13 +175,13 @@ const Navbar = () => {
         </button>
       </li>
       <li>
-        <Link
-          to="/services"
+        <button
+          
           className="text-4xl text-gray-800 font-bold hover:text-green-600"
-          onClick={() => setIsMenuOpen(false)} // Close dropdown menu on click
+          onClick={handleClick} // Close dropdown menu on click
         >
           Services
-        </Link>
+        </button>
       </li>
       <li>
         <button
