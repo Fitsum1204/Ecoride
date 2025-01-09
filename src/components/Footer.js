@@ -1,78 +1,78 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faYoutube, faTelegram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faFacebookF, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-   
-      <footer className="bg-gray-800 text-white py-6">
-  <div className="container mx-auto px-4 lg:px-64">
-    {/* Top Section */}
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-      {/* Logo and Description */}
-      <div>
-        <h3 className="text-2xl font-bold mb-2">EcoRide</h3>
-        <p className="text-sm text-gray-300">
-          Explore the world responsibly. Discover sustainable options for your next adventure.
-        </p>
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="container mx-auto px-4 lg:px-16">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+          {/* Logo and Description */}
+          <div>
+            <h3 className="text-3xl font-bold mb-2">EcoRide</h3>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              Explore the world responsibly. Discover sustainable options for your next adventure.
+            </p>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-700 my-6"></div>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-col justify-between items-center gap-4">
+         
+
+          {/* Social Media Links */}
+          <div className="flex gap-4">
+            <p className="text-sm text-gray-400">Follow Us on</p>
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/ecoridecosta/profilecard/?igsh=aThqcjR1enBjOHky"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full p-3 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110"
+              style={{
+                background: "linear-gradient(45deg, #f09433 0%, #e6683c 40%, #dc2743 60%, #cc2366 80%, #bc1888 100%)",
+              }}
+            >
+              <FontAwesomeIcon icon={faInstagram} size="lg" style={{ color: "#ffffff" }} />
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/jimenez.segura?mibextid=ZbWKwL"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#4267B2] rounded-full p-3 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110"
+            >
+              <FontAwesomeIcon icon={faFacebookF} size="lg" className="text-white" />
+            </a>
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full p-3 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110"
+              style={{
+                backgroundColor: "#25D366",
+              }}
+            >
+              <FontAwesomeIcon icon={faWhatsapp} size="lg" style={{ color: "#ffffff" }} />
+            </a>
+          </div>
+           {/* Copyright */}
+           <p className="text-sm text-gray-400 text-center md:text-center">
+            © {currentYear} EcoRide. All rights reserved.
+          </p>
+        </div>
       </div>
+    </footer>
+  );
+};
 
-     
-    </div>
-
-    {/* Divider */}
-    <div className="border-t border-gray-700 my-4"></div>
-
-    {/* Bottom Section */}
-    <div className="flex flex-col md:flex-row justify-between items-center">
-      {/* Copyright */}
-      <p className="text-sm text-gray-300 mb-4 md:mb-0">
-        © {new Date().getFullYear()} EcoRide. All rights reserved.
-      </p>
-
-      {/* Social Links */}
-      <div className="social-icons">
-  <div className="flex gap-4">
-    <a
-      href="https://telegram.org"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-white rounded-full p-2 flex items-center justify-center"
-    >
-      <FontAwesomeIcon icon={faTelegram} size="2x" className="text-[#24A1DE]" />
-    </a>
-    <a
-      href="https://youtube.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-white rounded-full p-2 flex items-center justify-center"
-    >
-      <FontAwesomeIcon icon={faYoutube} size="2x" className="text-[#FF0000]" />
-    </a>
-    <a
-      href="https://facebook.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-[#4267B2] rounded-full p-2 flex items-center justify-center"
-    >
-      <FontAwesomeIcon icon={faFacebookF} size="2x" className="text-white" />
-    </a>
-    <a
-      href="https://tiktok.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-white rounded-full p-2 flex items-center justify-center"
-    >
-      <FontAwesomeIcon icon={faTiktok} size="2x" className="text-black" />
-    </a>
-  </div>
-</div>
-
-    </div>
-  </div>
-</footer>
-
-  )
-}
-
-export default Footer
-
+export default Footer;

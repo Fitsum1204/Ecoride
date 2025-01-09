@@ -1,39 +1,14 @@
 import React, { Fragment } from 'react';
-import emailjs from 'emailjs-com'
-
-
 import Ecoride from '../assets/EcoRide.png';
 import F1 from '../assets/pexels-justin-shaifer-501272-1222271.jpg'
 import F2 from '../assets/pexels-simon-robben-55958-614810.jpg'
 import F3 from '../assets/face3.png'
 import { useNavigate } from 'react-router-dom';
-import Footer from './Footer';
-import Contact from './Contact';
+
 const Hero = () => {
   const navigate = useNavigate();
   const handelClick = () => {navigate('/services')}
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-        'service_0i9ov4m', // Replace with your EmailJS Service ID
-        'template_ydugj3g', // Replace with your EmailJS Template ID
-        e.target,
-        'tcIhGsDKIFHRbn4Q3' // Replace with your EmailJS User ID
-      )
-      .then(
-        (result) => {
-          console.log('Email sent successfully:', result.text);
-          alert('Message sent! We will get back to you soon.');
-        },
-        (error) => {
-          console.error('Error sending email:', error.text);
-          alert('Failed to send message. Please try again later.');
-        }
-      );
-
-    e.target.reset(); // Reset the form after submission
-    };
+ 
 
 
   return (
@@ -54,12 +29,10 @@ const Hero = () => {
             Discover eco-friendly accommodations and unforgettable eco-tourism activities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <button className="py-2 px-4 bg-green-700 text-white font-bold rounded hover:bg-green-800" onClick={handelClick}>
+            <button className="py-3 px-10 bg-green-500 text-white font-bold rounded hover:bg-green-600" onClick={handelClick}>
               View Tours
             </button>
-            {/* <button className="py-2 px-4 bg-green-700 text-white font-bold rounded hover:bg-green-800">
-              Book Now
-            </button> */}
+            
           </div>
         </div>
       </section>

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/logolast.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isToursDropdownOpen, setIsToursDropdownOpen] = useState(false);
-  const location = useLocation();
 
   // Toggle the mobile menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -14,38 +13,18 @@ const Navbar = () => {
   const handleMouseEnter = () => setIsToursDropdownOpen(true);
   const handleMouseLeave = () => setIsToursDropdownOpen(false);
 
-  // Smooth scrolling to a section
-  const handleScroll = (id) => {
-    if (location.pathname !== "/") {
-      window.location.href = `/#${id}`;
-      return;
-    }
-
-    const section = document.getElementById(id);
-    if (section) {
-      const headerHeight = document.querySelector("nav").offsetHeight;
-      const sectionTop = section.offsetTop - headerHeight;
-
-      window.scrollTo({
-        top: sectionTop,
-        behavior: "smooth",
-      });
-    }
-    setIsMenuOpen(false); // Close mobile menu if open
-  };
-
   return (
     <section className="sticky top-0 z-50 w-full bg-gray-100 shadow-md">
       <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 xl:px-64 py-4 bg-gray-100 shadow-md w-full">
         {/* Logo */}
-        <Link to="/" onClick={() => handleScroll("home")}>
-          <img src={logo} alt="EcoTours Logo" className="h-16 md:h-20 lg:h-24" />
+        <Link to="/">
+          <img src={logo} alt="EcoTours Logo" className="h-16 md:h-20 lg:h-24" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); handleMouseLeave(); }} />
         </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex list-none gap-4 lg:gap-6">
           <li>
-            <Link to="/" className="font-normal hover:underline text-gray-800 hover:text-green-700">
+            <Link to="/" className="font-normal hover:underline text-gray-800 hover:text-green-700" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               Home
             </Link>
           </li>
@@ -58,19 +37,22 @@ const Navbar = () => {
               Tours
             </button>
             {isToursDropdownOpen && (
-              <ul className="absolute bg-white border shadow-md mt-1 py-1 w-48">
+              <ul className="absolute top-6 left-0 bg-white rounded-lg z-50 shadow-md">
                 <li>
                   <Link
                     to="/concierge"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
+                    onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); handleMouseLeave(); }}
                   >
                     Concierge Tours
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/localtours"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    to="/services"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
+                   
+                    onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); handleMouseLeave(); }}
                   >
                     Local Tours
                   </Link>
@@ -82,6 +64,7 @@ const Navbar = () => {
             <Link
               to="/transport"
               className="font-normal hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Transport
             </Link>
@@ -89,7 +72,8 @@ const Navbar = () => {
           <li>
             <Link
               to="/contact"
-              className="font-normal hover:underline text-gray-800 hover:border-green-600 hover:text-white hover:bg-green-600 border-2 border-gray-950 px-4 mb-1.5"
+              className="font-normal text-gray-800 hover:border-green-600 hover:text-white hover:bg-green-600 border-2 border-gray-950 px-8 py-4"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Contact
             </Link>
@@ -127,59 +111,79 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="fixed top-24 inset-0 bg-white z-50 flex flex-col items-start p-6">
+          <div className="fixed top-24 inset-0 bg-white z-50 flex flex-col items-start p-6 md:hidden">
             <ul className="list-none flex flex-col gap-8 mt-12 w-full">
               <li>
                 <Link
                   to="/"
                   className="text-base text-gray-800 font-bold hover:text-green-600"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                 >
                   Home
                 </Link>
               </li>
-              <li>
+              <li className="relative">
                 <hr className="w-full bg-black mb-4" />
-                <Link
-                  to="/concierge"
-                  className="text-base text-gray-800 font-bold hover:text-green-600"
-                  onClick={() => setIsMenuOpen(false)}
+                <button
+                  className="hover:underline text-gray-800 hover:text-green-700 text-base font-bold"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  Concierge Tours
-                </Link>
-              </li>
-              <li>
-              <hr className="w-full bg-black mb-4" />
-                <Link
-                  to="/services"
-                  className="text-base text-gray-800 font-bold hover:text-green-600"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Local Tours
-                </Link>
+                  Tours
+                </button>
+                {isToursDropdownOpen && (
+                  <ul className="absolute top-10 left-6 bg-white rounded-lg z-50 shadow-md">
+                    <li>
+                      <Link
+                        to="/concierge"
+                        className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
+                        onClick={() => {
+                          handleMouseLeave();
+                          setIsMenuOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Concierge Tours
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services"
+                        className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
+                        onClick={() => {
+                          handleMouseLeave();
+                          setIsMenuOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Local Tours
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
               <hr className="w-full bg-black mb-2" />
               <li>
-                
                 <Link
                   to="/transport"
                   className="text-base text-gray-800 font-bold hover:text-green-600"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" });}}
                 >
                   Transport
                 </Link>
               </li>
               <li className="w-full">
-  <Link
-    to="/contact"
-    className="block text-center text-gray-800 font-bold hover:border-green-600 hover:text-white hover:bg-green-600 border-2 border-gray-500 text-lg p-2"
-    onClick={() => setIsMenuOpen(false)}
-  >
-    Contact
-  </Link>
-  
-</li>
-
+                <Link
+                  to="/contact"
+                  className="block text-center text-gray-800 font-bold hover:border-green-600 hover:text-white hover:bg-green-600 border-2 border-gray-500 text-lg p-2"
+                  onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                 
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         )}
