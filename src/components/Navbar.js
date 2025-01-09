@@ -8,7 +8,7 @@ const Navbar = () => {
 
   // Toggle the mobile menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+  const clickTours = () => setIsToursDropdownOpen(!isToursDropdownOpen);
   // Show and hide the dropdown menu on hover
   const handleMouseEnter = () => setIsToursDropdownOpen(true);
   const handleMouseLeave = () => setIsToursDropdownOpen(false);
@@ -128,21 +128,23 @@ const Navbar = () => {
                 <hr className="w-full bg-black mb-4" />
                 <button
                   className="hover:underline text-gray-800 hover:text-green-700 text-base font-bold"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
+                  onClick={clickTours}
+                  
                 >
                   Tours
                 </button>
                 {isToursDropdownOpen && (
-                  <ul className="absolute top-10 left-6 bg-white rounded-lg z-50 shadow-md">
+                  <ul className="absolute top-8 left-12 bg-white rounded-lg z-50 shadow-md ">
                     <li>
                       <Link
                         to="/concierge"
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
+                        className="block px-2 py-2 hover:bg-gray-100 hover:text-green-700"
                         onClick={() => {
-                          handleMouseLeave();
-                          setIsMenuOpen(false);
+                          
                           window.scrollTo({ top: 0, behavior: "smooth" });
+                          toggleMenu();
+                          clickTours();
+                      
                         }}
                       >
                         Concierge Tours
@@ -151,9 +153,10 @@ const Navbar = () => {
                     <li>
                       <Link
                         to="/services"
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
+                        className="block px-2 py-2 hover:bg-gray-100 hover:text-green-700"
                         onClick={() => {
-                          handleMouseLeave();
+                          toggleMenu();
+                          clickTours();
                           setIsMenuOpen(false);
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
