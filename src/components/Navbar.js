@@ -9,6 +9,7 @@ const Navbar = () => {
   // Toggle the mobile menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const clickTours = () => setIsToursDropdownOpen(!isToursDropdownOpen);
+
   // Show and hide the dropdown menu on hover
   const handleMouseEnter = () => setIsToursDropdownOpen(true);
   const handleMouseLeave = () => setIsToursDropdownOpen(false);
@@ -18,13 +19,25 @@ const Navbar = () => {
       <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 xl:px-64 py-4 bg-gray-100 shadow-md w-full">
         {/* Logo */}
         <Link to="/">
-          <img src={logo} alt="EcoTours Logo" className="h-16 md:h-20 lg:h-24" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); handleMouseLeave(); }} />
+          <img
+            src={logo}
+            alt="EcoTours Logo"
+            className="h-16 md:h-20 lg:h-24"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              handleMouseLeave();
+            }}
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex list-none gap-4 lg:gap-6">
+        <ul className="hidden md:flex list-none gap-6 lg:gap-8">
           <li>
-            <Link to="/" className="font-normal hover:underline text-gray-800 hover:text-green-700" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <Link
+              to="/"
+              className="font-normal hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               Home
             </Link>
           </li>
@@ -37,12 +50,15 @@ const Navbar = () => {
               Tours
             </button>
             {isToursDropdownOpen && (
-              <ul className="absolute top-6 left-0 bg-white rounded-lg z-50 shadow-md">
+              <ul className="absolute top-6 left-0 bg-white rounded-lg z-50 shadow-md text-nowrap">
                 <li>
                   <Link
                     to="/concierge"
                     className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
-                    onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); handleMouseLeave(); }}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      handleMouseLeave();
+                    }}
                   >
                     Concierge Tours
                   </Link>
@@ -51,8 +67,10 @@ const Navbar = () => {
                   <Link
                     to="/services"
                     className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
-                   
-                    onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); handleMouseLeave(); }}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      handleMouseLeave();
+                    }}
                   >
                     Local Tours
                   </Link>
@@ -82,18 +100,12 @@ const Navbar = () => {
 
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden">
-          <button className="text-gray-800 focus:outline-none" onClick={toggleMenu}>
+          <button
+            className="text-gray-800 focus:outline-none"
+            onClick={toggleMenu}
+          >
             {isMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <span className="text-2xl font-bold">&times;</span> // Unicode X
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +115,11 @@ const Navbar = () => {
                 stroke="currentColor"
                 className="w-6 h-6"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               </svg>
             )}
           </button>
@@ -117,7 +133,8 @@ const Navbar = () => {
                 <Link
                   to="/"
                   className="text-base text-gray-800 font-bold hover:text-green-600"
-                  onClick={() => {setIsMenuOpen(false);
+                  onClick={() => {
+                    setIsMenuOpen(false);
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
@@ -129,7 +146,6 @@ const Navbar = () => {
                 <button
                   className="hover:underline text-gray-800 hover:text-green-700 text-base font-bold"
                   onClick={clickTours}
-                  
                 >
                   Tours
                 </button>
@@ -140,11 +156,9 @@ const Navbar = () => {
                         to="/concierge"
                         className="block px-2 py-2 hover:bg-gray-100 hover:text-green-700"
                         onClick={() => {
-                          
                           window.scrollTo({ top: 0, behavior: "smooth" });
                           toggleMenu();
                           clickTours();
-                      
                         }}
                       >
                         Concierge Tours
@@ -172,7 +186,10 @@ const Navbar = () => {
                 <Link
                   to="/transport"
                   className="text-base text-gray-800 font-bold hover:text-green-600"
-                  onClick={() => {setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" });}}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                 >
                   Transport
                 </Link>
@@ -181,8 +198,10 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   className="block text-center text-gray-800 font-bold hover:border-green-600 hover:text-white hover:bg-green-600 border-2 border-gray-500 text-lg p-2"
-                  onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                 
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                 >
                   Contact
                 </Link>

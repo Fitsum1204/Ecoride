@@ -40,18 +40,20 @@ const Transport = () => {
         </p>
         <div className="flex flex-row md:flex-row items-center justify-between mt-8">
         <div className="mt-6">
-          <a
-            href="#contactUs"
+          <Link
+            to={"/contact"}
             className="bg-green-700 text-white font-medium text-lg px-8 py-3 rounded shadow-lg hover:bg-green-800 transition-colors"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            Book Your Ride
-          </a>
+            Let's Talk
+          </Link>
         </div>
         
         <div className="mt-6">
           <Link
             to="/hotels"
             className="bg-green-700 text-white font-medium text-lg px-8 py-3 rounded shadow-lg hover:bg-green-800 transition-colors"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Major Hotels We Serve
           </Link>

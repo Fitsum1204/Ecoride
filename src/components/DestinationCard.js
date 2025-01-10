@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { Link } from 'react-router-dom';
 
 
     const DestinationCard = ({ destination }) => {
@@ -30,9 +31,11 @@ import React,{useState} from 'react'
               </button>
               <div className="mt-4 flex items-center justify-between">
                 <span className="text-green-700 font-bold text-lg">{destination.price}</span>
-                <button className="bg-green-700 text-white px-4 py-2 rounded shadow">
-                 Book Now
-                </button>
+                <Link
+                to='/contact'
+                className="bg-green-700 text-white px-4 py-2 rounded shadow">
+                 Contact Us
+                </Link>
               </div>
             </div>
             
