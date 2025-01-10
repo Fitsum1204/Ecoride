@@ -1,8 +1,8 @@
-EcoRide Costa Rica
+# EcoRide Costa Rica
 
 EcoRide Costa Rica is an eco-friendly transportation service that connects travelers to the beautiful destinations of Costa Rica. This website is built with React and styled using Tailwind CSS, providing a seamless, responsive, and user-friendly experience.
 
-Features
+# Features
 
 Responsive Design: Optimized for mobile, tablet, and desktop devices.
 
@@ -12,7 +12,7 @@ Eco-Themed UI: Designed with an eco-friendly aesthetic using Tailwind CSS.
 
 Interactive Components: Engage users with modals, carousels, and other React components.
 
-Installation
+# Installation
 
 To run this project locally, follow these steps:
 
@@ -21,7 +21,7 @@ Clone the Repository:
 git clone https://github.com/Fitsum1204/Ecoride.git
 cd ecoride
 
-Install Dependencies:
+# Install Dependencies:
 Ensure you have Node.js and npm installed. Then run:
 
 npm install
@@ -32,7 +32,7 @@ npm start
 
 The app will be available at http://localhost:3000.
 
-Technologies Used
+# Technologies Used
 
 Frontend
 
@@ -42,7 +42,7 @@ React Router: For navigation between pages.
 
 Tailwind CSS: For styling and responsive design.
 
-Deployment
+# Deployment
 
 To deploy the website, follow these steps:
 
@@ -56,7 +56,7 @@ Use Netlify, Vercel, or GitHub Pages for deployment.
 
 Upload the build folder or follow their deployment guidelines.
 
-Contact
+# Contact
 
 For questions or feedback, reach out at:
 
