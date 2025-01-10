@@ -40,23 +40,25 @@ const Transport = () => {
         </p>
         <div className="flex flex-row md:flex-row items-center justify-between mt-8">
         <div className="mt-6">
-          <Link
-            to={"/contact"}
-            className="bg-green-700 text-white font-medium text-lg px-8 py-3 rounded shadow-lg hover:bg-green-800 transition-colors"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            Let's Talk
-          </Link>
+        <Link
+  to={"/contact"}
+  className="bg-green-700 text-white font-medium text-base sm:text-lg px-4 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:bg-green-800 transition-colors w-full sm:w-auto text-center"
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+>
+  Let's Talk
+</Link>
+
         </div>
         
         <div className="mt-6">
-          <Link
-            to="/hotels"
-            className="bg-green-700 text-white font-medium text-lg px-8 py-3 rounded shadow-lg hover:bg-green-800 transition-colors"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            Major Hotels We Serve
-          </Link>
+        <Link
+  to="/hotels"
+  className="bg-green-700 text-white font-medium text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:bg-green-800 transition-colors w-full sm:w-auto text-center"
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+>
+  Major Hotels We Serve
+</Link>
+
         </div>
         </div>
       </section>
