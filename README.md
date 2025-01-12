@@ -30,7 +30,7 @@ Start the Development Server:
 
 npm start
 
-The app will be available at http://localhost:3000.
+The app will be available at [http://ecoride.cr].
 
 # Technologies Used
 
@@ -62,4 +62,4 @@ For questions or feedback, reach out at:
 
 Email: fitsum1204@gmail.com
 
-Website: http://ecoride.cr
+
