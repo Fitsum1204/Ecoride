@@ -1,5 +1,6 @@
 import React from "react";
-import Ecoride from "../assets/tim.jpg";
+import Ecoride from "../assets/Michehel.jpeg";
+//import Image2 from "../assets/conc.jpeg";
 import { Link } from "react-router-dom";
 
 const ConciergeTour = () => {
@@ -45,6 +46,7 @@ const ConciergeTour = () => {
             className="w-full max-w-lg rounded-lg shadow-xl transform hover:scale-105 transition duration-300"
           />
         </div>
+        
       </section>
     </div>
   );

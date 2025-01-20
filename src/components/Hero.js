@@ -3,7 +3,7 @@ import Ecoride from '../assets/EcoRide.png';
 import F1 from '../assets/pexels-justin-shaifer-501272-1222271.jpg'
 import F2 from '../assets/pexels-simon-robben-55958-614810.jpg'
 import F3 from '../assets/face3.png'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -49,9 +49,12 @@ const Hero = () => {
            Your Gateway to Sustainable Adventures in Costa Rica
           Discover the vibrant beauty of Costa Rica with EcoRide, your trusted partner in eco-friendly travel and transportation. Based in the stunning Alajuela region, we offer curated local tours that immerse you in the heart of our lush landscapes and rich culture. For those seeking to explore the entire country, our personalized concierge tours provide seamless, tailored itineraries to help you uncover Costa Rica's hidden gems. Additionally, we specialize in reliable, comfortable, and sustainable transport services between airports, hotels, and destinations across the country. At EcoRide, we are committed to creating unforgettable experiences while preserving the natural beauty that makes Costa Rica a paradise. Let us take you on a journey that is as enriching as it is eco-conscious.
           </p>
-          <a href="#contactUs" className="underline hover:text-green-800">
+          <Link 
+            to="/contact" 
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} 
+            className="underline hover:text-green-800">
             Get in touch
-          </a>
+          </Link>
         </div>
 
         {/* Image Section */}
@@ -88,7 +91,7 @@ const Hero = () => {
           find sustainable options for every adventure. I’ll definitely use it
           again!"
         </p>
-        <h3 className="text-lg font-semibold text-green-700">- Sarah J.</h3>
+        <h3 className="text-lg font-semibold text-green-700">- Richard J.</h3>
         <p className="text-sm text-gray-500">Eco Enthusiast</p>
       </div>
 

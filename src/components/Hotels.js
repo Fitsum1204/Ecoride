@@ -18,7 +18,7 @@ import h16 from '../assets/hotelsPicture/h16.jpg';
 import h17 from '../assets/hotelsPicture/h17.jpg';
 import h18 from '../assets/hotelsPicture/h18.jpg';
 import h19 from '../assets/hotelsPicture/h19.jpg';
-import h20 from '../assets/hotelsPicture/h20.webp';  
+//import h20 from '../assets/hotelsPicture/h20.webp';  
 import h21 from '../assets/hotelsPicture/h21.jpg';  
 import h22 from '../assets/hotelsPicture/h22.jpg';
 import h23 from '../assets/hotelsPicture/h23.jpg';
@@ -35,7 +35,7 @@ const Hotels = () => {
         { 
             name: "Peace Lodge - Vara Blanca, Costa Rica", 
             image: h1,
-            website: "https://www.peacelodge.com/" },
+            website: "https://waterfallgardens.com/" },
         { 
             name: "El Silencio Lodge & Spa - Bajos del Toro, Costa Rica", 
             image: h2,
@@ -63,7 +63,7 @@ const Hotels = () => {
         { 
             name: "Villa Blanca Cloud Forest Hotel - San Ramón, Costa Rica", 
             image: h8,
-            website: "https://www.villablanca-costarica.com/" },    
+            website: "https://hotelvbcostarica.com/" },    
         { 
             name: "Altura Hotel - Poás, Costa Rica", 
             image: h9,
@@ -108,10 +108,10 @@ const Hotels = () => {
             name: "Hotel Cataratas del Toro - Bajos del Toro, Costa Rica", 
             image:  h19 ,
             website: "https://villagecataratas.com/el-hotel/" },
-        { 
+       /*  { 
             name: "Volcan Poas Rainforest Lodge - Vara Blanca, Costa Rica", 
             image: h20 ,
-            website: "https://poasvolcanolodge.com/" },
+            website: "https://poasvolcanolodge.com/" }, */
         { 
             name: "Hotel Martino Spa and Resort - Alajuela, Costa Rica", 
             image: h21 ,
@@ -151,7 +151,7 @@ const Hotels = () => {
         { 
             name: "Hotel Buena Vista - Alajuela, Costa Rica", 
             image: h30 ,
-            website: "https://www.hotelbuenavistacr.com/" },
+            website: "https://www.hotelbuenavistacr.com/activities?_gl=1*eii68p*_up*MQ..*_ga*Mzk4MzQ4NDgyLjE3MzY1MjgzNTI.*_ga_VBNK8X4YWJ*MTczNjUyODM1MS4xLjAuMTczNjUyODM1NS4wLjAuMA..*_ga_3R5SJEDWK4*MTczNjUyODM1MS4xLjAuMTczNjUyODM1NS4wLjAuMA" },
       ];
       
 

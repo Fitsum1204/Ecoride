@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaGlobe } from "react-icons/fa";
 
 const TranslateWidget = () => {
@@ -6,12 +6,31 @@ const TranslateWidget = () => {
 
   const handleToggle = () => {
     setShowTranslate(!showTranslate);
-
-    // Log any errors related to Google Translate
-    if (!window.google || !window.google.translate) {
-      console.error("Google Translate script not loaded.");
-    }
   };
+
+  useEffect(() => {
+    // Load Google Translate script
+    const addGoogleTranslateScript = () => {
+      if (!document.getElementById("google-translate-script")) {
+        const script = document.createElement("script");
+        script.id = "google-translate-script";
+        script.src =
+          "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    };
+
+    // Initialize Google Translate
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    };
+
+    addGoogleTranslateScript();
+  }, []);
 
   return (
     <div>
@@ -28,8 +47,8 @@ const TranslateWidget = () => {
       <div
         id="google_translate_element"
         className={`${
-            showTranslate ? "block" : "hidden"
-          } absolute top-10 right-2 bg-white rounded-lg p-4 z-50 shadow-md`}
+          showTranslate ? "block" : "hidden"
+        } absolute top-10 right-2 bg-white rounded-lg p-4 z-50 shadow-md`}
       ></div>
     </div>
   );
