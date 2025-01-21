@@ -1,23 +1,27 @@
-import  InlineWidget  from '@calcom/embed-react';
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 const Schedule = () => {
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi({ namespace: "schedule" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
+
   return (
-    <section className="flex items-center justify-center min-h-screen p-4 sm:p-6 md:p-8 lg:px-16 xl:px-32 bg-gray-50">
-      <div className="w-full max-w-2xl">
-        <h3 className="text-lg font-semibold text-green-700 mb-2 text-center">Contact Us</h3>
-        <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">
-          Schedule Your Appointment Today!
-        </h2>
-        <InlineWidget
-          calLink="https://cal.com/free-forfree-huuuew/schedule-your-visit"
-          styles={{
-            primaryColor: '#34d399', // Tailwind's emerald-400
-            textColor: '#374151', // Tailwind's gray-700
-            backgroundColor: '#f9fafb', // Tailwind's gray-50
-          }}
-        />
-      </div>
-    </section>
+    <div className="w-full h-full">
+      <header className="p-4 bg-gray-100 text-center">
+        <h1 className="text-3xl font-bold text-green-700">Schedule Your Appointment</h1>
+        <p className="text-gray-600 mt-2">Use the calendar below to select your preferred date and time.</p>
+      </header>
+      <Cal
+        namespace="schedule"
+        calLink="fitsum-amare-vhgdss/schedule"
+        style={{ width: "100%", height: "100%", overflow: "scroll" }}
+        config={{ layout: "month_view" }}
+      />
+    </div>
   );
 };
 

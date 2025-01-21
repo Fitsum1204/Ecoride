@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import h1 from '../../assets/hotelsPicture/h1.webp';
-import h2 from '../../assets/hotelsPicture/h2.jpg';
-import h3 from '../../assets/hotelsPicture/h3.jpg';
+import h1 from '../../assets/detailsPicture/church2.jpg';
+import h2 from '../../assets/detailsPicture/sarchi1.jpg';
+import h3 from '../../assets/detailsPicture/sarchi2.jpg';
 import { FaChevronDown, FaChevronUp,FaUsers, FaClock, FaSuitcase,FaUserTie } from 'react-icons/fa';  // Importing icons for the arrow
+import { Link } from 'react-router-dom';
 
 const Sarchi = () => {
   // States to handle the toggle for each section
@@ -151,16 +152,18 @@ const Sarchi = () => {
 
           {/* Price Section (Aligned below About Section on smaller screens) */}
           <div className="mt-4 bg-gray-100 p-4 rounded-md shadow-md space-y-4">
-            <div className="flex flex-col justify-between items-start">
+            <div className="flex flex-col justify-between items-start mb-6">
               <span className="text-xl font-semibold">From $130</span>
               <span className="text-1xl font-extralight text-grey-300">per person</span>
               <span className="text-1xl font-extralight text-grey-300">Discounts for children and  larger groups</span>
               
             </div>
             
-            <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+            <div className='mb-4'>
+            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-16">
               Schedule Now
-            </button>
+            </Link>
+            </div>
             <div className="text-sm text-gray-600">
               * Free cancellation up to 24 hours in advance.
             </div>

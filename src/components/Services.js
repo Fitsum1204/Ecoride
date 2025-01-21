@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import s6 from '../assets/toursImage/poas5.jpg';
+import s7 from '../assets/toursImage/birdmidr.jpg';
 import s1 from '../assets/toursImage/Poas Volcano.jpg';
 import s2 from '../assets/toursImage/Doka-Coffee-Plantation.jpg';
 import s3 from '../assets/toursImage/Sarchí-and-Grecia.jpg';
@@ -14,14 +15,14 @@ const Services = () => {
     {
       name: "Poas Volcano and Doka Coffee Plantation tour",
       price: "From $200",
-      image: s1,
+      image: s6,
       route: "/poasdoka",
       description: "Embark on an unforgettable journey to one of Costa Rica's most iconic natural wonders with our Poás Volcano Tour and delve into the rich heritage of Costa Rican coffee with a private tour of the renowned Doka Coffee Plantation. In the heart of Central Costa Rica, the Poás Volcano Tour offers a close-up view of the majestic volcano, renowned for its dramatic crater and steaming geothermal activity. Perfect for nature lovers and adventure seekers, this two-hour guided experience can be extended for a small fee per additional hour.Meanwhile, at Doka Coffee Plantation, wander through lush coffee fields, learn about the meticulous cultivation process, and discover the fascinating history behind one of Costa Rica’s most treasured exports. Led by a knowledgeable local expert, this intimate tour is ideal for coffee lovers and cultural enthusiasts, offering an engaging journey into Costa Rica’s coffee legacy. Together, these tours promise a breathtaking adventure and a flavorful exploration that you won’t forget.",
     },
     {
       name: "Poas Volcano and Mirador Cinchona tour",
       price: "From $200",
-      image: s1,
+      image: s7,
       route: "/poasmirador",
       description: "Explore two of Costa Rica's natural gems with our combined Poás Volcano and Mirador Cinchona tour. Start your adventure at the iconic Poás Volcano, renowned for its dramatic crater and geothermal activity. Enjoy breathtaking views and immerse yourself in the surrounding cloud forest. Next, head to Mirador Cinchona, a premier birdwatching hotspot nestled in the scenic highlands. Guided by a local expert, spot a variety of exotic bird species, including toucans and hummingbirds, while enjoying serene landscapes. Perfect for nature lovers and adventure seekers, this tour offers an unforgettable glimpse into Costa Rica's volcanic and avian wonders.",
     },

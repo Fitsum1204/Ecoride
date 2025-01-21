@@ -89,6 +89,15 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              to="/schedule"
+              className="font-normal hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Schedule Now
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact"
               className="font-normal text-gray-800 hover:border-green-600 hover:text-white hover:bg-green-600 border-2 border-gray-950 px-8 py-4"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -184,7 +193,20 @@ const Navbar = () => {
                 >
                   Transport
                 </Link>
-              </li>
+              </li> 
+              <hr className="w-full bg-black mb-2" />
+              <li>
+                <Link
+                  to="/schedule"
+                  className="text-base text-gray-800 font-bold hover:text-green-600"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  Schedule Now
+                </Link>
+              </li>  
               <li className="w-full">
                 <Link
                   to="/contact"
