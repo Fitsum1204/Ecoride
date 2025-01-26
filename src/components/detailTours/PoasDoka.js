@@ -39,15 +39,15 @@ const PoasDoka = () => {
           <div className="mt-4 space-y-4">
             <h2 className="text-2xl font-semibold">About the Tour</h2>
             <p className="text-gray-700 leading-relaxed">
-          
-            Experience Costa Rica's iconic Poás Volcano and delve into its rich coffee heritage with our combined tour. Enjoy stunning views of the dramatic crater and explore lush coffee fields at Doka Coffee Plantation. Led by a local expert, this adventure is perfect for nature lovers and cultural enthusiasts, offering an unforgettable journey into Costa Rica's natural and coffee legacy.
-            </p>
+              Embark on an unforgettable adventure in Costa Rica that combines the awe-inspiring beauty of Poás Volcano with the rich traditions of the country’s renowned coffee culture. Begin your journey with a visit to the iconic Poás Volcano, where you’ll marvel at the dramatic landscapes of its massive crater, surrounded by lush cloud forests and panoramic views that are truly breathtaking. Then, immerse yourself in the fascinating world of coffee production at the Doka Coffee Plantation, a historic estate that offers a behind-the-scenes look at every step of the coffee-making process, from bean to brew. </p>
+            <p className="text-gray-700 leading-relaxed">
+              Premium tour, led by an expert local guide, this tour weaves together the natural wonders of Costa Rica with its cultural heritage, providing insights into the geological marvels of the volcano and the artistry behind one of the world's favorite beverages. Perfect for nature enthusiasts, coffee lovers, and those seeking a deeper connection to Costa Rican culture, this experience promises stunning scenery, educational encounters, and memories that will last a lifetime.</p>
             <hr className="w-full bg-black mb-4" />
             <ul className="text-gray-700 pl-6 list-inside  space-y-4">
         
         <li className="flex items-center">
           <FaUsers className="mr-2 text-gray-600" />
-          Ages 0-99, max of 30 per group
+            All ages, max of 6 per group
         </li>
         
         <li className="flex items-center">
@@ -56,7 +56,7 @@ const PoasDoka = () => {
         </li>
         <li className="flex items-center">
           <FaSuitcase className="mr-2 text-gray-600" />
-          one trip a day: Pick up time 8:20 am
+          One trip a day: Pick up time 8:30 am
         </li>
         <li className="flex items-center">
           <FaUserTie className="mr-2 text-gray-600" />
@@ -92,9 +92,13 @@ const PoasDoka = () => {
                 {showExpect ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showExpect && (
-                <p className="text-gray-700 leading-relaxed">
-                  Experience the stunning Poás Volcano and delve into Costa Rica's coffee heritage with our combined tour. Enjoy breathtaking views of the volcano's dramatic crater and explore lush coffee fields at Doka Coffee Plantation. Guided by a local expert, this adventure offers an immersive look into Costa Rica's natural wonders and coffee legacy. Perfect for nature lovers and cultural enthusiasts, this journey promises unforgettable memories.
-                </p>
+                <div>
+                  <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
+                  <li> Doka tour will proceed rain or shine </li>
+                  <li className="text-gray-700 leading-relaxed">
+                    Experience the stunning Poás Volcano and delve into Costa Rica's coffee heritage with our combined tour. Enjoy breathtaking views of the volcano's dramatic crater and explore lush coffee fields at Doka Coffee Plantation. Guided by a local expert, this adventure offers an immersive look into Costa Rica's natural wonders and coffee legacy. Perfect for nature lovers and cultural enthusiasts, this journey promises unforgettable memories.
+                  </li>
+                </div>
               )}
             </div>
 
@@ -106,9 +110,26 @@ const PoasDoka = () => {
                 {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDeparture && (
-                <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:20 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
-                </p>
+                <div>
+                <li className="text-gray-700 leading-relaxed">
+                  The tour departs from San Jose at 8:30 AM.
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. 
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Departing Poas around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Lunch at a local resturant serving Costa Rican classics
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Tour continues at the lovely Doka Coffee plantation.
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Return to hotel at around 2:30 PM
+                </li>
+                </div>
               )}
             </div>
 
