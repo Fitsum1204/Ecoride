@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Ecoride from '../assets/EcoRide.png';
-import F1 from '../assets/pexels-justin-shaifer-501272-1222271.jpg'
+import F1 from '../assets/family.jpeg'
 import F2 from '../assets/pexels-simon-robben-55958-614810.jpg'
 import F3 from '../assets/face3.png'
 import { useNavigate, Link } from 'react-router-dom';
@@ -82,17 +82,15 @@ const Hero = () => {
         <div className="flex flex-col items-center mb-4">
           <img
             src={F1}
-            alt="Sarah J."
-            className="w-24 h-24 rounded-full shadow-md"
+            alt="people"
+            className="w-80 h-80 rounded-full shadow-md"
           />
         </div>
         <p className="text-gray-600 italic mb-4">
-          "EcoRide made my vacation unforgettable! I loved how easy it was to
-          find sustainable options for every adventure. I’ll definitely use it
-          again!"
+          "Our family spent a fabulous day with Michael visiting both Poas Volcano and Doka Coffee Farm. He is an outstanding tour guide ,exteremely" knowledgeable about these location as well as birds,animals and flora of Costa Rica. Michael is warm and personabel.His lunch recommendation,Freddo Fresas wase exeptional.We look forward to returning to Costa Rica and exploring news places with Michael at EcorideCostal.
         </p>
-        <h3 className="text-lg font-semibold text-green-700">- Richard J.</h3>
-        <p className="text-sm text-gray-500">Eco Enthusiast</p>
+        <h3 className="text-lg font-semibold text-green-700">Eco Enthusiast Family</h3>
+      
       </div>
 
       {/* Testimonial 2 */}
