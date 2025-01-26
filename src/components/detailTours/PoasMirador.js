@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import h1 from '../../assets/detailsPicture/poas2.jpg';
 import h2 from '../../assets/detailsPicture/bird2.jpg';
 import h3 from '../../assets/detailsPicture/birdmidr.jpg';
-import { FaChevronDown, FaChevronUp,FaUsers, FaClock, FaSuitcase,FaUserTie } from 'react-icons/fa';  // Importing icons for the arrow
+import { FaChevronDown, FaChevronUp, FaUsers, FaClock, FaSuitcase, FaUserTie } from 'react-icons/fa';  // Importing icons for the arrow
 import { Link } from 'react-router-dom';
 
 const PoasMirador = () => {
@@ -21,11 +21,11 @@ const PoasMirador = () => {
   const toggleCancellation = () => setShowCancellation(!showCancellation);
 
   return (
-    
+
     <div className="max-w-screen-lg mx-auto p-4">
-       {/* Header */}
-       <h1 className="text-3xl font-bold text-center mb-8">
-       Poas Volcano and Mirador Cinchona tour
+      {/* Header */}
+      <h1 className="text-3xl font-bold text-center mb-8">
+        Poas Volcano and Mirador Cinchona tour
       </h1>
 
       {/* Top Images and Details Section */}
@@ -35,110 +35,166 @@ const PoasMirador = () => {
           <div className="h-80">
             <img src={h1} alt="Tour 1" className="w-full h-full object-cover rounded-md" />
           </div>
-          {/* About Section */}
-          <div className="mt-4 space-y-4">
-            <h2 className="text-2xl font-semibold">About the Tour</h2>
-            <p className="text-gray-700 leading-relaxed">
-          
-            Discover two of Costa Rica's natural wonders on our combined Poás Volcano and Mirador Cinchona tour. Enjoy dramatic views of Poás Volcano's crater and geothermal activity, then head to Mirador Cinchona for premier birdwatching. Guided by a local expert, spot exotic birds like toucans and hummingbirds amidst stunning landscapes. Perfect for nature lovers and adventure seekers, this tour offers an unforgettable glimpse into Costa Rica's volcanic and avian beauty.
+        </div>
+        <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+              Poás Volcano and Mirador Cinchona Combined Tour
+            </h1>
+            <p className="text-lg md:text-xl text-center mb-12">
+              Discover two of Costa Rica’s most captivating natural wonders with this expertly guided tour, perfect for nature lovers and adventure seekers alike.
             </p>
-            <hr className="w-full bg-black mb-4" />
-            <ul className="text-gray-700 pl-6 list-inside  space-y-4">
-        
-        <li className="flex items-center">
-          <FaUsers className="mr-2 text-gray-600" />
-          Ages 0-99, max of 30 per group
-        </li>
-        
-        <li className="flex items-center">
-          <FaClock className="mr-2 text-gray-600" />
-          Duration: 6 hours 
-        </li>
-        <li className="flex items-center">
-          <FaSuitcase className="mr-2 text-gray-600" />
-          one trip a day: Pick up time 8:20 am
-        </li>
-        <li className="flex items-center">
-          <FaUserTie className="mr-2 text-gray-600" />
-          Live guide: English, Spanish
-        </li>
-      </ul>
-            {/* What's Included */}
-            <div>
-            <hr className="w-full bg-black mb-4" />
-              <div className="flex items-center justify-between cursor-pointer" onClick={toggleIncluded}>
-                <h3 className="text-xl font-semibold">What's Included</h3>
-                {showIncluded ? <FaChevronUp /> : <FaChevronDown />}
-              </div>
-              {showIncluded && (
-                <ul className="list-disc list-inside text-gray-700">
-                  <li>See amazing variety of bird life include the Quetzal</li>
-                  <li>Wildlife sets the schedule</li>
-                  <li>Stops at local shops</li>
-                  <li> Snacks included</li>
-                  <b>What's not Included</b>
-                  <li> Gratuities</li>
-                  <li>  Alcohol</li>
-                </ul>
-                
-              )}
+
+            {/* Poás Volcano Section */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">Poás Volcano</h2>
+              <p className="text-lg">
+                Begin your adventure at the iconic Poás Volcano, known for its massive active crater, one of the largest in the world. Marvel at the geothermal activity, including steaming fumaroles and a vibrant crater lake that shifts from aquamarine to emerald depending on its mineral content.
+              </p>
+              <p className="text-lg mt-4">
+                At an elevation of over 8,800 feet, Poás offers not only cooler temperatures but also sweeping views of the Central Valley and surrounding cloud forest. Your expert guide will provide fascinating insights into the volcano’s geological significance and its role in shaping the local environment.
+              </p>
             </div>
 
-            {/* What to Expect */}
-            <div>
-            <hr className="w-full bg-black mb-4" />
-              <div className="flex items-center justify-between cursor-pointer" onClick={toggleExpect}>
-                <h3 className="text-xl font-semibold">What to Expect</h3>
-                {showExpect ? <FaChevronUp /> : <FaChevronDown />}
-              </div>
-              {showExpect && (
-                <p className="text-gray-700 leading-relaxed">
-      
-                Explore two of Costa Rica's natural wonders with our combined Poás Volcano and Mirador Cinchona tour. Witness the dramatic crater and geothermal activity of Poás Volcano, then head to Mirador Cinchona for premier birdwatching. Guided by a local expert, spot exotic birds like toucans and hummingbirds amidst stunning landscapes. Perfect for nature lovers and adventure seekers, this tour offers unforgettable views and an immersive experience in Costa Rica's volcanic and avian beauty.
-                </p>
-              )}
+            {/* Mirador Cinchona Section */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">Mirador Cinchona</h2>
+              <p className="text-lg">
+                Next, visit the breathtaking Mirador Cinchona, a serene spot known for its lush surroundings and vibrant birdlife. Overlooking cascading waterfalls and rolling hills, this destination is a hidden gem for bird enthusiasts and photographers alike.
+              </p>
+              <p className="text-lg mt-4">
+                Keep an eye out for exotic bird species such as the keel-billed toucan, emerald toucanet, violet sabrewing, and fiery-throated hummingbird. You might also spot colorful tanagers, motmots, and even hawks. The area’s tranquil beauty and abundant wildlife make it a must-see for nature lovers.
+              </p>
             </div>
 
-            {/* Departure and Return */}
-            <div>
-            <hr className="w-full bg-black mb-4" />
-              <div className="flex items-center justify-between cursor-pointer" onClick={toggleDeparture}>
-                <h3 className="text-xl font-semibold">Departure and Return</h3>
-                {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
-              </div>
-              {showDeparture && (
-                <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:20 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
-                </p>
-              )}
+            {/* Why Choose This Tour */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">Why Choose This Tour?</h2>
+              <ul className="list-disc pl-6 space-y-2 text-lg">
+                <li>
+                  <strong>Diverse Natural Wonders:</strong> Experience the contrast between the volcanic landscapes of Poás and the lush birdwatching haven of Mirador Cinchona.
+                </li>
+                <li>
+                  <strong>Expert Guidance:</strong> Learn from a knowledgeable local guide who shares captivating insights into the geology, flora, and fauna of the region.
+                </li>
+                <li>
+                  <strong>Photography Opportunities:</strong> Capture stunning views of the crater, geothermal features, waterfalls, and colorful bird species in their natural habitats.
+                </li>
+                <li>
+                  <strong>Adventure for All:</strong> Perfect for travelers seeking a blend of geological intrigue and avian treasures.
+                </li>
+              </ul>
             </div>
 
-            {/* Duration */}
-            <div>
-            <hr className="w-full bg-black mb-4" />
-              <div className="flex items-center justify-between cursor-pointer" onClick={toggleDuration}>
-                <h3 className="text-xl font-semibold">Duration</h3>
-                {showDuration ? <FaChevronUp /> : <FaChevronDown />}
-              </div>
-              {showDuration && (
-                <p className="text-gray-700 leading-relaxed">
-                  The tour lasts for approximately 6 hours.
-                </p>
-              )}
-            </div>
+            {/* About Section */}
+            <div className="mt-4 space-y-4">
+              <h2 className="text-2xl font-semibold">About the Tour</h2>
+              <p className="text-gray-700 leading-relaxed">
 
-            {/* Cancellation */}
-            <div>
-            <hr className="w-full bg-black mb-4" />
-              <div className="flex items-center justify-between cursor-pointer" onClick={toggleCancellation}>
-                <h3 className="text-xl font-semibold">Cancellation</h3>
-                {showCancellation ? <FaChevronUp /> : <FaChevronDown />}
+                Discover two of Costa Rica's natural wonders on our combined Poás Volcano and Mirador Cinchona tour. Enjoy dramatic views of Poás Volcano's crater and geothermal activity, then head to Mirador Cinchona for premier birdwatching. Guided by a local expert, spot exotic birds like toucans and hummingbirds amidst stunning landscapes. Perfect for nature lovers and adventure seekers, this tour offers an unforgettable glimpse into Costa Rica's volcanic and avian beauty.
+              </p>
+              <hr className="w-full bg-black mb-4" />
+              <ul className="text-gray-700 pl-6 list-inside  space-y-4">
+
+                <li className="flex items-center">
+                  <FaUsers className="mr-2 text-gray-600" />
+                  All ages, max of 6 per group
+                </li>
+
+                <li className="flex items-center">
+                  <FaClock className="mr-2 text-gray-600" />
+                  Duration: 6 hours
+                </li>
+                <li className="flex items-center">
+                  <FaSuitcase className="mr-2 text-gray-600" />
+                  One trip a day: Pick up time 8:30 am
+                </li>
+                <li className="flex items-center">
+                  <FaUserTie className="mr-2 text-gray-600" />
+                  Live guide: English, Spanish
+                </li>
+              </ul>
+              {/* What's Included */}
+              <div>
+                <hr className="w-full bg-black mb-4" />
+                <div className="flex items-center justify-between cursor-pointer" onClick={toggleIncluded}>
+                  <h3 className="text-xl font-semibold">What's Included</h3>
+                  {showIncluded ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {showIncluded && (
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>See amazing variety of bird life include the Quetzal</li>
+                    <li>Wildlife sets the schedule</li>
+                    <li>Stops at local shops</li>
+                    <li>Snacks included</li>
+                    <b>What's not Included</b>
+                    <li>Gratuities</li>
+                    <li>Alcohol</li>
+                  </ul>
+
+                )}
               </div>
-              {showCancellation && (
-                <p className="text-gray-700 leading-relaxed">
-                  Free cancellation up to 24 hours in advance.
-                </p>
-              )}
+
+              {/* What to Expect */}
+              <div>
+                <hr className="w-full bg-black mb-4" />
+                <div className="flex items-center justify-between cursor-pointer" onClick={toggleExpect}>
+                  <h3 className="text-xl font-semibold">What to Expect</h3>
+                  {showExpect ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {showExpect && (
+                  <div>
+                  <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
+                  <li> Birding tour will proceed rain or shine </li>
+                  <li className="text-gray-700 leading-relaxed">
+
+                    Explore two of Costa Rica's natural wonders with our combined Poás Volcano and Mirador Cinchona tour. Witness the dramatic crater and geothermal activity of Poás Volcano, then head to Mirador Cinchona for premier birdwatching. Guided by a local expert, spot exotic birds like toucans and hummingbirds amidst stunning landscapes. Perfect for nature lovers and adventure seekers, this tour offers unforgettable views and an immersive experience in Costa Rica's volcanic and avian beauty.
+                  </li>
+                  </div>
+                )}
+              </div>
+
+              {/* Departure and Return */}
+              <div>
+                <hr className="w-full bg-black mb-4" />
+                <div className="flex items-center justify-between cursor-pointer" onClick={toggleDeparture}>
+                  <h3 className="text-xl font-semibold">Departure and Return</h3>
+                  {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {showDeparture && (
+                  <p className="text-gray-700 leading-relaxed">
+                    The tour departs from San Jose at 8:30 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
+                  </p>
+                )}
+              </div>
+
+              {/* Duration */}
+              <div>
+                <hr className="w-full bg-black mb-4" />
+                <div className="flex items-center justify-between cursor-pointer" onClick={toggleDuration}>
+                  <h3 className="text-xl font-semibold">Duration</h3>
+                  {showDuration ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {showDuration && (
+                  <p className="text-gray-700 leading-relaxed">
+                    The tour lasts for approximately 6 hours.
+                  </p>
+                )}
+              </div>
+
+              {/* Cancellation */}
+              <div>
+                <hr className="w-full bg-black mb-4" />
+                <div className="flex items-center justify-between cursor-pointer" onClick={toggleCancellation}>
+                  <h3 className="text-xl font-semibold">Cancellation</h3>
+                  {showCancellation ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {showCancellation && (
+                  <p className="text-gray-700 leading-relaxed">
+                    Free cancellation up to 24 hours in advance.
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -157,13 +213,13 @@ const PoasMirador = () => {
               <span className="text-xl font-semibold">From $200</span>
               <span className="text-1xl font-extralight text-grey-300">per person</span>
               <span className="text-1xl font-extralight text-grey-300">Discounts for children and  larger groups</span>
-              
+
             </div>
-            
+
             <div className='mb-4'>
-            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-16">
-              Schedule Now
-            </Link>
+              <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-16">
+                Schedule Now
+              </Link>
             </div>
             <div className="text-sm text-gray-600">
               * Free cancellation up to 24 hours in advance.
