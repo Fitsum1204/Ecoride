@@ -161,7 +161,7 @@ const Doka = () => {
               
             </div>
             <div className='mb-4'>
-            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-16">
+            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-10">
               Schedule Now
             </Link>
             </div>

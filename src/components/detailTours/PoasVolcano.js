@@ -56,7 +56,7 @@ const PoasVolcano = () => {
         </li>
         <li className="flex items-center">
           <FaSuitcase className="mr-2 text-gray-600" />
-          One trip a day: Pick up time 8:30 am
+          One trip a day: Pick up time 8:30 AM
         </li>
         <li className="flex items-center">
           <FaUserTie className="mr-2 text-gray-600" />
@@ -163,7 +163,7 @@ const PoasVolcano = () => {
               
             </div>
             <div className='mb-4'>
-            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-16">
+            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-10">
               Schedule Now
             </Link>
             </div>
