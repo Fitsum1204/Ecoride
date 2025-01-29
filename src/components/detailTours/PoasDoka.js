@@ -118,7 +118,7 @@ const PoasDoka = () => {
                   After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. 
                 </li>
                 <li className="text-gray-700 leading-relaxed">
-                  Departing Poas around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
+                  Departing Poas around 11:30 AM, ensuring you have plenty of time to enjoy the park and surroundings.
                 </li>
                 <li className="text-gray-700 leading-relaxed">
                   Lunch at a local resturant serving Costa Rican classics

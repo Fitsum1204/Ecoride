@@ -36,27 +36,80 @@ const Waterfall = () => {
             <img src={h1} alt="Tour 1" className="w-full h-full object-cover rounded-md" />
           </div>
           {/* About Section */}
-          <div className="mt-4 space-y-4">
-            <h2 className="text-2xl font-semibold">About the Tour</h2>
-            <p className="text-gray-700 leading-relaxed">
-            Discover Costa Rica's natural beauty with a private tour of La Paz Waterfall Gardens. Guided by a local expert, explore lush rainforest trails, stunning waterfalls, vibrant gardens, and abundant wildlife. Visit the hummingbird garden, butterfly observatory, and animal sanctuary. Perfect for nature lovers and families, this personalized tour offers an immersive look at Costa Rica's biodiversity. Enjoy a relaxed and unforgettable experience tailored to your group.
-           
-            </p>
+          <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+          Discover the Wonders of La Paz Waterfall Gardens with an Expert Naturalist
+        </h1>
+
+        {/* Introduction */}
+        <p className="text-lg md:text-xl text-center mb-12">
+          Experience the breathtaking beauty and rich biodiversity of Costa Rica like never before with an exclusive, 
+          expert-led private tour of La Paz Waterfall Gardens. Your local naturalist guide will ensure an immersive 
+          journey through one of the country’s most captivating natural landscapes.
+        </p>
+
+        {/* Section: Waterfalls */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">A Journey Through Vibrant Gardens and Majestic Waterfalls</h2>
+          <p className="text-lg">
+            Explore the winding rainforest trails and witness five stunning waterfalls cascading down volcanic rock formations. 
+            From the dramatic plunge of Magia Blanca to the serene beauty of Templo, each waterfall offers a unique spectacle. 
+            Your guide will highlight the diverse plant life, including towering ferns, vibrant orchids, and exotic bromeliads, 
+            all essential to the delicate rainforest ecosystem.
+          </p>
+        </div>
+
+        {/* Section: Hummingbird & Butterfly Gardens */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">The Hummingbird and Butterfly Gardens – A Kaleidoscope of Color</h2>
+          <p className="text-lg">
+            Step into the enchanting hummingbird garden, where dozens of iridescent species flutter in a mesmerizing dance. 
+            Watch as species like the violet sabrewing, green-crowned brilliant, and fiery-throated hummingbird feed on nectar.
+          </p>
+          <p className="text-lg mt-4">
+            Next, enter the butterfly observatory, home to the dazzling blue morpho and many other species. Learn about 
+            their metamorphosis and the crucial role they play in pollination.
+          </p>
+        </div>
+
+        {/* Section: Wildlife Sanctuary */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Encounter Costa Rica’s Native Wildlife in the Animal Sanctuary</h2>
+          <p className="text-lg">
+            Visit the rescue and rehabilitation center at La Paz Waterfall Gardens, where you’ll observe native Costa Rican wildlife, 
+            including jaguars, pumas, ocelots, and playful spider monkeys. Bird lovers will enjoy sightings of scarlet macaws, 
+            keel-billed toucans, and even the elusive resplendent quetzal.
+          </p>
+        </div>
+
+        {/* Section: Personalized Experience */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">A Personalized, Relaxed, and Enriching Experience</h2>
+          <p className="text-lg">
+            Whether you are a passionate wildlife enthusiast, a photography lover, or a family seeking an unforgettable adventure, 
+            this private tour ensures a customized experience tailored to your interests. Your expert guide will share fascinating 
+            insights, answer questions, and reveal hidden gems throughout your journey.
+          </p>
+        </div>
+
+      </div>
             <hr className="w-full bg-black mb-4" />
             <ul className="text-gray-700 pl-6 list-inside  space-y-4">
         
         <li className="flex items-center">
           <FaUsers className="mr-2 text-gray-600" />
-          Ages 0-99, max of 30 per group
+          All ages, max of 6 per group
         </li>
         
         <li className="flex items-center">
           <FaClock className="mr-2 text-gray-600" />
-          Duration: 2.5 hours 
+          Duration: 4 hours 
         </li>
         <li className="flex items-center">
           <FaSuitcase className="mr-2 text-gray-600" />
-          one trip a day: Pick up time 8:20 am
+          One trip a day: Pick up time 8:00 am
         </li>
         <li className="flex items-center">
           <FaUserTie className="mr-2 text-gray-600" />
@@ -123,7 +176,7 @@ const Waterfall = () => {
               </div>
               {showDuration && (
                 <p className="text-gray-700 leading-relaxed">
-                  The tour lasts for approximately 2.5 hours.
+                  Including transport, the tour lasts for approximately 4 hours.
                 </p>
               )}
             </div>
