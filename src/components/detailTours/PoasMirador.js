@@ -73,7 +73,10 @@ const PoasMirador = () => {
         </li>
         <li className="flex items-center">
           <FaSuitcase className="mr-2 text-gray-600" />
-          One trip a day: Pick up time 8:30 am
+
+
+          one trip a day: Pick up time 8:20 am
+
         </li>
         <li className="flex items-center">
           <FaUserTie className="mr-2 text-gray-600" />
@@ -117,6 +120,7 @@ const PoasMirador = () => {
                 {showExpect ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showExpect && (
+
                 <div>
                   <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
                   <li> Mirador tour will proceed rain or shine </li>
@@ -125,6 +129,7 @@ const PoasMirador = () => {
                 Explore two of Costa Rica's natural wonders with our combined Poás Volcano and Mirador Cinchona tour. Witness the dramatic crater and geothermal activity of Poás Volcano, then head to Mirador Cinchona for premier birdwatching. Guided by a local expert, spot exotic birds like toucans and hummingbirds amidst stunning landscapes. Perfect for nature lovers and adventure seekers, this tour offers unforgettable views and an immersive experience in Costa Rica's volcanic and avian beauty.
                 </li>
                 </div>
+
               )}
             </div>
 
@@ -136,6 +141,7 @@ const PoasMirador = () => {
                 {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDeparture && (
+
                 <div>
                 <li className="text-gray-700 leading-relaxed">
                   The tour departs from San Jose at 8:30 AM.
@@ -156,6 +162,7 @@ const PoasMirador = () => {
                   Return to hotel at around 2:30 PM
                 </li>
                 </div>
+
               )}
             </div>
 
