@@ -4,7 +4,7 @@ import s6 from '../assets/toursImage/poas5.jpg';
 import s7 from '../assets/toursImage/birdmidr.jpg';
 import s1 from '../assets/toursImage/Poas Volcano.jpg';
 import s2 from '../assets/toursImage/Doka-Coffee-Plantation.jpg';
-import s3 from '../assets/toursImage/Sarchí-and-Grecia.jpg';
+import s3 from '../assets/toursImage/Sarchí-and-Grecia.jpeg'; 
 import s4 from '../assets/toursImage/La-Paz-Waterfall.jpg';
 import s5 from '../assets/toursImage/bird.jpeg';
 
