@@ -47,7 +47,7 @@ const PoasVolcano = () => {
         
         <li className="flex items-center">
           <FaUsers className="mr-2 text-gray-600" />
-          Ages 0-99, max of 30 per group
+          All ages, max of 6 per group
         </li>
         
         <li className="flex items-center">
@@ -56,7 +56,7 @@ const PoasVolcano = () => {
         </li>
         <li className="flex items-center">
           <FaSuitcase className="mr-2 text-gray-600" />
-          one trip a day: Pick up time 8:20 am
+          One trip a day: Pick up time 8:30 am
         </li>
         <li className="flex items-center">
           <FaUserTie className="mr-2 text-gray-600" />
@@ -77,9 +77,9 @@ const PoasVolcano = () => {
                   <li>Entrance Fees to the National Park</li>
                   <li>Snacks and Water</li>
                   <b>What's not Included</b>
-                  <li>lunch</li>
-                  <li> Gratuities</li>
-                  <li>  Alcoho</li>
+                  <li>Lunch</li>
+                  <li>Gratuities</li>
+                  <li>Alcohol</li>
                 </ul>
                 
               )}
@@ -93,9 +93,12 @@ const PoasVolcano = () => {
                 {showExpect ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showExpect && (
-                <p className="text-gray-700 leading-relaxed">
+                <div>
+                  <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
+                <li className="text-gray-700 leading-relaxed">
                   You will visit the Doka Coffee Plantation, to enjoy a delicious breakfast and a guided tour of the coffee plantation where you will learn about the techniques used by experts to process and produce one of the best coffees in Costa Rica. 
-                </p>
+                </li>
+                </div>
               )}
             </div>
 
@@ -108,7 +111,7 @@ const PoasVolcano = () => {
               </div>
               {showDeparture && (
                 <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:20 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
+                  The tour departs from San Jose at 8:30 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 AM, ensuring you have plenty of time to enjoy the park and surroundings.
                 </p>
               )}
             </div>

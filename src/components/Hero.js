@@ -87,7 +87,7 @@ const Hero = () => {
           />
         </div>
         <p className="text-gray-600 italic mb-4">
-          "Our family spent a fabulous day with Michael visiting both Poas Volcano and Doka Coffee Farm. He is an outstanding tour guide ,exteremely" knowledgeable about these location as well as birds,animals and flora of Costa Rica. Michael is warm and personabel.His lunch recommendation,Freddo Fresas wase exeptional.We look forward to returning to Costa Rica and exploring news places with Michael at EcorideCostal.
+        "Our family spent a fabulous day with Michael visiting both Poás Volcano and Doka Coffee Farm. He is an outstanding tour guide, extremely knowledgeable about these locations as well as the birds, animals, and flora of Costa Rica. Michael is warm and personable. His lunch recommendation, Freddo Fresas, was exceptional. We look forward to returning to Costa Rica and exploring new places with Michael at Ecoride Costa."
         </p>
         <h3 className="text-lg font-semibold text-green-700">Eco Enthusiast Family</h3>
       

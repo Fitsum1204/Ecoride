@@ -73,7 +73,7 @@ const PoasMirador = () => {
         </li>
         <li className="flex items-center">
           <FaSuitcase className="mr-2 text-gray-600" />
-          one trip a day: Pick up time 8:20 am
+          One trip a day: Pick up time 8:30 am
         </li>
         <li className="flex items-center">
           <FaUserTie className="mr-2 text-gray-600" />
@@ -117,10 +117,14 @@ const PoasMirador = () => {
                 {showExpect ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showExpect && (
-                <p className="text-gray-700 leading-relaxed">
+                <div>
+                  <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
+                  <li> Mirador tour will proceed rain or shine </li>
       
+                <li className="text-gray-700 leading-relaxed">
                 Explore two of Costa Rica's natural wonders with our combined Poás Volcano and Mirador Cinchona tour. Witness the dramatic crater and geothermal activity of Poás Volcano, then head to Mirador Cinchona for premier birdwatching. Guided by a local expert, spot exotic birds like toucans and hummingbirds amidst stunning landscapes. Perfect for nature lovers and adventure seekers, this tour offers unforgettable views and an immersive experience in Costa Rica's volcanic and avian beauty.
-                </p>
+                </li>
+                </div>
               )}
             </div>
 
@@ -132,9 +136,26 @@ const PoasMirador = () => {
                 {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDeparture && (
-                <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:20 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
-                </p>
+                <div>
+                <li className="text-gray-700 leading-relaxed">
+                  The tour departs from San Jose at 8:30 AM.
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. 
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Departing Poas around 11:30 AM, ensuring you have plenty of time to enjoy the park and surroundings.
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Lunch at a local resturant serving Costa Rican classics
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Tour continues at Mirador, a birders paradise
+                </li>
+                <li className="text-gray-700 leading-relaxed">
+                  Return to hotel at around 2:30 PM
+                </li>
+                </div>
               )}
             </div>
 
