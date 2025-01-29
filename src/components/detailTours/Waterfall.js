@@ -39,7 +39,7 @@ const Waterfall = () => {
           <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+        <h1 className="text-xl  font-bold text-center mb-8">
           Discover the Wonders of La Paz Waterfall Gardens with an Expert Naturalist
         </h1>
 
@@ -52,7 +52,7 @@ const Waterfall = () => {
 
         {/* Section: Waterfalls */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">A Journey Through Vibrant Gardens and Majestic Waterfalls</h2>
+          <h2 className="text-xl font-bold mb-4">A Journey Through Vibrant Gardens and Majestic Waterfalls</h2>
           <p className="text-lg">
             Explore the winding rainforest trails and witness five stunning waterfalls cascading down volcanic rock formations. 
             From the dramatic plunge of Magia Blanca to the serene beauty of Templo, each waterfall offers a unique spectacle. 
@@ -63,7 +63,7 @@ const Waterfall = () => {
 
         {/* Section: Hummingbird & Butterfly Gardens */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">The Hummingbird and Butterfly Gardens – A Kaleidoscope of Color</h2>
+          <h2 className="text-xl font-bold mb-4">The Hummingbird and Butterfly Gardens – A Kaleidoscope of Color</h2>
           <p className="text-lg">
             Step into the enchanting hummingbird garden, where dozens of iridescent species flutter in a mesmerizing dance. 
             Watch as species like the violet sabrewing, green-crowned brilliant, and fiery-throated hummingbird feed on nectar.
@@ -76,7 +76,7 @@ const Waterfall = () => {
 
         {/* Section: Wildlife Sanctuary */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Encounter Costa Rica’s Native Wildlife in the Animal Sanctuary</h2>
+          <h2 className="text-xl font-bold mb-4">Encounter Costa Rica’s Native Wildlife in the Animal Sanctuary</h2>
           <p className="text-lg">
             Visit the rescue and rehabilitation center at La Paz Waterfall Gardens, where you’ll observe native Costa Rican wildlife, 
             including jaguars, pumas, ocelots, and playful spider monkeys. Bird lovers will enjoy sightings of scarlet macaws, 
@@ -86,7 +86,7 @@ const Waterfall = () => {
 
         {/* Section: Personalized Experience */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">A Personalized, Relaxed, and Enriching Experience</h2>
+          <h2 className="text-xl font-bold mb-4">A Personalized, Relaxed, and Enriching Experience</h2>
           <p className="text-lg">
             Whether you are a passionate wildlife enthusiast, a photography lover, or a family seeking an unforgettable adventure, 
             this private tour ensures a customized experience tailored to your interests. Your expert guide will share fascinating 
@@ -95,7 +95,7 @@ const Waterfall = () => {
         </div>
 
       </div>
-            <hr className="w-full bg-black mb-4" />
+            <hr className="w-full bg-black mb-6" />
             <ul className="text-gray-700 pl-6 list-inside  space-y-4">
         
         <li className="flex items-center">
@@ -111,14 +111,14 @@ const Waterfall = () => {
           <FaSuitcase className="mr-2 text-gray-600" />
           One trip a day: Pick up time 8:00 am
         </li>
-        <li className="flex items-center">
+        <li className="flex items-center ">
           <FaUserTie className="mr-2 text-gray-600" />
           Live guide: English, Spanish
         </li>
       </ul>
             {/* What's Included */}
             <div>
-            <hr className="w-full bg-black mb-4" />
+            <hr className="w-full bg-black mt-5 mb-4" />
               <div className="flex items-center justify-between cursor-pointer" onClick={toggleIncluded}>
                 <h3 className="text-xl font-semibold">What's Included</h3>
                 {showIncluded ? <FaChevronUp /> : <FaChevronDown />}
@@ -140,7 +140,7 @@ const Waterfall = () => {
 
             {/* What to Expect */}
             <div>
-            <hr className="w-full bg-black mb-4" />
+            <hr className="w-full bg-black mt-5 mb-4" />
               <div className="flex items-center justify-between cursor-pointer" onClick={toggleExpect}>
                 <h3 className="text-xl font-semibold">What to Expect</h3>
                 {showExpect ? <FaChevronUp /> : <FaChevronDown />}
@@ -155,7 +155,7 @@ const Waterfall = () => {
 
             {/* Departure and Return */}
             <div>
-            <hr className="w-full bg-black mb-4" />
+            <hr className="w-full bg-black mt-5 mb-4" />
               <div className="flex items-center justify-between cursor-pointer" onClick={toggleDeparture}>
                 <h3 className="text-xl font-semibold">Departure and Return</h3>
                 {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
@@ -169,7 +169,7 @@ const Waterfall = () => {
 
             {/* Duration */}
             <div>
-            <hr className="w-full bg-black mb-4" />
+            <hr className="w-full bg-black mt-5 mb-4" />
               <div className="flex items-center justify-between cursor-pointer" onClick={toggleDuration}>
                 <h3 className="text-xl font-semibold">Duration</h3>
                 {showDuration ? <FaChevronUp /> : <FaChevronDown />}
@@ -183,7 +183,7 @@ const Waterfall = () => {
 
             {/* Cancellation */}
             <div>
-            <hr className="w-full bg-black mb-4" />
+            <hr className="w-full bg-black mt-5 mb-4" />
               <div className="flex items-center justify-between cursor-pointer" onClick={toggleCancellation}>
                 <h3 className="text-xl font-semibold">Cancellation</h3>
                 {showCancellation ? <FaChevronUp /> : <FaChevronDown />}
@@ -215,7 +215,7 @@ const Waterfall = () => {
             </div>
             
             <div className='mb-4'>
-            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-16">
+            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-10">
               Schedule Now
             </Link>
             </div>
