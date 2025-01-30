@@ -36,6 +36,63 @@ const PoasVolcano = () => {
             <img src={h1} alt="Tour 1" className="w-full h-full object-cover rounded-md" />
           </div>
           {/* About Section */}
+          import React from 'react';
+
+    <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+          Explore the Majestic Poás Volcano with an Expert Guide
+        </h1>
+
+        {/* Introduction */}
+        <p className="text-lg md:text-xl text-center mb-12">
+          Embark on a thrilling journey to one of Costa Rica’s most awe-inspiring volcanoes. This guided two-hour tour 
+          offers breathtaking views of the massive crater, stunning geothermal landscapes, and the rare cloud forest ecosystem.
+        </p>
+
+        {/* Section: Crater & Geothermal Features */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">The Crater & Geothermal Wonders</h2>
+          <p className="text-lg">
+            Witness the enormous Poás crater, nearly 1.5 kilometers in diameter, and its surreal boiling sulfuric lake. 
+            Feel the power of geothermal forces as steaming fumaroles release gases from deep within the Earth.
+          </p>
+        </div>
+
+        {/* Section: Cloud Forest & Unique Ecosystem */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Cloud Forest & Unique Ecosystem</h2>
+          <p className="text-lg">
+            Explore Poás’s rare high-altitude cloud forest, where acidic volcanic conditions have shaped a unique and resilient landscape. 
+            Discover exotic plants like the Poor Man’s Umbrella, giant bromeliads, and orchids that thrive in the volcanic soil.
+          </p>
+        </div>
+
+        {/* Section: Extended Tour Option */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Extend Your Adventure</h2>
+          <p className="text-lg">
+            Upgrade your experience with a hike to Laguna Botos, a serene crater lake surrounded by lush forest. Along the way, 
+            watch for the elusive resplendent quetzal, one of Costa Rica’s most stunning birds.
+          </p>
+        </div>
+
+
+        {/* Section: Why Choose This Tour */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Why Choose This Tour?</h2>
+          <ul className="list-disc pl-6 space-y-2 text-lg">
+            <li><strong>Expert Guidance:</strong> Gain in-depth knowledge from an experienced naturalist.</li>
+            <li><strong>Unparalleled Views:</strong> Witness one of the world’s most visually stunning volcanoes.</li>
+            <li><strong>Unique Ecosystem:</strong> Discover rare cloud forest plant life and vibrant bird species.</li>
+            <li><strong>Tailored Experience:</strong> Enjoy an intimate, small-group setting for a more immersive experience.</li>
+          </ul>
+        </div>
+
+      </div>
+
+
           <div className="mt-4 space-y-4">
             <h2 className="text-2xl font-semibold">About the Tour</h2>
             <p className="text-gray-700 leading-relaxed">
@@ -52,7 +109,7 @@ const PoasVolcano = () => {
         
         <li className="flex items-center">
           <FaClock className="mr-2 text-gray-600" />
-          Duration: 4 hours 
+          Duration: 4 hours including transportation
         </li>
         <li className="flex items-center">
           <FaSuitcase className="mr-2 text-gray-600" />
@@ -95,9 +152,10 @@ const PoasVolcano = () => {
               {showExpect && (
                 <div>
                   <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
-                <li className="text-gray-700 leading-relaxed">
-                  You will visit the Doka Coffee Plantation, to enjoy a delicious breakfast and a guided tour of the coffee plantation where you will learn about the techniques used by experts to process and produce one of the best coffees in Costa Rica. 
-                </li>
+                  <li><strong>Duration:</strong> Approximately 2.5 hours</li>
+                  <li><strong>Difficulty Level:</strong> Moderate (some uneven paths and inclines)</li>
+                  <li><strong>National Park Ticket:</strong> Not included – purchase in advance</li>
+                  <li><strong>Recommended Gear:</strong> Comfortable walking shoes, light jacket, hat, and camera</li>
                 </div>
               )}
             </div>
@@ -111,7 +169,7 @@ const PoasVolcano = () => {
               </div>
               {showDeparture && (
                 <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:30 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 AM, ensuring you have plenty of time to enjoy the park and surroundings.
+                  The tour departs from San Jose at 8:30 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 12:30 AM, ensuring you have plenty of time to enjoy the park and surroundings.
                 </p>
               )}
             </div>
@@ -125,7 +183,7 @@ const PoasVolcano = () => {
               </div>
               {showDuration && (
                 <p className="text-gray-700 leading-relaxed">
-                  The tour lasts for approximately 4 hours.
+                  The tour lasts for approximately 4 hoursi with 2.5 hours at the volcano.
                 </p>
               )}
             </div>
@@ -145,6 +203,7 @@ const PoasVolcano = () => {
             </div>
           </div>
         </div>
+    </div>
 
         {/* Right Column (Images and Price Section) */}
         <div className="md:col-span-1">

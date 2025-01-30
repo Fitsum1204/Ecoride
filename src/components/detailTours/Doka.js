@@ -36,17 +36,63 @@ const Doka = () => {
             <img src={h1} alt="Tour 1" className="w-full h-full object-cover rounded-md" />
           </div>
           {/* About Section */}
+
+    <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+          Explore the Rich Flavors of Costa Rica at Doka Coffee Plantation
+        </h1>
+
+        {/* Introduction */}
+        <p className="text-lg md:text-xl text-center mb-12">
+          Step into the world of Costa Rican coffee with an exclusive, expert-led tour of the historic 
+          Doka Coffee Plantation. Discover the meticulous process of cultivating, harvesting, and roasting 
+          some of the finest coffee beans in the world.
+        </p>
+
+        {/* Section: Coffee Fields */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Explore the Lush Coffee Fields</h2>
+          <p className="text-lg">
+            Stroll through the rolling coffee plantations of Doka Estate, where Arabica coffee plants thrive in 
+            nutrient-rich volcanic soil. Your expert guide will explain the cultivation process and the factors 
+            that contribute to Costa Rica’s globally renowned coffee quality.
+          </p>
+        </div>
+
+        {/* Section: Meet the Local Coffee Workers */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Meet the People Behind the Coffee & Support the Community</h2>
+          <p className="text-lg">
+            Engage with the hardworking farmers and coffee pickers who have perfected their craft over generations. 
+            Your visit helps support fair wages, education programs, and healthcare initiatives, ensuring that the local 
+            community thrives alongside Costa Rica’s rich coffee tradition.
+          </p>
+        </div>
+
+        {/* Section: Why Choose This Tour */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Why Choose This Tour?</h2>
+          <ul className="list-disc pl-6 space-y-2 text-lg">
+            <li><strong>Exclusive Access:</strong> Tour the oldest coffee wet mill in Costa Rica.</li>
+            <li><strong>Expert Guidance:</strong> Learn from coffee specialists about every step of production.</li>
+            <li><strong>Unforgettable Tasting:</strong> Sample single-origin coffees, including the sought-after Peaberry bean.</li>
+            <li><strong>Support Local Communities:</strong> Help combat poverty and sustain fair wages for coffee farmers.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
           <div className="mt-4 space-y-4">
-            <h2 className="text-2xl font-semibold">About the Tour</h2>
-            <p className="text-gray-700 leading-relaxed">
-            Embark on a private adventure through Doka Coffee Plantation, guided by a local expert. Explore lush coffee fields, uncover the meticulous cultivation process, and dive into the rich history of Costa Rican coffee. This exclusive tour is perfect for coffee enthusiasts and cultural explorers alike, offering a flavorful journey into Costa Rica's coffee legacy.
-            </p>
             <hr className="w-full bg-black mb-4" />
             <ul className="text-gray-700 pl-6 list-inside  space-y-4">
         
         <li className="flex items-center">
           <FaUsers className="mr-2 text-gray-600" />
-          Ages 0-99, max of 30 per group
+          All , max of 6 per group
         </li>
         
         <li className="flex items-center">
@@ -71,14 +117,15 @@ const Doka = () => {
               </div>
               {showIncluded && (
                 <ul className="list-disc list-inside text-gray-700">
-                  <li>Full tour of functioning factor </li>
-                  <li>Guide</li>
-                  <li>pick your own coffee</li>
-                  <li>Meet workers</li>
+                  <li><strong>Exclusive Access:</strong> Tour the oldest coffee wet mill in Costa Rica.</li>
+                  <li><strong>Expert Guidance:</strong> Learn from coffee specialists about every step of production.</li>
+                  <li><strong>Unforgettable Tasting:</strong> Sample single-origin coffees, including the sought-after Peaberry bean.</li>
+                  <li><strong>Support Local Communities:</strong> Help combat poverty and sustain fair wages for coffee farmers.</li>
+                  <li><strong>Pick your own coffee</strong></li>
                   <b>What's not Included</b>
-                  <li>lunch</li>
-                  <li> Gratuities</li>
-                  <li>  Alcoho</li>
+                  <li>Lunch</li>
+                  <li>Gratuities</li>
+                  <li>Alcohol</li>
                 </ul>
              
               )}
@@ -93,8 +140,6 @@ const Doka = () => {
               </div>
               {showExpect && (
                 <p className="text-gray-700 leading-relaxed">
-                  You will visit the Doka Coffee Plantation, to enjoy a delicious breakfast and a guided tour of the coffee plantation where you will learn about the techniques used by experts to process and produce one of the best coffees in Costa Rica. <br></br>
-
                   <b><i>Best season is Oct - Feb.  Upgraded tour available in season</i></b>
                 </p>
               )}
@@ -109,7 +154,8 @@ const Doka = () => {
               </div>
               {showDeparture && (
                 <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 7:30 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 12:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
+                  The tour departs from your hotel 8:00 AM. Return to hotel between 11:00 AM and 12:00 PM
+                  Afternoon tour departs from your hotel 1:00 PM. Return to hotel between 4:00 PM and AM 5:00 PM
                 </p>
               )}
             </div>
