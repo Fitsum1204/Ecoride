@@ -22,7 +22,7 @@ const Mirador = () => {
 
   return (
     
-    <div className="max-w-screen-lg mx-auto p-4">
+    <div className="w-full pt-4 px-6 md:px-16 lg:px-32 xl:px-64">
        {/* Header */}
        <h1 className="text-3xl font-bold text-center mb-8">
        Tour to Mirador Cinchona
@@ -99,28 +99,36 @@ const Mirador = () => {
       </div>
     </div>
           <div className="mt-4 space-y-4">
+
             <h2 className="text-2xl font-semibold">About the Tour</h2>
+
+            <h2 className="text-2xl text-green-700 font-bold">About the Tour</h2>
+            <p className="text-gray-700 leading-relaxed pl-3 italic">
+          
+            Discover Costa Rica’s premier birdwatching hotspot at Mirador Cinchona. Enjoy breathtaking views and spot a variety of bird species, including toucans and hummingbirds, guided by a local expert. Relax at the charming café overlooking the lush landscape. Perfect for bird enthusiasts and nature lovers, this personalized tour offers an unforgettable glimpse into Costa Rica’s avian diversity. 
+            </p>
+
             <hr className="w-full bg-black mb-4" />
-            <ul className="text-gray-700 pl-6 list-inside  space-y-4">
+            <ul className="text-gray-700 pl-6 list-inside  space-y-4 bg-blue-200 p-4 rounded-md shadow-md italic">
         
-        <li className="flex items-center">
-          <FaUsers className="mr-2 text-gray-600" />
-          Ages 0-99, max of 30 per group
-        </li>
-        
-        <li className="flex items-center">
-          <FaClock className="mr-2 text-gray-600" />
-          Duration: 6-7 hours 
-        </li>
-        <li className="flex items-center">
-          <FaSuitcase className="mr-2 text-gray-600" />
-          one trip a day: Pick up time 6:00 am
-        </li>
-        <li className="flex items-center">
-          <FaUserTie className="mr-2 text-gray-600" />
-          Live guide: English, Spanish
-        </li>
-      </ul>
+                <li className="flex items-center">
+                  <FaUsers className="mr-2 text-gray-600" />
+                  All Ages , max of 6 per group
+                </li>
+                
+                <li className="flex items-center">
+                  <FaClock className="mr-2 text-gray-600" />
+                  Duration: 6-7 hours 
+                </li>
+                <li className="flex items-center">
+                  <FaSuitcase className="mr-2 text-gray-600" />
+                  one trip a day: Pick up time 6:00AM
+                </li>
+                <li className="flex items-center">
+                  <FaUserTie className="mr-2 text-gray-600" />
+                  Live guide: English, Spanish
+                </li>
+             </ul>
             {/* What's Included */}
             <div>
             <hr className="w-full bg-black mb-4" />
@@ -129,7 +137,7 @@ const Mirador = () => {
                 {showIncluded ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showIncluded && (
-                <ul className="list-disc list-inside text-gray-700">
+                <ul className="list-disc list-inside text-gray-700 pt-2 pl-6 italic">
                 
                   <li>Guide</li>
                   <li>Stop by La Paz Waterfall</li>
@@ -137,7 +145,7 @@ const Mirador = () => {
                   <li>Feeders attract wide variety of bird species </li>
                   <li>Even more wild varieties near by</li>
                   <li>Upgrade available for nature hike to stop special species.</li>
-                  <b>What's not Included</b>
+                  <b className='text-red-400'>What's not Included</b>
                   <li>lunch</li>
                   <li> Gratuities</li>
                   <li>  Alcoho</li>
@@ -154,7 +162,7 @@ const Mirador = () => {
                 {showExpect ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showExpect && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   Discover Costa Rica’s birdwatching paradise at Mirador Cinchona. Enjoy scenic views, spot toucans and hummingbirds, and relax at a charming café. Guided by a local expert, this tour offers an unforgettable experience for bird enthusiasts and nature lovers.
                 </p>
               )}
@@ -168,8 +176,13 @@ const Mirador = () => {
                 {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDeparture && (
+
                 <p className="text-gray-700 leading-relaxed">
                   The tour departs from San Jose at 6:00 AM. After a scenic drive, you’ll reach the Mirador Cinchona , where the tour begins. The return is around 1:30 PM, ensuring you have plenty of time to enjoy.
+
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
+                  The tour departs from San Jose at 6:00 AM. After a scenic drive, you’ll reach theMirador Cinchona , where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
+
                 </p>
               )}
             </div>
@@ -182,7 +195,7 @@ const Mirador = () => {
                 {showDuration ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDuration && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   The tour lasts for approximately 6-7 hours.
                 </p>
               )}
@@ -196,7 +209,7 @@ const Mirador = () => {
                 {showCancellation ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showCancellation && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   Free cancellation up to 24 hours in advance.
                 </p>
               )}
@@ -213,9 +226,9 @@ const Mirador = () => {
           </div>
 
           {/* Price Section (Aligned below About Section on smaller screens) */}
-          <div className="mt-4 bg-gray-100 p-4 rounded-md shadow-md space-y-4">
+          <div className="sticky top-36 mt-4 bg-slate-50 p-4 rounded-md shadow-md space-y-4 italic">
             <div className="flex flex-col justify-between items-start mb-6">
-              <span className="text-xl font-semibold">From $250</span>
+              <span className="text-xl font-bold not-italic">From $250</span>
               <span className="text-1xl font-extralight text-grey-300">per person</span>
               <span className="text-1xl font-extralight text-grey-300">Discounts for children and  larger groups</span>
               

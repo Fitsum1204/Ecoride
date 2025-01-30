@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Ecoride from '../assets/EcoRide.png';
 import F1 from '../assets/family.jpeg'
 import F2 from '../assets/pexels-simon-robben-55958-614810.jpg'
-import F3 from '../assets/face3.png'
+import F3 from '../assets/family3.jpeg'
 import { useNavigate, Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -99,35 +99,34 @@ const Hero = () => {
       <div className="bg-white rounded-lg shadow-lg p-6">
         <div className="flex flex-col items-center mb-4">
           <img
+            src={F3}
+            alt="David M."
+            className="w-80 h-80 rounded-full shadow-md"
+          />
+        </div>
+        <p className="text-gray-600 italic mb-4">
+        "we highly recommend EcoRide to anyone who wants to explore the world
+        while preserving nature. Excelent Trip!"
+        </p>
+        <p className="text-lg font-semibold text-green-700">Nature Lover</p>
+      </div>
+{/* Testimonial 3 */}
+<div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex flex-col items-center mb-4">
+          <img
             src={F2}
             alt="David M."
-            className="w-24 h-24 rounded-full shadow-md"
+            className="w-60 h-60 rounded-full shadow-md"
           />
         </div>
         <p className="text-gray-600 italic mb-4">
           "A seamless experience from start to finish. The app's navigation and
           eco-friendly options are a game-changer for responsible travel."
         </p>
-        <h3 className="text-lg font-semibold text-green-700">- David M.</h3>
+        <h3 className="text-lg font-semibold text-green-700"> David M.</h3>
         <p className="text-sm text-gray-500">Adventure Seeker</p>
       </div>
-
-      {/* Testimonial 3 */}
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex flex-col items-center mb-4">
-          <img
-            src={F3}
-            alt="Maria L."
-            className="w-24 h-24 rounded-full shadow-md"
-          />
-        </div>
-        <p className="text-gray-600 italic mb-4">
-          "I highly recommend EcoRide to anyone who wants to explore the world
-          while preserving nature. The app made it so easy and enjoyable!"
-        </p>
-        <h3 className="text-lg font-semibold text-green-700">- Maria L.</h3>
-        <p className="text-sm text-gray-500">Nature Lover</p>
-      </div>
+     
     </div>
   </div>
 </section>
