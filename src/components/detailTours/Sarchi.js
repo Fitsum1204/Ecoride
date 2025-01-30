@@ -22,7 +22,7 @@ const Sarchi = () => {
 
   return (
     
-    <div className="max-w-screen-lg mx-auto p-4">
+    <div className="w-full pt-4 px-6 md:px-16 lg:px-32 xl:px-64">
        {/* Header */}
        <h1 className="text-3xl font-bold text-center mb-8">
        Private Sarchí and Grecia Tour
@@ -37,32 +37,32 @@ const Sarchi = () => {
           </div>
           {/* About Section */}
           <div className="mt-4 space-y-4">
-            <h2 className="text-2xl font-semibold">About the Tour</h2>
-            <p className="text-gray-700 leading-relaxed">
+            <h2 className="text-xl font-bold text-green-700">About the Tour</h2>
+            <p className="text-gray-700 leading-relaxed pl-3 italic">
           
             Experience Costa Rica's artisan heritage on a private tour of Sarchí and Grecia. Marvel at Sarchí's iconic painted ox carts and visit Grecia's unique metal church. Shop for handcrafted souvenirs along the way. Guided by a local expert, this tour offers a fascinating glimpse into Costa Rica's traditions and artistry. Perfect for cultural and shopping enthusiasts.
             </p>
             <hr className="w-full bg-black mb-4" />
-            <ul className="text-gray-700 pl-6 list-inside  space-y-4">
+            <ul className="text-gray-700 pl-6 list-inside  space-y-4 bg-blue-200 p-4 rounded-md shadow-md italic">
         
-        <li className="flex items-center">
-          <FaUsers className="mr-2 text-gray-600" />
-          Ages 0-99, max of 30 per group
-        </li>
-        
-        <li className="flex items-center">
-          <FaClock className="mr-2 text-gray-600" />
-          Duration: 6-7 hours 
-        </li>
-        <li className="flex items-center">
-          <FaSuitcase className="mr-2 text-gray-600" />
-          one trip a day: Pick up time 8:20 am
-        </li>
-        <li className="flex items-center">
-          <FaUserTie className="mr-2 text-gray-600" />
-          Live guide: English, Spanish
-        </li>
-      </ul>
+                  <li className="flex items-center">
+                    <FaUsers className="mr-2 text-gray-600" />
+                    All ages , max of 6 per group
+                  </li>
+                  
+                  <li className="flex items-center">
+                    <FaClock className="mr-2 text-gray-600" />
+                    Duration: 6-7 hours 
+                  </li>
+                  <li className="flex items-center">
+                    <FaSuitcase className="mr-2 text-gray-600" />
+                    one trip a day: Pick up time 8:20 am
+                  </li>
+                  <li className="flex items-center">
+                    <FaUserTie className="mr-2 text-gray-600" />
+                    Live guide: English, Spanish
+                  </li>
+               </ul>
             {/* What's Included */}
             <div>
             <hr className="w-full bg-black mb-4" />
@@ -71,16 +71,13 @@ const Sarchi = () => {
                 {showIncluded ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showIncluded && (
-                <ul className="list-disc list-inside text-gray-700">
+                <ul className="list-disc list-inside text-gray-700 italic pt-2 pl-6">
                   <li>Transportation to/from </li>
                   <li>Guide</li>
                   <li>Souvenir shopping, </li>
                   <li>Lunch included </li>
                   <li> custom craftsman</li>
-
-                  
-                </ul>
-                
+                </ul> 
               )}
             </div>
 
@@ -92,7 +89,7 @@ const Sarchi = () => {
                 {showExpect ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showExpect && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   Discover Costa Rica's artisan heritage with a private tour of Sarchí and Grecia. Marvel at painted ox carts, explore Grecia's unique metal church, and shop for handcrafted souvenirs. Guided by a local expert, this tour offers a fascinating glimpse into Costa Rica's traditions and artistry. Perfect for cultural and shopping enthusiasts.
                 </p>
               )}
@@ -106,7 +103,7 @@ const Sarchi = () => {
                 {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDeparture && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   The tour departs from San Jose at 8:20 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
                 </p>
               )}
@@ -120,7 +117,7 @@ const Sarchi = () => {
                 {showDuration ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDuration && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   The tour lasts for approximately 6-7 hours.
                 </p>
               )}
@@ -134,7 +131,7 @@ const Sarchi = () => {
                 {showCancellation ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showCancellation && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   Free cancellation up to 24 hours in advance.
                 </p>
               )}
@@ -151,20 +148,20 @@ const Sarchi = () => {
           </div>
 
           {/* Price Section (Aligned below About Section on smaller screens) */}
-          <div className="mt-4 bg-gray-100 p-4 rounded-md shadow-md space-y-4">
+          <div className="sticky top-36 mt-4 bg-gray-100 p-4 rounded-md shadow-md space-y-4">
             <div className="flex flex-col justify-between items-start mb-6">
-              <span className="text-xl font-semibold">From $130</span>
-              <span className="text-1xl font-extralight text-grey-300">per person</span>
-              <span className="text-1xl font-extralight text-grey-300">Discounts for children and  larger groups</span>
+              <span className="text-xl font-bold">From $130</span>
+              <span className="text-base font-extralight text-grey-300 italic">per person</span>
+              <span className="text-1xl font-extralight text-grey-300 italic">Discounts for children and  larger groups</span>
               
             </div>
             
             <div className='mb-4'>
-            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-10">
+            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-10 italic">
               Schedule Now
             </Link>
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-gray-600 italic">
               * Free cancellation up to 24 hours in advance.
             </div>
           </div>

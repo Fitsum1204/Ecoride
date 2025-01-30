@@ -80,6 +80,8 @@ const ConciergeTour = () => {
             </p>
             <Link
               to="/contact"
+              onClick={() => window.scrollTo({  top: 900,
+                left: 100, behavior: "smooth" })}
               className="inline-block px-8 py-3 bg-green-600 text-white text-lg font-medium rounded-lg shadow-md hover:bg-green-700 transition duration-300"
             >
               Plan your adventure today!

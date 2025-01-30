@@ -22,7 +22,7 @@ const PoasMirador = () => {
 
   return (
     
-    <div className="max-w-screen-lg mx-auto p-4">
+    <div className="w-full pt-4 px-6 md:px-16 lg:px-32 xl:px-64">
        {/* Header */}
        <h1 className="text-3xl font-bold text-center mb-8">
        Poas Volcano and Mirador Cinchona tour
@@ -37,30 +37,30 @@ const PoasMirador = () => {
           </div>
           {/* About Section */}
           <div className="mt-4 space-y-4">
-            <h2 className="text-2xl font-semibold">About the Tour</h2>
-            <p className="text-gray-700 leading-relaxed">
+            <h2 className="text-2xl text-green-700 font-bold">About the Tour</h2>
+            <p className="text-gray-700 leading-relaxed pl-3 italic">
           
             Discover two of Costa Rica’s most captivating natural wonders with this expertly guided tour, perfect for nature lovers and adventure seekers alike.
             </p>
-            <h2 className="text-2xl font-bold mb-4">Poás Volcano</h2>
-            <p className="text-gray-700 leading-relaxed">
+            <h2 className="text-2xl text-green-700 font-bold  mb-4">Poás Volcano</h2>
+            <p className="text-gray-700 leading-relaxed pl-3 italic">
           
             Begin your adventure at the iconic Poás Volcano, known for its massive active crater, one of the largest in the world. Marvel at the geothermal activity, including steaming fumaroles and a vibrant crater lake that shifts from aquamarine to emerald depending on its mineral content.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed pl-3 italic ">
             At an elevation of over 8,800 feet, Poás offers not only cooler temperatures but also sweeping views of the Central Valley and surrounding cloud forest. Your expert guide will provide fascinating insights into the volcano’s geological significance and its role in shaping the local environment.
             </p>
-            <h2 className="text-2xl font-bold mb-4">Mirador Cinchona</h2>
-            <p className="text-gray-700 leading-relaxed">
+            <h2 className="text-2xl text-green-700 font-bold mb-4">Mirador Cinchona</h2>
+            <p className="text-gray-700 leading-relaxed pl-3 italic">
           
             Next, visit the breathtaking Mirador Cinchona, a serene spot known for its lush surroundings and vibrant birdlife. Overlooking cascading waterfalls and rolling hills, this destination is a hidden gem for bird enthusiasts and photographers alike.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed pl-3 italic">
             Keep an eye out for exotic bird species such as the keel-billed toucan, emerald toucanet, violet sabrewing, and fiery-throated hummingbird. You might also spot colorful tanagers, motmots, and even hawks. The area’s tranquil beauty and abundant wildlife make it a must-see for nature lovers.
             </p>
             
             <hr className="w-full bg-black mb-4" />
-            <ul className="text-gray-700 pl-6 list-inside  space-y-4">
+            <ul className="text-gray-700 pl-6 list-inside  space-y-4 italic bg-blue-200 p-4 rounded-md shadow-md ">
         
         <li className="flex items-center">
           <FaUsers className="mr-2 text-gray-600" />
@@ -91,20 +91,20 @@ const PoasMirador = () => {
                 {showIncluded ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showIncluded && (
-                <ul className="list-disc list-inside text-gray-700">
+                <ul className="list-disc  list-inside text-gray-700 pt-2 pl-6 italic">
                   <li>
-                  <strong>Diverse Natural Wonders:</strong> Experience the contrast between the volcanic landscapes of Poás and the lush birdwatching haven of Mirador Cinchona.
+                  <strong className='text-amber-400'>Diverse Natural Wonders:</strong> Experience the contrast between the volcanic landscapes of Poás and the lush birdwatching haven of Mirador Cinchona.
                 </li>
                 <li>
-                  <strong>Expert Guidance:</strong> Learn from a knowledgeable local guide who shares captivating insights into the geology, flora, and fauna of the region.
+                  <strong className='text-amber-400'>Expert Guidance:</strong> Learn from a knowledgeable local guide who shares captivating insights into the geology, flora, and fauna of the region.
                 </li>
                 <li>
-                  <strong>Photography Opportunities:</strong> Capture stunning views of the crater, geothermal features, waterfalls, and colorful bird species in their natural habitats.
+                  <strong className='text-amber-400'>Photography Opportunities:</strong> Capture stunning views of the crater, geothermal features, waterfalls, and colorful bird species in their natural habitats.
                 </li>
                 <li>
-                  <strong>Adventure for All:</strong> Perfect for travelers seeking a blend of geological intrigue and avian treasures.
+                  <strong className='text-amber-400'>Adventure for All:</strong> Perfect for travelers seeking a blend of geological intrigue and avian treasures.
                 </li>
-                  <b>What's not Included</b>
+                  <b className='text-red-400'>What's not Included</b>
                   <li> Gratuities</li>
                   <li>  Alcohol</li>
                 </ul>
@@ -121,7 +121,7 @@ const PoasMirador = () => {
               </div>
               {showExpect && (
 
-                <div>
+                <div className='pt-2 pl-6 italic'>
                   <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
                   <li> Mirador tour will proceed rain or shine </li>
       
@@ -142,7 +142,7 @@ const PoasMirador = () => {
               </div>
               {showDeparture && (
 
-                <div>
+                <div className='pt-2 pl-6 italic'>
                 <li className="text-gray-700 leading-relaxed">
                   The tour departs from San Jose at 8:30 AM.
                 </li>
@@ -174,7 +174,7 @@ const PoasMirador = () => {
                 {showDuration ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDuration && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   The tour lasts for approximately 6 hours.
                 </p>
               )}
@@ -188,7 +188,7 @@ const PoasMirador = () => {
                 {showCancellation ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showCancellation && (
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
                   Free cancellation up to 24 hours in advance.
                 </p>
               )}
@@ -205,11 +205,11 @@ const PoasMirador = () => {
           </div>
 
           {/* Price Section (Aligned below About Section on smaller screens) */}
-          <div className="mt-4 bg-gray-100 p-4 rounded-md shadow-md space-y-4">
+          <div className="sticky top-36 mt-4 bg-slate-50 p-4 rounded-md shadow-md space-y-4">
             <div className="flex flex-col justify-between items-start mb-6">
-              <span className="text-xl font-semibold">From $200</span>
-              <span className="text-1xl font-extralight text-grey-300">per person</span>
-              <span className="text-1xl font-extralight text-grey-300">Discounts for children and  larger groups</span>
+              <span className="text-xl font-bold">From $200</span>
+              <span className="text-1xl font-extralight text-grey-300 italic">per person</span>
+              <span className="text-1xl font-extralight text-grey-300 italic">Discounts for children and  larger groups</span>
               
             </div>
             
@@ -218,7 +218,7 @@ const PoasMirador = () => {
               Schedule Now
             </Link>
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-gray-600 italic">
               * Free cancellation up to 24 hours in advance.
             </div>
           </div>

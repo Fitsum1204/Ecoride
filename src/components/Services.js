@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import s6 from '../assets/toursImage/poas5.jpg';
 import s7 from '../assets/toursImage/birdmidr.jpg';
 import s1 from '../assets/toursImage/Poas Volcano.jpg';
-import s2 from '../assets/toursImage/Doka-Coffee-Plantation.jpg';
+import s2 from '../assets/detailsPicture/doka3.avif';
 import s3 from '../assets/toursImage/Sarchí-and-Grecia.jpeg'; 
-import s4 from '../assets/toursImage/La-Paz-Waterfall.jpg';
+import s4 from '../assets/detailsPicture/waterfall2.jpg';
 import s5 from '../assets/toursImage/bird.jpeg';
 
 const Services = () => {
@@ -77,7 +77,10 @@ const Services = () => {
               alt={destination.name}
               className="w-full h-48 object-cover"
             />
-            <div className="p-4">
+            <div className="p-4 cursor-pointer" onClick={() => {
+                    navigate(destination.route);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}>
               <h2 className="text-xl font-semibold text-gray-800">{destination.name}</h2>
               <p className="text-gray-600 mt-2 text-sm sm:text-base">{destination.description}</p>
               <div className="mt-4 flex items-center justify-between">
