@@ -36,15 +36,15 @@ const Mirador = () => {
             <img src={h1} alt="Tour 1" className="w-full h-full object-cover rounded-md" />
           </div>
           {/* About Section */}
-          <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
+          <div className="bg-gray-50 text-gray-800 p-6 md:p-6">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+        <h1 className="text-2xl text-green-700  font-bold text-left mb-6">
           Mirador Cinchona Private Birdwatching Tour
         </h1>
 
         {/* Introduction */}
-        <p className="text-lg md:text-xl text-center mb-12">
+        <p className="text-lg  text-left mb-6 pl-3 italic ">
           Discover one of Costa Rica’s hidden birdwatching gems with a private tour to 
           <strong> Mirador Cinchona</strong>, a serene haven in the highlands where nature flourishes. 
           Led by an expert naturalist, this exclusive experience offers breathtaking views, 
@@ -53,13 +53,13 @@ const Mirador = () => {
 
         {/* Section: Scenic Highlands & Birdwatching */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">A Birdwatcher’s Paradise in the Scenic Highlands</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl text-green-700 font-bold mb-4">A Birdwatcher’s Paradise in the Scenic Highlands</h2>
+          <p className="text-lg pl-3 italic">
             Perched amidst Costa Rica’s lush highlands, <strong>Mirador Cinchona</strong> is renowned for its extraordinary bird diversity. 
             With an abundance of feeders and natural foliage, the area attracts a dazzling array of exotic species, making it 
             an ideal location for birding enthusiasts and photographers alike. 
           </p>
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 pl-3 italic">
             Your <strong>expert local guide</strong> will help you spot and identify some of the region’s most sought-after birds, 
             including <strong>keel-billed toucans, emerald toucanets, fiery-throated hummingbirds, and violet sabrewings</strong>. 
             Vibrant tanagers, motmots, and raptors are also frequent visitors, creating a dynamic and exciting birdwatching experience.
@@ -68,13 +68,13 @@ const Mirador = () => {
 
         {/* Section: The Café & Relaxation */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Relax and Unwind at a Scenic Café</h2>
-          <p className="text-lg">
-            Take a break and soak in the peaceful atmosphere at a **charming café overlooking the lush valley**. 
-            Here, you can enjoy a fresh cup of Costa Rican coffee while watching **hummingbirds dart effortlessly 
-            between feeders**, sometimes coming within inches of your seat.
+          <h2 className="text-2xl text-green-700 font-bold mb-4 ">Relax and Unwind at a Scenic Café</h2>
+          <p className="text-lg pl-3 italic">
+            Take a break and soak in the peaceful atmosphere at a <b>charming café overlooking the lush valley</b>. 
+            Here, you can enjoy a fresh cup of Costa Rican coffee while watching <b>hummingbirds dart effortlessly 
+            between feeders</b>, sometimes coming within inches of your seat.
           </p>
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 pl-3 italic">
             The sound of a nearby waterfall, the mist rolling through the highlands, and the chorus of birdsong 
             create a tranquil retreat, allowing you to fully immerse yourself in the natural beauty of Costa Rica.
           </p>
@@ -82,14 +82,14 @@ const Mirador = () => {
 
         {/* Section: Personalized Experience */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">A Tailored Birdwatching & Nature Experience</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl text-green-700 font-bold mb-4">A Tailored Birdwatching & Nature Experience</h2>
+          <p className="text-lg pl-3 italic">
             Whether you're a passionate birder, a nature photographer, or simply looking to connect with 
             Costa Rica’s remarkable biodiversity, this **private tour is customized to your pace and interests**. 
             Your guide will share expert insights, ensuring a deeper understanding of the region’s ecosystems 
             and wildlife behaviors.
           </p>
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-0 pl-3 italic">
             With breathtaking landscapes, close encounters with exotic birds, and a peaceful setting, 
             <strong> Mirador Cinchona</strong> offers an unforgettable escape into nature that will leave you 
             with lifelong memories.
@@ -99,15 +99,6 @@ const Mirador = () => {
       </div>
     </div>
           <div className="mt-4 space-y-4">
-
-            <h2 className="text-2xl font-semibold">About the Tour</h2>
-
-            <h2 className="text-2xl text-green-700 font-bold">About the Tour</h2>
-            <p className="text-gray-700 leading-relaxed pl-3 italic">
-          
-            Discover Costa Rica’s premier birdwatching hotspot at Mirador Cinchona. Enjoy breathtaking views and spot a variety of bird species, including toucans and hummingbirds, guided by a local expert. Relax at the charming café overlooking the lush landscape. Perfect for bird enthusiasts and nature lovers, this personalized tour offers an unforgettable glimpse into Costa Rica’s avian diversity. 
-            </p>
-
             <hr className="w-full bg-black mb-4" />
             <ul className="text-gray-700 pl-6 list-inside  space-y-4 bg-blue-200 p-4 rounded-md shadow-md italic">
         
@@ -176,14 +167,10 @@ const Mirador = () => {
                 {showDeparture ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {showDeparture && (
-
-                <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 6:00 AM. After a scenic drive, you’ll reach the Mirador Cinchona , where the tour begins. The return is around 1:30 PM, ensuring you have plenty of time to enjoy.
-
-                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
-                  The tour departs from San Jose at 6:00 AM. After a scenic drive, you’ll reach theMirador Cinchona , where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
-
-                </p>
+              
+                 <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
+                 The tour departs from San Jose at 6:00 AM. After a scenic drive, you’ll reach the Mirador Cinchona, where the tour begins. The return is around 1:30 PM, ensuring you have plenty of time to enjoy.
+               </p>
               )}
             </div>
 

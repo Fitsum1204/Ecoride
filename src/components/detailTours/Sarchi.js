@@ -36,15 +36,15 @@ const Sarchi = () => {
             <img src={h1} alt="Tour 1" className="w-full h-full object-cover rounded-md" />
           </div>
           {/* About Section */}
-          <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
+          <div className="bg-gray-50 text-gray-800 p-6 md:p-6">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+        <h1 className="text-2xl text-green-700 font-bold text-left mb-4">
           Discover Costa Rica’s Artisan Heritage: Sarchí & Grecia Private Tour
         </h1>
 
         {/* Introduction */}
-        <p className="text-lg md:text-xl text-center mb-12">
+        <p className="text-lg  text-left mb-8 pl-3 italic">
           Immerse yourself in Costa Rica’s rich artisan culture on a private guided tour of the charming towns of 
           <strong> Sarchí and Grecia</strong>. From vibrant painted ox carts to a stunning architectural landmark, this 
           experience is perfect for cultural explorers and shopping enthusiasts alike.
@@ -52,14 +52,14 @@ const Sarchi = () => {
 
         {/* Section: Sarchí – The Artisan Capital */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Sarchí – The Heart of Costa Rican Artistry</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl text-green-700 font-bold mb-4">Sarchí – The Heart of Costa Rican Artistry</h2>
+          <p className="text-lg pl-3 italic">
             Begin your journey in <strong>Sarchí</strong>, Costa Rica’s most famous artisan town. Stroll through streets lined with 
             family-owned workshops where master craftsmen create stunning <strong>hand-painted ox carts</strong>, a cherished 
             symbol of Costa Rican heritage. Watch as skilled artists meticulously apply intricate patterns in vibrant colors, 
             continuing a tradition that dates back over a century.
           </p>
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 pl-3 italic">
             Your expert guide will share the fascinating history behind these ox carts, once essential for transporting coffee 
             and now a UNESCO-recognized art form. Don’t miss the chance to see the **world’s largest painted ox cart**, a 
             magnificent testament to this proud tradition.
@@ -68,13 +68,13 @@ const Sarchi = () => {
 
         {/* Section: Grecia – The Unique Metal Church */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Grecia – The Town of the Iconic Metal Church</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl font-bold mb-4 text-green-700">Grecia – The Town of the Iconic Metal Church</h2>
+          <p className="text-lg pl-3 italic">
             Continue to the picturesque town of <strong>Grecia</strong>, home to one of Costa Rica’s most unique architectural 
             landmarks – <strong>Iglesia de la Nuestra Señora de las Mercedes</strong>. This striking, deep-red, all-metal church 
             is made entirely of prefabricated steel panels, shipped from Belgium in the 1890s.  
           </p>
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 pl-3 italic">
             Your guide will unveil the intriguing story of how this grand structure was assembled and how it remains one of 
             the most well-preserved and admired churches in Latin America. The surrounding town plaza, filled with towering 
             palm trees and local vendors, makes for a delightful stop to soak in the town’s laid-back charm.
@@ -83,13 +83,13 @@ const Sarchi = () => {
 
         {/* Section: Shopping for Handcrafted Souvenirs */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Shop for Authentic Costa Rican Handicrafts</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl text-green-700 font-bold mb-4">Shop for Authentic Costa Rican Handicrafts</h2>
+          <p className="text-lg pl-3 italic">
             No visit to Sarchí is complete without browsing its vibrant artisan markets, where you’ll find an array of 
             handcrafted treasures. Choose from exquisitely painted trays, wooden carvings, leather goods, and authentic 
             <strong> handwoven textiles</strong>, all created by local artisans.  
           </p>
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 pl-3 italic">
             Whether you’re looking for a meaningful souvenir or a unique piece of Costa Rican culture to take home, 
             your guide will help you navigate the best shops and find items that reflect the true spirit of Costa Rican craftsmanship.
           </p>
@@ -97,8 +97,8 @@ const Sarchi = () => {
 
         {/* Section: Personalized Experience */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">A Personalized and Enriching Cultural Experience</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl text-green-700 font-bold mb-4">A Personalized and Enriching Cultural Experience</h2>
+          <p className="text-lg pl-3 italic">
             This private tour ensures a <strong>tailored experience</strong>, allowing you to explore at your own pace with 
             exclusive insights from your local expert. Whether you’re a history buff, an art lover, or simply eager to discover 
             Costa Rica’s cultural heart, this journey will leave you with unforgettable memories and a deeper appreciation 
@@ -108,55 +108,26 @@ const Sarchi = () => {
       </div>
     </div>
           <div className="mt-4 space-y-4">
-
-
-            <h2 className="text-xl font-bold text-green-700">About the Tour</h2>
-            <p className="text-gray-700 leading-relaxed pl-3 italic">
-          
-            Experience Costa Rica's artisan heritage on a private tour of Sarchí and Grecia. Marvel at Sarchí's iconic painted ox carts and visit Grecia's unique metal church. Shop for handcrafted souvenirs along the way. Guided by a local expert, this tour offers a fascinating glimpse into Costa Rica's traditions and artistry. Perfect for cultural and shopping enthusiasts.
-            </p>
-
             <hr className="w-full bg-black mb-4" />
             <ul className="text-gray-700 pl-6 list-inside  space-y-4 bg-blue-200 p-4 rounded-md shadow-md italic">
-        
-
-        <li className="flex items-center">
-          <FaUsers className="mr-2 text-gray-600" />
-          All ages, max of 6 per group
-        </li>
-        
-        <li className="flex items-center">
-          <FaClock className="mr-2 text-gray-600" />
-          Duration: 6-7 hours 
-        </li>
-        <li className="flex items-center">
-          <FaSuitcase className="mr-2 text-gray-600" />
-          One trip a day: Pick up time 8:30 am
-        </li>
-        <li className="flex items-center">
-          <FaUserTie className="mr-2 text-gray-600" />
-          Live guide: English, Spanish
-        </li>
-      </ul>
-
-                  <li className="flex items-center">
-                    <FaUsers className="mr-2 text-gray-600" />
-                    All ages , max of 6 per group
-                  </li>
-                  
-                  <li className="flex items-center">
-                    <FaClock className="mr-2 text-gray-600" />
-                    Duration: 6-7 hours 
-                  </li>
-                  <li className="flex items-center">
-                    <FaSuitcase className="mr-2 text-gray-600" />
-                    one trip a day: Pick up time 8:20 am
-                  </li>
-                  <li className="flex items-center">
-                    <FaUserTie className="mr-2 text-gray-600" />
-                    Live guide: English, Spanish
-                  </li>
-               </ul>
+                <li className="flex items-center">
+                  <FaUsers className="mr-2 text-gray-600" />
+                  All ages, max of 6 per group
+                </li>
+                
+                <li className="flex items-center">
+                  <FaClock className="mr-2 text-gray-600" />
+                  Duration: 6-7 hours 
+                </li>
+                <li className="flex items-center">
+                  <FaSuitcase className="mr-2 text-gray-600" />
+                  One trip a day: Pick up time 8:30 am
+                </li>
+                <li className="flex items-center">
+                  <FaUserTie className="mr-2 text-gray-600" />
+                  Live guide: English, Spanish
+                </li>
+             </ul>
 
             {/* What's Included */}
             <div>
@@ -167,40 +138,29 @@ const Sarchi = () => {
               </div>
               {showIncluded && (
 
-                <ul className="list-disc pl-6 space-y-2 text-lg">
+                <ul className="list-disc space-y-2 text-lg pl-10 italic">
                 <li>
-                  <strong>Round-Trip Transportation:</strong> Enjoy comfortable, air-conditioned transportation to and from your hotel or designated pickup location, ensuring a stress-free and relaxing experience.
+                  <strong className='text-amber-600'>Round-Trip Transportation:</strong> Enjoy comfortable, air-conditioned transportation to and from your hotel or designated pickup location, ensuring a stress-free and relaxing experience.
                 </li>
                 <li>
-                  <strong>Expert Local Guide:</strong> Gain fascinating insights into Costa Rica’s rich artisan heritage with a knowledgeable guide who will share stories, history, and behind-the-scenes details of Sarchí and Grecia.
+                  <strong className='text-amber-600'>Expert Local Guide:</strong> Gain fascinating insights into Costa Rica’s rich artisan heritage with a knowledgeable guide who will share stories, history, and behind-the-scenes details of Sarchí and Grecia.
                 </li>
                 <li>
-                  <strong>Souvenir Shopping Experience:</strong> Browse vibrant artisan markets in Sarchí, where you can find beautifully handcrafted ox carts, wood carvings, ceramics, leather goods, and traditional textiles made by skilled local artisans.
+                  <strong className='text-amber-600'>Souvenir Shopping Experience:</strong> Browse vibrant artisan markets in Sarchí, where you can find beautifully handcrafted ox carts, wood carvings, ceramics, leather goods, and traditional textiles made by skilled local artisans.
                 </li>
                 <li>
-                  <strong>Authentic Costa Rican Lunch:</strong> Savor a delicious, locally-prepared lunch at a traditional Costa Rican restaurant, featuring fresh ingredients and regional flavors.
+                  <strong className='text-amber-600'>Authentic Costa Rican Lunch:</strong> Savor a delicious, locally-prepared lunch at a traditional Costa Rican restaurant, featuring fresh ingredients and regional flavors.
                 </li>
                 <li>
-                  <strong>Meet Master Craftsmen:</strong> Get an exclusive opportunity to meet and interact with local artisans in their workshops. Watch them meticulously hand-paint intricate designs on ox carts and other crafts while learning about their time-honored techniques.
+                  <strong className='text-amber-600'>Meet Master Craftsmen:</strong> Get an exclusive opportunity to meet and interact with local artisans in their workshops. Watch them meticulously hand-paint intricate designs on ox carts and other crafts while learning about their time-honored techniques.
                 </li>
                 <li>
-                  <strong>Visit to Grecia’s Iconic Metal Church:</strong> Explore the stunning Iglesia de la Nuestra Señora de las Mercedes, a one-of-a-kind architectural marvel made entirely of prefabricated metal panels shipped from Belgium in the 19th century.
+                  <strong className='text-amber-600'>Visit to Grecia’s Iconic Metal Church:</strong> Explore the stunning Iglesia de la Nuestra Señora de las Mercedes, a one-of-a-kind architectural marvel made entirely of prefabricated metal panels shipped from Belgium in the 19th century.
                 </li>
                 <li>
-                  <strong>Scenic Photo Opportunities:</strong> Capture breathtaking views of Costa Rica’s lush landscapes, charming town squares, and the beautifully painted ox carts of Sarchí.
+                  <strong className='text-amber-600'>Scenic Photo Opportunities:</strong> Capture breathtaking views of Costa Rica’s lush landscapes, charming town squares, and the beautifully painted ox carts of Sarchí.
                 </li>
               </ul>
-
-                
-
-                <ul className="list-disc list-inside text-gray-700 italic pt-2 pl-6">
-                  <li>Transportation to/from </li>
-                  <li>Guide</li>
-                  <li>Souvenir shopping, </li>
-                  <li>Lunch included </li>
-                  <li> custom craftsman</li>
-                </ul> 
-
               )}
             </div>
 
@@ -227,14 +187,12 @@ const Sarchi = () => {
               </div>
               {showDeparture && (
 
-                <p className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:30 AM.
+    <p className="text-gray-700 leading-relaxed pt-4 pl-6 italic">
+      The tour departs from San Jose at 8:30 AM.
+    </p>
+    
+)}
 
-                <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
-                  The tour departs from San Jose at 8:20 AM. After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. The return is around 11:30 PM, ensuring you have plenty of time to enjoy the park and surroundings.
-
-                </p>
-              )}
             </div>
 
             {/* Duration */}
