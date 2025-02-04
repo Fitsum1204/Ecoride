@@ -29,7 +29,7 @@ const Schedule = () => {
   useEffect(() => {
     if (date && selectedTour) {
       axios
-        .get(`http://localhost:3000/api/booked-times?date=${date}&tour=${selectedTour}`)
+        .get(`https://ecoride-pddz.onrender.com/api/booked-times?date=${date}&tour=${selectedTour}`)
         .then((response) => setBookedTimes(response.data))
         .catch((error) => console.error("Error fetching booked times:", error));
     }
@@ -49,7 +49,7 @@ const Schedule = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/book-tour", {
+      const response = await axios.post("https://ecoride-pddz.onrender.com/book-tour", {
         name,
         email,
         tour: selectedTour,
