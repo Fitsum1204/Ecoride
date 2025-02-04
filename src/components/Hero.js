@@ -106,7 +106,7 @@ const Hero = () => {
         </div>
         <p className="text-gray-600 italic mb-4">
         "we highly recommend EcoRide to anyone who wants to explore the world
-        while preserving nature. Excelent Trip!"
+        while preserving nature. Excellent Trip!"
         </p>
         <p className="text-lg font-semibold text-green-700">Nature Lover</p>
       </div>
