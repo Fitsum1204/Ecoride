@@ -10,8 +10,44 @@ const Schedule = () => {
       availableTimes: ["09:00 AM", "11:00 AM", "02:00 PM", "04:00 PM"],
     },
     {
+      name: "Tour of Poas Volcano and Doka Coffee Plantation",
+      price: 200,
+      eventTypeId: 1679568,
+      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
+    },
+    {
+      name: "Poas Volcano and Mirador Cinchona tour",
+      price: 200,
+      eventTypeId: 1679568,
+      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
+    },
+    {
       name: "Tour of Poás Volcano",
+      price: 130,
+      eventTypeId: 1679568,
+      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
+    },
+    {
+      name: "Tour of the Doka Coffee Plantation",
       price: 100,
+      eventTypeId: 1679568,
+      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
+    },
+    {
+      name: "Sarchí and Grecia Tour",
+      price: 100,
+      eventTypeId: 1679568,
+      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
+    },
+    {
+      name: "Tour of La Paz Waterfall Gardens",
+      price: 100,
+      eventTypeId: 1679568,
+      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
+    },
+    {
+      name: "Tour to Mirador Cinchona",
+      price: 250,
       eventTypeId: 1679568,
       availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
     },
@@ -70,9 +106,11 @@ const Schedule = () => {
       alert(error.response.data.message);
     }
   };
-
-  return (
-    <div className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-10">
+//className="backdrop-filter backdrop-blur-lg bg-opacity-50 bg-blue-100 fixed top-10 left-0 w-full h-full flex justify-center items-center"
+  return (//bg-blue-100 fixed top-10 left-0 w-full h-full flex justify-center items-center
+    
+    <div className=" max-w-xl mx-auto  p-2 bg-white shadow-lg rounded-xl mt-10 z-50 shadow-black">
+      
       <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">Book a Tour</h1>
 
       <div className="space-y-4">
@@ -164,6 +202,7 @@ const Schedule = () => {
         </button>
       </div>
     </div>
+ 
   );
 };
 
