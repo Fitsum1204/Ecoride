@@ -4,13 +4,13 @@ import axios from "axios";
 const Schedule = () => {
   const [tours] = useState([
     {
-      name: "City Tour",
+      name: "Concierge Tours",
       price: 50,
       eventTypeId: 1761492,
       availableTimes: ["09:00 AM", "11:00 AM", "02:00 PM", "04:00 PM"],
     },
     {
-      name: "Safari",
+      name: "Tour of Poás Volcano",
       price: 100,
       eventTypeId: 1679568,
       availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
