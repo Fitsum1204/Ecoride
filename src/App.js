@@ -20,6 +20,8 @@ import Mirador from './components/detailTours/Mirador';
 import PoasDoka from './components/detailTours/PoasDoka';
 import PoasMirador from './components/detailTours/PoasMirador';
 import Schedulewedget from './components/Schedulewedget';
+import Guide from './components/Guide';
+import GuiderPage from './components/Guide2';
 const App = () => {
 
   return (
@@ -33,7 +35,7 @@ const App = () => {
      
         <Route path="/" element={<Hero />} />
        
-        
+        <Route path="/guide2" element={<GuiderPage />} />
         <Route path="/transport" element={<Transport />} />
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/services" element={
@@ -87,6 +89,7 @@ const App = () => {
           </>
           } />
          <Route path="/concierge" element={<ConciergeTour />} /> 
+          <Route path="/guide" element={<Guide />} />
       </Routes>
       <Footer />  
     </Router>

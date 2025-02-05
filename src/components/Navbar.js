@@ -98,6 +98,24 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+               to="/guide"
+              className="font-normal hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Guide
+            </Link>
+            </li>
+            <li>
+            <Link
+               to="/guide2"
+              className="font-normal hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Guide2
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact"
               className="font-normal text-gray-800 hover:border-green-600 hover:text-white hover:bg-green-600 border-2 border-gray-950 px-8 py-4"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -206,7 +224,19 @@ const Navbar = () => {
                 >
                   Schedule Now
                 </Link>
-              </li>  
+              </li> 
+              <li>
+                <Link
+                  to="/guide"
+                  className="text-base text-gray-800 font-bold hover:text-green-600"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  Guide
+                </Link>
+              </li>   
               <li className="w-full">
                 <Link
                   to="/contact"
