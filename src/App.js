@@ -21,7 +21,7 @@ import PoasDoka from './components/detailTours/PoasDoka';
 import PoasMirador from './components/detailTours/PoasMirador';
 import Schedulewedget from './components/Schedulewedget';
 import Guide from './components/Guide';
-import GuiderPage from './components/Guide2';
+import GuiderPage from './components/Guide';
 const App = () => {
 
   return (

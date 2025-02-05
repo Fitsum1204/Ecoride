@@ -216,7 +216,8 @@ const Navbar = () => {
                 >
                   Schedule Now
                 </Link>
-              </li> 
+              </li>
+              <hr className="w-full bg-black mb-2" /> 
               <li>
                 <Link
                   to="/guide2"
@@ -226,7 +227,7 @@ const Navbar = () => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
-                  Guide2
+                  Guide
                 </Link>
               </li>   
               <li className="w-full">

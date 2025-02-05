@@ -1,103 +1,82 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
-import image1 from "../assets/guidePictures/Michael6.jpeg";
-import image2 from "../assets/family.jpeg";
-import image3 from "../assets/logolast.png";
-import image4 from "../assets/Michehel.jpeg";
+import { Link } from "react-router-dom";
+import image6 from "../assets/guidePictures/Michael6.jpeg";
 import Slideshow from "./Slideshow";
-const Guide = () => {
+
+const GuiderPage = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-xl">
-      {/* Hero Section */}
-      <div className="flex justify-center items-center  m-8">
-      <div className="bg-white p-4 rounded-xl shadow-lg text-center w-64 relative">
+    <div className="max-w-5xl mx-auto pt-10 px-6 md:px-10 bg-[#FAF7F2] shadow-lg rounded-lg flex flex-col md:flex-row gap-12">
+      {/* Left Section (Guide Info) */}
+      <div className="flex flex-col items-center p-6 md:w-1/3 md:mb-96 sm:mb-0 md:rounded-full  lg:rounded-full sm:rounded-lg bg-white  shadow-md">
         {/* Circular Image */}
-        <div className="w-36 h-36 mx-auto overflow-hidden rounded-full border-4 border-white -mt-12 shadow-md">
-          <img
-            src={image1} // Replace with actual image
-            alt="Fountain Park"
-            className="w-full h-full object-cover"
-          />
+        <div className="w-52 h-52 mx-auto overflow-hidden rounded-full border-4 border-gray-300 shadow-lg">
+          <img src={image6} alt="Michael" className="w-full h-full object-cover" />
         </div>
         
-        {/* Title */}
-        <h2 className="text-gray-800 font-semibold text-lg mt-4">
-        Michael
-        </h2>
-        
-        {/* Description */}
-        <div className="flex flex-col items-center justify-center text-gray-600 text-sm mt-2">
-          
-          <p className="text-gray-600">Experienced Tour Guide & Nature Enthusiast</p>
-        <p className="text-gray-500">Multilingual | English + Spanish</p>
+        {/* Guide Info */}
+        <h2 className="text-gray-800 font-bold text-2xl mt-4">Michael</h2>
+        <p className="text-gray-600 mt-2 text-center">Experienced Tour Guide & Nature Enthusiast</p>
+        <p className="text-gray-500 text-sm text-center">Multilingual | English + Spanish</p>
+      </div>
+
+      {/* Right Section (Main Content) */}
+      <div className="md:w-2/3 flex flex-col justify-center">
+        <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
+          Passionate about Creating Great Travel Experiences
+        </h1>
+
+        {/* Call to Action Buttons */}
+        <div className="flex gap-4 mt-6">
+          <a
+            href="https://wa.me/50685499997?text=Hi%20there!%20I%20am%20interested%20in%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-black text-white rounded-lg shadow-md hover:bg-gray-800 transition-all"
+          >
+            Talk with Me
+          </a>
+          <Link
+            to="/schedule"
+            className="px-6 py-3 bg-gray-200 text-gray-900 rounded-lg shadow-md hover:bg-gray-300 transition-all"
+          >
+            Book Now
+          </Link>
         </div>
-      </div>
-    </div>
-      
-      {/* Profile Section */}
-      {/* <div className="flex flex-col items-center text-center mb-8">
-        <img
-          src={image4}         alt="Michael"
-          className="w-32 h-32 rounded-full shadow-md"
-        />
-        <h2 className="text-2xl font-bold mt-4">Michael</h2>
-        <p className="text-gray-600">Experienced Tour Guide & Nature Enthusiast</p>
-        <p className="text-gray-500">Multilingual | English + Spanish</p>
-      </div> */}
-      <Slideshow/>
-      {/* Services Offered */}
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Services Offered</h2>
-        <ul className="list-disc pl-6 text-gray-600">
-          <li>City Tours</li>
-          <li>Hiking & Nature Walks</li>
-          <li>Cultural Experiences</li>
-          <li>Customizable Private Tours</li>
-        </ul>
-      </div>
-     
-      {/* Image Slider */}
-     
-      
-      {/* Testimonials */}
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">What Clients Say</h2>
-        <p className="text-gray-600 italic">"Michael made our trip unforgettable! Highly recommend his tours."</p>
-        <p className="text-gray-500">- Sarah J.</p>
-      </div>
-      
-      {/* Booking Info */}
-      <div className="mb-8 text-center">
-        <h2 className="text-xl font-semibold mb-4">Book a Tour</h2>
-        <p className="text-gray-600">For bookings and inquiries, contact:</p>
-        <p className="text-gray-500">Email: michael.tours@example.com</p>
-        <p className="text-gray-500">Phone: +123 456 7890</p>
-        <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg shadow-md">Contact Now</button>
-      </div>
-      
-      {/* FAQ Section */}
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">FAQs</h2>
-        <p className="text-gray-600"><strong>What should I bring?</strong> Comfortable shoes, water, and a camera!</p>
-        <p className="text-gray-600 mt-2"><strong>Is it kid-friendly?</strong> Yes, most tours are family-friendly.</p>
-      </div>
-      
-      {/* Contact & Social Media */}
-      <div className="text-center">
-        <h2 className="text-xl font-semibold mb-4">Follow Michael</h2>
-        <p className="text-gray-600">Stay connected on social media:</p>
-        <div className="flex justify-center space-x-4 mt-2">
-          <a href="#" className="text-blue-500">Instagram</a>
-          <a href="#" className="text-blue-500">Facebook</a>
-          <a href="#" className="text-blue-500">YouTube</a>
+
+        {/* Services Offered */}
+        <div className="mt-8">
+          <h2 className="text-2xl font-semibold mb-4">Services Offered</h2>
+          <ul className="list-none text-gray-700 space-y-3">
+            <li className="flex items-center gap-2">✅ City Tours</li>
+            <li className="flex items-center gap-2">✅ Hiking & Nature Walks</li>
+            <li className="flex items-center gap-2">✅ Cultural Experiences</li>
+            <li className="flex items-center gap-2">✅ Custom Private Tours</li>
+          </ul>
         </div>
+
+        {/* Image Slider */}
+        <div className="mt-8">
+          <Slideshow />
+        </div>
+
+        {/* Booking Information */}
+         <div className="my-8 pl-4 text-center bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center gap-4">
+          <h2 className="text-xl font-semibold mb-2">Book a Tour</h2>
+          <p className="text-gray-600">For bookings and inquiries:</p>
+          <p className="text-gray-700 font-medium">📧  Crbirds31@yahoo.com</p>
+          <a href="https://wa.me/50685499997?text=Hi%20there!%20I%20am%20interested%20in%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer" className="text-gray-700 font-medium cursor-pointer">📞 +50685499997</a>
+          <Link to="/contact" onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" })}} className="mt-6 mb-5 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all">
+            Contact Now
+          </Link>
+        </div> 
+   
       </div>
+    
     </div>
   );
 };
 
-export default Guide
+export default GuiderPage;
