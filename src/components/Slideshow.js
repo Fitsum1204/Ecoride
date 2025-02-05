@@ -19,15 +19,19 @@ const Slideshow = () => {
   ];
 
   return (
-    <div className="p-6 flex justify-start place-items-start">
-      <div className="w-3/4 h-3/4">
+    <div className="py-5 flex justify-start place-items-start">
+      <div className="w-full h-full">
         <Slide autoplay transitionDuration={500} arrows={true} indicators={true}>
           {slideImages.map((slide, index) => (
-            <div key={index} className="flex justify-center items-center h-full w-full">
+            <div key={index} className="flex flex-col justify-start items-start h-full w-full">
               <div
                 className="h-96 w-96 bg-cover bg-center flex justify-center items-center"
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
+                <div
+                className="h-96 w-96 bg-cover bg-center flex justify-center items-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              ></div>
                {/*  <h2 className="text-white text-3xl font-bold">{slide.caption}</h2> */}
               </div>
             </div>

@@ -227,14 +227,14 @@ const Navbar = () => {
               </li> 
               <li>
                 <Link
-                  to="/guide"
+                  to="/guide2"
                   className="text-base text-gray-800 font-bold hover:text-green-600"
                   onClick={() => {
                     setIsMenuOpen(false);
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
-                  Guide
+                  Guide2
                 </Link>
               </li>   
               <li className="w-full">
