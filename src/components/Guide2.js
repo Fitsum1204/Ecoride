@@ -60,16 +60,21 @@ const GuiderPage = () => {
         </div>
 
         {/* Booking Information */}
-        {/* <div className="mt-8 text-center bg-gray-100 p-6 rounded-lg shadow-md">
+         <div className="my-8 pl-4 text-center bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center gap-4">
           <h2 className="text-xl font-semibold mb-2">Book a Tour</h2>
           <p className="text-gray-600">For bookings and inquiries:</p>
-          <p className="text-gray-700 font-medium">📧 michael.tours@example.com</p>
-          <p className="text-gray-700 font-medium">📞 +123 456 7890</p>
-          <button className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all">
+          <p className="text-gray-700 font-medium">📧  Crbirds31@yahoo.com</p>
+          <a href="https://wa.me/50685499997?text=Hi%20there!%20I%20am%20interested%20in%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer" className="text-gray-700 font-medium cursor-pointer">📞 +50685499997</a>
+          <Link to="/contact" onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" })}} className="mt-6 mb-5 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all">
             Contact Now
-          </button>
-        </div> */}
+          </Link>
+        </div> 
+   
       </div>
+    
     </div>
   );
 };

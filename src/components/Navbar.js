@@ -96,22 +96,14 @@ const Navbar = () => {
               Schedule Now
             </Link>
           </li>
-          <li>
-            <Link
-               to="/guide"
-              className="font-normal hover:underline text-gray-800 hover:text-green-700"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Guide
-            </Link>
-            </li>
+         
             <li>
             <Link
                to="/guide2"
               className="font-normal hover:underline text-gray-800 hover:text-green-700"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              Guide2
+              Guide
             </Link>
           </li>
           <li>
