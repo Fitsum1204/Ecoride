@@ -64,7 +64,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-gray-100">
+    <div className=" bg-[#FAF7F2]">
       <header className="text-center mb-8 px-4">
         <h1 className="text-4xl font-bold text-green-700 sm:text-3xl">EcoRide Local Tours</h1>
         <p className="text-lg mt-2 text-gray-600 sm:text-base">Michael +506 8549 9997</p>

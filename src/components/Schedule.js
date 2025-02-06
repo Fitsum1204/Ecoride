@@ -1,208 +1,57 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useState, useEffect } from "react";
+
+// Sample cost calculation based on tour type and number of people
+const calculateCost = (tourType, numPeople) => {
+  const costPerPerson = {
+    "city_tour": 50,
+    "nature_tour": 70,
+    "transportation": 30,
+  };
+
+  return costPerPerson[tourType] * numPeople;
+};
 
 const Schedule = () => {
-  const [tours] = useState([
-    {
-      name: "Concierge Tours",
-      price: 50,
-      eventTypeId: 1761492,
-      availableTimes: ["09:00 AM", "11:00 AM", "02:00 PM", "04:00 PM"],
-    },
-    {
-      name: "Tour of Poas Volcano and Doka Coffee Plantation",
-      price: 200,
-      eventTypeId: 1679568,
-      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
-    },
-    {
-      name: "Poas Volcano and Mirador Cinchona tour",
-      price: 200,
-      eventTypeId: 1679568,
-      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
-    },
-    {
-      name: "Tour of Poás Volcano",
-      price: 130,
-      eventTypeId: 1679568,
-      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
-    },
-    {
-      name: "Tour of the Doka Coffee Plantation",
-      price: 100,
-      eventTypeId: 1679568,
-      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
-    },
-    {
-      name: "Sarchí and Grecia Tour",
-      price: 100,
-      eventTypeId: 1679568,
-      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
-    },
-    {
-      name: "Tour of La Paz Waterfall Gardens",
-      price: 100,
-      eventTypeId: 1679568,
-      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
-    },
-    {
-      name: "Tour to Mirador Cinchona",
-      price: 250,
-      eventTypeId: 1679568,
-      availableTimes: ["07:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],
-    },
-  ]);
-
   const [selectedTour, setSelectedTour] = useState("");
-  const [date, setDate] = useState("");
-  const [people, setPeople] = useState(1);
+  const [selectedDate, setSelectedDate] = useState("");
+  
   const [totalCost, setTotalCost] = useState(0);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
-  const [bookedTimes, setBookedTimes] = useState([]);
 
   useEffect(() => {
-    if (date && selectedTour) {
-      axios
-        .get(`https://ecoride-pddz.onrender.com/api/booked-times?date=${date}&tour=${selectedTour}`)
-        .then((response) => setBookedTimes(response.data))
-        .catch((error) => console.error("Error fetching booked times:", error));
-    }
-  }, [date, selectedTour]);
+    (async () => {
+      const cal = await getCalApi({ namespace: "schedule" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
 
-  useEffect(() => {
-    if (selectedTour) {
-      const tourPrice = tours.find((t) => t.name === selectedTour)?.price || 0;
-      setTotalCost(tourPrice * people);
-    }
-  }, [selectedTour, people, tours]);
+  
 
   const handleBooking = async () => {
-    if (!selectedTour || !date || !name || !email || !selectedTime) {
-      alert("Please fill in all fields");
+    if (!selectedTour || !selectedDate) {
+      alert("Please select a tour and date.");
       return;
     }
 
-    try {
-      const response = await axios.post("https://ecoride-pddz.onrender.com/book-tour", {
-        name,
-        email,
-        tour: selectedTour,
-        date,
-        time: selectedTime,
-        people,
-        totalCost,
-      });
-      alert(response.data.message);
-      setName("")
-      setEmail("");
-      setSelectedTour("");
-      setDate("");
-      setSelectedTime("");
-      setPeople(1);
-      setTotalCost(0);
-    } catch (error) {
-      alert(error.response.data.message);
-    }
-  };
-//className="backdrop-filter backdrop-blur-lg bg-opacity-50 bg-blue-100 fixed top-10 left-0 w-full h-full flex justify-center items-center"
-  return (//bg-blue-100 fixed top-10 left-0 w-full h-full flex justify-center items-center
     
-    <div className=" max-w-xl mx-auto  p-2 bg-white shadow-lg rounded-xl mt-10 z-50 shadow-black">
+    alert(`Booking confirmed! Total cost: $${totalCost}`);
+  };
+
+  return (
+    <div className="w-full h-full">
+      <header className="p-4 bg-gray-100 text-center">
+        <h1 className="text-3xl font-bold text-green-700">Schedule Your Appointment</h1>
+        <p className="text-gray-600 mt-2">Use the calendar below to select your preferred date and time.</p>
+      </header>
       
-      <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">Book a Tour</h1>
-
-      <div className="space-y-4">
-        <div>
-          <label className="block text-gray-700 font-medium">Full Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
-            placeholder="Enter your name"
-          />
-        </div>
-
-        <div>
-          <label className="block text-gray-700 font-medium">Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
-            placeholder="Enter your email"
-          />
-        </div>
-
-        <div>
-          <label className="block text-gray-700 font-medium">Select a Tour:</label>
-          <select
-            value={selectedTour}
-            onChange={(e) => setSelectedTour(e.target.value)}
-            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
-          >
-            <option value="">-- Select Tour --</option>
-            {tours.map((tour, index) => (
-              <option key={index} value={tour.name}>
-                {tour.name} - ${tour.price} per person
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-gray-700 font-medium">Select Date:</label>
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
-
-        <div>
-          <label className="block text-gray-700 font-medium">Available Times:</label>
-          <select
-            value={selectedTime}
-            onChange={(e) => setSelectedTime(e.target.value)}
-            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
-          >
-            <option value="">-- Select Time --</option>
-            {selectedTour &&
-              tours
-                .find((tour) => tour.name === selectedTour)
-                ?.availableTimes.map((time, index) => (
-                  <option key={index} value={time} disabled={bookedTimes.includes(time)}>
-                    {time} {bookedTimes.includes(time) && "(Booked)"}
-                  </option>
-                ))}
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-gray-700 font-medium">Number of People:</label>
-          <input
-            type="number"
-            value={people}
-            onChange={(e) => setPeople(Number(e.target.value))}
-            min="1"
-            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
-
-        <h3 className="text-xl font-semibold text-center text-green-600">Total Cost: ${totalCost}</h3>
-
-        <button
-          onClick={handleBooking}
-          className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-        >
-          Book Now
-        </button>
-      </div>
+      <Cal
+        namespace="schedule"
+        calLink="fitsum-amare-vhgdss/schedule"
+        style={{ width: "100%", height: "100%", overflow: "scroll" }}
+        config={{ layout: "month_view" }}
+        onDateSelected={setSelectedDate} // Handle the date selection from the calendar
+      />
     </div>
- 
   );
 };
 

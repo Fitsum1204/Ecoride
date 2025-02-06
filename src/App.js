@@ -22,6 +22,7 @@ import PoasMirador from './components/detailTours/PoasMirador';
 import Schedulewedget from './components/Schedulewedget';
 import Guide from './components/Guide';
 import GuiderPage from './components/Guide';
+import BirdTour from './components/BirdTour';
 const App = () => {
 
   return (
@@ -88,7 +89,7 @@ const App = () => {
           <Schedulewedget />
           </>
           } />
-         <Route path="/concierge" element={<ConciergeTour />} /> 
+         <Route path="/concierge" element={<BirdTour />} /> 
           <Route path="/guide" element={<Guide />} />
       </Routes>
       <Footer />  

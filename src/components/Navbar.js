@@ -60,7 +60,7 @@ const Navbar = () => {
                       handleMouseLeave();
                     }}
                   >
-                    Concierge Tours
+                    Birding Tour
                   </Link>
                 </li>
                 <li>
@@ -171,7 +171,7 @@ const Navbar = () => {
                           clickTours();
                         }}
                       >
-                        Concierge Tours
+                       Birding Tour
                       </Link>
                     </li>
                     <li>
