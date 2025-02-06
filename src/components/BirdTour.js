@@ -13,7 +13,7 @@ const videoSlides = [video1, video2, video3];
 
 const BirdTour = () => {
   return (
-    <div className="bg-[#FAF7F2] font-sans">
+    <div className="bg-[#FAF7F2] font-sans max-w-5xl mx-auto p-6 bg-white shadow-md mt-8 rounded-lg">
       {/* Hero Section with Video Slideshow */}
       <div className="relative w-full aspect-video md:aspect-[16/9] sm:aspect-[4/3]">
           <Slide 
