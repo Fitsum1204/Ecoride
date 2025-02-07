@@ -83,7 +83,7 @@ const Services = () => {
                   }}>
               <h2 className="text-xl font-semibold text-gray-800">{destination.name}</h2>
               <p className="text-gray-600 mt-2 text-sm sm:text-base">{destination.description}</p>
-              <div className="mt-4 flex items-center justify-between">
+              <div className=" mt-4  flex items-end justify-between it">
                 <span className="text-green-700 font-bold text-lg">{destination.price}</span>
                 <button
                   onClick={() => {
