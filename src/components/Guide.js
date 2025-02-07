@@ -19,7 +19,9 @@ const GuiderPage = () => {
     >
       {/* Animated Image Container */}
       <motion.div
-        className="w-52 h-52 overflow-hidden rounded-full border-4 border-orange-300 shadow-xl relative"
+       className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-72 lg:w-64 lg:h-80 xl:w-72 xl:h-96 
+       overflow-hidden rounded-full border-4 border-orange-300 shadow-xl relative"
+       
         whileHover={{ scale: 1.1 }}
       >
         <motion.img
@@ -58,13 +60,25 @@ const GuiderPage = () => {
 
       {/* Animated Ripple Effect */}
        <motion.div
-        className="absolute top-[600px]    w-48 h-48 flex items-center justify-center pointer-events-none "
+        className="relative flex items-center justify-center w-full h-full rounded-full bg-gray-50 overflow-hidden m-10 "
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: [0, 1.2, 1], opacity: [0, 0.5, 0] }}
         transition={{ repeat: Infinity, duration: 3, ease: "easeOut" }}
       >
-        <div className="flex flex-col justify-evenly  w-full h-full rounded-full bg-red-400 opacity-30 gap-20">
-          <motion.img
+         {/*  Animation */}
+      
+              <div class="absolute w-full h-full bg-green-600 border border-white animate-expand rounded-full"></div>
+              <div class="absolute w-full h-full bg-green-600 border border-white animate-expand rounded-full" style={{ animationDelay: "1s" }}></div>
+              <div class="absolute w-full h-full bg-green-500 border border-white animate-expand rounded-full" style={{ animationDelay: "1.5s" }}></div>
+              <div class="absolute w-full h-full bg-green-500 border border-white animate-expand rounded-full" style={{ animationDelay: "2s" }}></div>
+              <div class="absolute w-full h-full bg-green-400 border border-white animate-expand rounded-full" style={{ animationDelay: "2.5s" }}></div>
+              <div class="absolute w-full h-full bg-green-400 border border-white animate-expand rounded-full" style={{ animationDelay: "3s" }}></div>
+              <div class="absolute w-full h-full bg-green-300 border border-white animate-expand rounded-full" style={{ animationDelay: "3.5s" }}></div>
+              <div class="absolute w-full h-full bg-green-200 border border-white animate-expand rounded-full" style={{ animationDelay: "4s" }}></div>
+              <div class="absolute w-full h-full bg-green-100 border border-white animate-expand rounded-full" style={{ animationDelay: "4.5s" }}></div>
+              <div class="absolute w-full h-full bg-green-50 border border-white animate-expand rounded-full" style={{ animationDelay: "5s" }}></div>
+
+          {/* <motion.img
           src={image6}
           alt="Michael"
           className="w-full h-full object-cover"
@@ -72,67 +86,13 @@ const GuiderPage = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         />
-        <motion.img
-          src={extraImage1}
-          alt="Michael"
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        />
-        <motion.img
-          src={extraImage2}
-          alt="Michael"
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        />
-        <motion.img
-          src={extraImage3}
-          alt="Michael"
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        />
-        <motion.img
-          src={image6}
-          alt="Michael"
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        />
-        <motion.img
-          src={extraImage1}
-          alt="Michael"
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        />
-        
        
-        </div>
+         */}
+       
+     
         
       </motion.div> 
-      {/* <motion.div
-        className="absolute top-[650px]   left-5 w-48 h-52 flex items-center justify-center pointer-events-none"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: [0, 1.2, 1], opacity: [0, 0.5, 0] }}
-        transition={{ repeat: Infinity, duration: 3, ease: "easeOut" }}
-      >
-        <div className="flex justify-center items-center  w-full h-full rounded-full bg-red-400 opacity-30"><motion.img
-          src={image6}
-          alt="Michael"
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        /></div>
-        
-      </motion.div>  */}
+     
     </motion.div>
       
 
