@@ -12,7 +12,7 @@ const GuiderPage = () => {
     <div className="max-w-5xl mx-auto pt-10 px-6 md:px-10 bg-[#FAF7F2] shadow-lg rounded-lg flex flex-col md:flex-row gap-12">
       {/* Left Section (Guide Info) */}
       <motion.div
-      className="flex flex-col items-center p-8 md:w-1/3 lg:w-1/3 md:rounded-full sm:rounded-2xl sm:h-full    bg-gradient-to-b from-yellow-50 to-orange-100 shadow-2xl relative mb-3 md:h-full"
+      className="flex flex-col items-center p-8 md:w-1/3 lg:w-1/3 md:rounded-full sm:rounded-2xl    bg-gradient-to-b from-yellow-50 to-orange-100 shadow-2xl relative mb-3 "
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -57,14 +57,82 @@ const GuiderPage = () => {
       </p>
 
       {/* Animated Ripple Effect */}
-      {/* <motion.div
-        className="absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none"
+       <motion.div
+        className="absolute top-[600px]    w-48 h-48 flex items-center justify-center pointer-events-none "
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: [0, 1.2, 1], opacity: [0, 0.5, 0] }}
         transition={{ repeat: Infinity, duration: 3, ease: "easeOut" }}
       >
-        <div className="relative w-72 h-72 rounded-full bg-red-400 opacity-30"><div className="relative w-52 h-52 rounded-full bg-red-700 opacity-30"></div></div>
-      </motion.div> */}
+        <div className="flex flex-col justify-evenly  w-full h-full rounded-full bg-red-400 opacity-30 gap-20">
+          <motion.img
+          src={image6}
+          alt="Michael"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <motion.img
+          src={extraImage1}
+          alt="Michael"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <motion.img
+          src={extraImage2}
+          alt="Michael"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <motion.img
+          src={extraImage3}
+          alt="Michael"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <motion.img
+          src={image6}
+          alt="Michael"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <motion.img
+          src={extraImage1}
+          alt="Michael"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+        
+       
+        </div>
+        
+      </motion.div> 
+      {/* <motion.div
+        className="absolute top-[650px]   left-5 w-48 h-52 flex items-center justify-center pointer-events-none"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: [0, 1.2, 1], opacity: [0, 0.5, 0] }}
+        transition={{ repeat: Infinity, duration: 3, ease: "easeOut" }}
+      >
+        <div className="flex justify-center items-center  w-full h-full rounded-full bg-red-400 opacity-30"><motion.img
+          src={image6}
+          alt="Michael"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        /></div>
+        
+      </motion.div>  */}
     </motion.div>
       
 
