@@ -86,15 +86,15 @@ const Navbar = () => {
             >
               Transport
             </Link>
-          </li>
-          <li>
-            <Link
+          {/* </li>
+          <li> */}
+           {/*  <Link
               to="/schedule"
               className="font-normal hover:underline text-gray-800 hover:text-green-700"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Schedule Now
-            </Link>
+            </Link> */}
           </li>
          
             <li>
@@ -204,8 +204,8 @@ const Navbar = () => {
                   Transport
                 </Link>
               </li> 
-              <hr className="w-full bg-black mb-2" />
-              <li>
+              {/*  <hr className="w-full bg-black mb-2" />*/}
+              {/* <li>
                 <Link
                   to="/schedule"
                   className="text-base text-gray-800 font-bold hover:text-green-600"
@@ -216,7 +216,7 @@ const Navbar = () => {
                 >
                   Schedule Now
                 </Link>
-              </li>
+              </li> */}
               <hr className="w-full bg-black mb-2" /> 
               <li>
                 <Link

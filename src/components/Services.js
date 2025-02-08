@@ -69,36 +69,37 @@ const Services = () => {
         <h1 className="text-4xl font-bold text-green-700 sm:text-3xl">EcoRide Local Tours</h1>
         <p className="text-lg mt-2 text-gray-600 sm:text-base">Michael +506 8549 9997</p>
       </header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 pb-4">
-        {destinations.map((destination, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img
-              src={destination.image}
-              alt={destination.name}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4 cursor-pointer" onClick={() => {
-                    navigate(destination.route);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}>
-              <h2 className="text-xl font-semibold text-gray-800">{destination.name}</h2>
-              <p className="text-gray-600 mt-2 text-sm sm:text-base">{destination.description}</p>
-              <div className=" mt-4  flex items-end justify-between it">
-                <span className="text-green-700 font-bold text-lg">{destination.price}</span>
-                <button
-                  onClick={() => {
-                    navigate(destination.route);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                  className="bg-green-700 text-white px-4 py-2 rounded shadow"
-                >
-                  Details
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 pb-4 items-stretch">
+  {destinations.map((destination, index) => (
+    <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
+      <img
+        src={destination.image}
+        alt={destination.name}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-4 flex flex-col flex-grow cursor-pointer" onClick={() => {
+        navigate(destination.route);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}>
+        <h2 className="text-xl font-semibold text-gray-800">{destination.name}</h2>
+        <p className="text-gray-600 mt-2 text-sm sm:text-base flex-grow">{destination.description}</p>
+        <div className="mt-auto flex items-end justify-between">
+          <span className="text-green-700 font-bold text-lg">{destination.price}</span>
+          <button
+            onClick={() => {
+              navigate(destination.route);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="bg-green-700 text-white px-4 py-2 rounded shadow"
+          >
+            Details
+          </button>
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 };

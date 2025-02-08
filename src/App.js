@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 
 import Footer from './components/Footer';
 import Hotels from './components/Hotels';
-import ConciergeTour from './components/ConciergeTour';
+
 import Schedule from './components/Schedule';
 import PoasVolcano from './components/detailTours/PoasVolcano';
 import Doka from './components/detailTours/Doka';
@@ -23,6 +23,7 @@ import Schedulewedget from './components/Schedulewedget';
 import Guide from './components/Guide';
 import GuiderPage from './components/Guide';
 import BirdTour from './components/BirdTour';
+
 const App = () => {
 
   return (

@@ -4,38 +4,58 @@ import F1 from '../assets/family.jpeg'
 import F2 from '../assets/pexels-simon-robben-55958-614810.jpg'
 import F3 from '../assets/family3.jpeg'
 import { useNavigate, Link } from 'react-router-dom';
-
-const Hero = () => {
+import { motion } from 'framer-motion';
+const Hero1 = () => {
   const navigate = useNavigate();
-  const handelClick = () => {navigate('/services')}
- 
+  const handleClick = () => {navigate('/services')}
+  //const handleClick = () => {
+    //console.log("View Tours clicked!");
 
 
   return (
     <Fragment>
       {/* Hero Section */}
-      <section id="home" className="relative w-full h-[530px]">
-        {/* Background with Gradient and Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-[url('/public/coverpage.jpeg')]">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-        </div>
+      <section id="home" className="relative w-full h-[530px] overflow-hidden">
+      {/* Background with Animated Image and Gradient */}
+      
 
-        {/* Content */}
-        <div className="relative flex flex-col items-start justify-center text-left h-full text-white p-6 sm:p-10 md:p-20 lg:p-32 xl:p-64">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-normal mb-4">
-            Explore the World, Sustainably
-          </h1>
-          <p className="mb-4 text-base sm:text-lg md:text-xl lg:text-2xl max-w-lg font-normal leading-tight tracking-normal font-sans">
-            Discover eco-friendly accommodations and unforgettable eco-tourism activities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <button className="py-3 px-10 bg-green-500 text-white font-bold rounded hover:bg-green-600" onClick={handelClick}>
-              View Tours
-            </button>
-            
-          </div>
-        </div>
-      </section>
+      {/* Content */}
+      <div className="relative flex flex-col items-start justify-center text-left h-full text-white p-6 sm:p-10 md:p-20 lg:p-32 xl:p-64">
+        <motion.h1 
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-normal mb-4"
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          Explore the World, Sustainably
+        </motion.h1>
+
+        <motion.p 
+          className="mb-4 text-base sm:text-lg md:text-xl lg:text-2xl max-w-lg font-normal leading-tight tracking-normal font-sans"
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        >
+          Discover eco-friendly accommodations and unforgettable eco-tourism activities.
+        </motion.p>
+
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-4 mt-6"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+        >
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="py-3 px-10 bg-green-500 text-white font-bold rounded shadow-lg hover:bg-green-600"
+            onClick={handleClick}
+          >
+            View Tours
+          </motion.button>
+        </motion.div>
+      </div>
+    </section>
 
       {/* Info Section */}
       <section id="about" className="flex flex-col lg:flex-row items-center p-4 sm:p-2 md:p-16 md:flex-row lg:px-32 xl:px-64 py-8 gap-8">
@@ -139,4 +159,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero1;

@@ -124,12 +124,12 @@ const Contact = () => {
    
     </div>
     <h2 className="text-3xl font-bold mb-6">
-  <Link
+  {/* <Link
     to="/schedule"
     className="hover:underline text-green-800"
   >
     Schedule Your Appointment Today!
-  </Link>
+  </Link> */}
 </h2>
 
   </div>

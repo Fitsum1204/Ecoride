@@ -15,6 +15,3 @@
   border-top: 12px solid #4a5568; /* Adjust color as needed */
 }
 
-.react-slideshow-wrapper .react-slideshow-fadezoom-images-wrap {
-  position: static !important;
-}

@@ -106,7 +106,7 @@ const GuiderPage = () => {
 >
   <span className="relative inline-block">
     Passionate about  
-    <span className="absolute -bottom-2 left-0 w-full h-2 bg-yellow-400 rounded-md"></span>
+    
   </span>  
   <br className="hidden sm:block" />
   <span className="text-green-600">Creating Great Travel Experiences</span>
@@ -195,7 +195,7 @@ const GuiderPage = () => {
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
               className="text-green-500 text-xl"
             >
-              ✅
+              ✔
             </motion.span>
             <span className="text-lg font-medium">{service}</span>
           </motion.li>
