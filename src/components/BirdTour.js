@@ -91,7 +91,7 @@ const BirdingTours = () => {
   
         {/* Personalized Experience Section with Smooth Transition */}
         <motion.div
-            className="relative flex flex-col items-center text-center max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-yellow-500 to-orange-400 text-white shadow-2xl"
+            className="relative flex flex-col items-center text-center max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-yellow-50 to-orange-100 shadow-2xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
@@ -105,7 +105,7 @@ const BirdingTours = () => {
             animate={{ y: 0, rotate: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
             >
-            <FaFeather size={40} />
+            <FaFeather size={40} className="text-green-800" />
             </motion.div>
 
             {/* Title with Entrance Animation */}
@@ -131,14 +131,14 @@ const BirdingTours = () => {
         </motion.div>
         {/* Tour Packages Section */}
         <motion.div 
-        className="relative flex flex-col max-w-6xl mx-auto p-6  rounded-3xl bg-gradient-to-r from-yellow-500 to-orange-400 text-white shadow-2xl "
+        className="relative flex flex-col max-w-6xl mx-auto p-6  rounded-3xl bg-gradient-to-r from-yellow-50 to-orange-100 text-white shadow-2xl "
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true, amount: 0.3 }}
         >
-        <h2 className="text-4xl font-extrabold mb-8 text-center drop-shadow-lg sm:text-3xl">🌿 Exclusive Birding Tours</h2>
+        <h2 className="text-4xl font-extrabold mb-8 text-center drop-shadow-lg sm:text-3xl text-gray-700">🌿 Exclusive Birding Tours</h2>
 
         {/** Tour Card Component **/}
         {[
@@ -203,13 +203,13 @@ const BirdingTours = () => {
         <BirdSlideshow />
         {/* Pricing Section */}
         <motion.div 
-        className="mt-6 p-6 md:p-8 rounded-xl bg-gradient-to-r from-yellow-500 to-orange-400 shadow-2xl text-white"
+        className="mt-6 p-6 md:p-8 rounded-xl bg-gradient-to-r from-yellow-50 to-orange-100 shadow-2xl text-gray-300"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         >
         <motion.h2 
-            className="text-3xl md:text-4xl font-extrabold mb-4 drop-shadow-lg text-white"
+            className="text-3xl md:text-4xl font-extrabold mb-4 drop-shadow-lg text-gray-700"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -223,11 +223,11 @@ const BirdingTours = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
         >
-            <strong className="text-white">14-Day Private Birding Tour:</strong> 
-            <span className="text-yellow-300 font-bold ml-2 drop-shadow-lg"> $6,295 USD per person (double occupancy)</span> <br/>
+            <strong className="text-gray-700">14-Day Private Birding Tour:</strong> 
+            <span className="text-yellow-900 font-bold ml-2 drop-shadow-lg"> $6,295 USD per person (double occupancy)</span> <br/>
             
-            <strong className="text-white">7-Day Private Birding Tour:</strong> 
-            <span className="text-yellow-300 font-bold ml-2 drop-shadow-lg"> $3,990 USD per person (double occupancy)</span>
+            <strong className="text-gray-700">7-Day Private Birding Tour:</strong> 
+            <span className="text-yellow-900 font-bold ml-2 drop-shadow-lg"> $3,990 USD per person (double occupancy)</span>
         </motion.p>
         </motion.div>
         {/* Contact Section */}
