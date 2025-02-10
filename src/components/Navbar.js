@@ -50,7 +50,16 @@ const Navbar = () => {
               Birding Tour
             </Link>
           </li>
-          <li
+          <li>
+            <Link
+              to="/services"
+              className="font-normal text-wrap hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Tours
+            </Link>
+          </li>
+         {/*  <li
             className="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -71,7 +80,7 @@ const Navbar = () => {
                   >
                     Birding Tour
                   </Link>
-                </li> */}
+                </li> 
                 <li>
                   <Link
                     to="/services"
@@ -87,7 +96,7 @@ const Navbar = () => {
                 
               </ul>
             )}
-          </li>
+          </li> */}
           <li>
             <Link
               to="/transport"
@@ -174,7 +183,20 @@ const Navbar = () => {
                   Birding Tour
                 </Link>
               </li>
-              <li className="relative">
+              <hr className="w-full bg-black mb-4" />
+              <li>
+                <Link
+                  to="/services"
+                  className="text-base text-gray-800 font-bold hover:text-green-600"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  Tours
+                </Link>
+              </li>
+              {/* <li className="relative">
                 <hr className="w-full bg-black mb-4" />
                 <button
                   className="hover:underline text-gray-800 hover:text-green-700 text-base font-bold"
@@ -196,7 +218,7 @@ const Navbar = () => {
                       >
                        Birding Tour
                       </Link>
-                    </li> */}
+                    </li> 
                     <li>
                       <Link
                         to="/services"
@@ -214,7 +236,7 @@ const Navbar = () => {
                     
                   </ul>
                 )}
-              </li>
+              </li> */}
               <hr className="w-full bg-black mb-2" />
               <li>
                 <Link
