@@ -129,8 +129,9 @@ const GuiderPage = () => {
             </a>
          {/* Book Now Button */}
   <Link
-    to="/schedule"
+    to="/contact"
     className="px-6 py-3 rounded-lg bg-gray-200 text-gray-900 shadow-lg hover:bg-gray-300 hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
   >
     <svg
       className="w-5 h-5 text-gray-900"
