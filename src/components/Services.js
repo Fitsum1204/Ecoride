@@ -64,10 +64,10 @@ const Services = () => {
   ];
 
   return (
-    <div className=" bg-[#FAF7F2]">
-      <header className="text-center mb-8 px-4">
-        <h1 className="text-4xl font-bold text-green-700 sm:text-3xl">EcoRide Local Tours</h1>
-        <p className="text-lg mt-2 text-gray-600 sm:text-base">Michael +506 8549 9997</p>
+    <div className=" bg-[#FAF7F2] px-6 md:px-16 lg:px-32 xl:px-64 ">
+      <header className="text-center mb-8  px-4">
+        <h1 className="text-4xl font-bold text-green-700 sm:text-3xl p-8">EcoRide Local Tours</h1>
+        <p className="text-lg  text-gray-600 sm:text-base">Michael +506 8549 9997</p>
       </header>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 pb-4 items-stretch">
   {destinations.map((destination, index) => (
