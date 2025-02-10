@@ -7,11 +7,8 @@ import Hero from './components/Hero';
 import Transport from './components/Transport';
 import TranslateWidget from './components/TranslateWidget';
 import Contact from './components/Contact';
-
 import Footer from './components/Footer';
 import Hotels from './components/Hotels';
-
-import Schedule from './components/Schedule';
 import PoasVolcano from './components/detailTours/PoasVolcano';
 import Doka from './components/detailTours/Doka';
 import Sarchi from './components/detailTours/Sarchi';
@@ -20,9 +17,8 @@ import Mirador from './components/detailTours/Mirador';
 import PoasDoka from './components/detailTours/PoasDoka';
 import PoasMirador from './components/detailTours/PoasMirador';
 import Schedulewedget from './components/Schedulewedget';
-import Guide from './components/Guide';
 import GuiderPage from './components/Guide';
-import BirdTour from './components/BirdTour';
+import BirdingTours from './components/BirdTour';
 
 const App = () => {
 
@@ -36,8 +32,6 @@ const App = () => {
       <Routes>
      
         <Route path="/" element={<Hero />} />
-       
-        <Route path="/guide2" element={<GuiderPage />} />
         <Route path="/transport" element={<Transport />} />
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/services" element={
@@ -46,8 +40,6 @@ const App = () => {
                 <Schedulewedget />
                 </>} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/schedule" element={<Schedule />} />
-      
         <Route path="/poasvolcano" element={
           <> 
           <PoasVolcano />
@@ -90,8 +82,9 @@ const App = () => {
           <Schedulewedget />
           </>
           } />
-         <Route path="/concierge" element={<BirdTour />} /> 
-          <Route path="/guide" element={<Guide />} />
+         
+         <Route path="/birding" element={<BirdingTours />} /> 
+          <Route path="/guide" element={<GuiderPage />} />
       </Routes>
       <Footer />  
     </Router>

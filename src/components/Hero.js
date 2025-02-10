@@ -46,8 +46,7 @@ const Hero = () => {
           Welcome to <span className='text-green-600'>EcoRide</span>
           </h2>
           <p className="text-base md:text-sm lg:text-base text-gray-600 mb-6">
-           Your Gateway to Sustainable Adventures in Costa Rica
-          Discover the vibrant beauty of Costa Rica with EcoRide, your trusted partner in eco-friendly travel and transportation. Based in the stunning Alajuela region, we offer curated local tours that immerse you in the heart of our lush landscapes and rich culture. For those seeking to explore the entire country, our personalized concierge tours provide seamless, tailored itineraries to help you uncover Costa Rica's hidden gems. Additionally, we specialize in reliable, comfortable, and sustainable transport services between airports, hotels, and destinations across the country. At EcoRide, we are committed to creating unforgettable experiences while preserving the natural beauty that makes Costa Rica a paradise. Let us take you on a journey that is as enriching as it is eco-conscious.
+          Discover the vibrant beauty of Costa Rica with EcoRide, your trusted partner in eco-friendly travel and transportation. Based in Alajuela, we offer curated local tours and personalized concierge adventures to explore the country’s hidden gems. Our exclusive <strong>private birding tours</strong>take you into Costa Rica’s most diverse habitats, from cloud forests to coastal mangroves, guided by expert naturalists. Whether you choose a <strong>7-day regional tour</strong> or a <strong>14-day cross-country journey</strong>, we provide a fully immersive birding experience tailored to your interests. Additionally, our sustainable transport services ensure reliable and comfortable travel between airports, hotels, and destinations. Experience Costa Rica with EcoRide, where adventure and conservation go hand in hand.
           </p>
           <Link 
             to="/contact" 

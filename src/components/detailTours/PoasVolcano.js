@@ -217,7 +217,7 @@ const PoasVolcano = () => {
               
             </div>
             <div className='mb-4 italic'>
-            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-8">
+            <Link to='/contact' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-8">
               Schedule Now
             </Link>
             </div>

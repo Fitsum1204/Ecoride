@@ -1,305 +1,266 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-
-import { motion } from "framer-motion";
+import { FaFeather, FaMapMarkerAlt } from "react-icons/fa";
+import BirdSlideshow from "./BirdSlideShow";
 import video1 from "../assets/video1.mp4";  
 import video2 from "../assets/Video2.mp4";
 import video3 from "../assets/video3.mp4"; 
-import BirdSlideshow from "./BirdSlideShow";
-//import TourPackages from "./Tours";
-import TourPackages from "./TourPackages";
+import { Link } from "react-router-dom";
+
 const videoSlides = [video1, video2, video3];
-
-const BirdTour = () => {
+const BirdingTours = () => {
   return (
-    <div className="bg-[#FAF7F2] font-sans max-w-5xl mx-auto p-6  shadow-md mt-0 rounded-lg">
-      {/* Hero Section with Video Slideshow */}
-      <div className="relative w-full aspect-video md:aspect-[16/9] sm:aspect-[4/3]">
-          <Slide 
-            autoplay 
-            transitionDuration={1000} 
-            autoplaySpeed={4000}
-            arrows={false} 
-            pauseOnHover={false}
-          >
-            {videoSlides.map((video, index) => (
-              <div key={index} className="relative w-full h-full">
-                {/* Video Container */}
-                <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 aspect ratio */}
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute top-0 left-0 w-full h-full object-cover"
+    <div className="container max-w-5xl mx-auto p-6 space-y-8">
+        {/* Hero Section with Video Slideshow */}
+        <div className="relative w-full aspect-video md:aspect-[16/9] sm:aspect-[4/3]">
+                  <Slide 
+                    autoplay 
+                    transitionDuration={1000} 
+                    autoplaySpeed={4000}
+                    arrows={false} 
+                    pauseOnHover={false}
                   >
-                    <source src={video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
+                    {videoSlides.map((video, index) => (
+                      <div key={index} className="relative w-full h-full">
+                        {/* Video Container */}
+                        <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 aspect ratio */}
+                          <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="absolute top-0 left-0 w-full h-full object-cover"
+                          >
+                            <source src={video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+                    ))}
+                  </Slide>
+        </div>
+        {/* Hero Section */}
+          <motion.div
+            className="relative flex flex-col items-center justify-center text-center  p-6 rounded-2xl bg-gradient-to-r from-green-900 to-green-700 text-white shadow-2xl mt-0"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+            >
+            {/* Subtle animated background effect */}
+            <motion.div
+                className="absolute inset-0 bg-green-800/50 rounded-2xl blur-xl opacity-40"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.4 }}
+                transition={{ duration: 1.5 }}
+            />
 
-                {/* Overlay Content */}
-                <div className="absolute inset-0 bg-slate-600 bg-opacity-10 flex flex-col items-center justify-end p-2 text-center">
-                  <div className="max-w-4xl mx-auto">
-                    <h1 className="text-base md:text-3xl sm:text-lg font-bold text-white mb-0">
-                      Costa Rica Birding Adventure
-                    </h1>
-                    <p className="text-sm md:text-lg sm:text-base text-white mb-6">
-                      Experience the breathtaking beauty of Costa Rica’s diverse bird species.
-                    </p>
-                    <Link
-                      to="/book"
-                      className="inline-block px-4 py-2 md:px-6 md:py-2 sm:px-4 sm:py-2 bg-yellow-500 text-black rounded-lg text-lg md:text-base sm:text-sm hover:bg-yellow-600 transition-colors"
-                    >
-                      Book Your Tour
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slide>
-      </div>
-      {/* Tour Overview */}
-      <TourPackages />
-      {/* Tour Details */}
-      <motion.div 
-      initial={{ opacity: 0, y: 20, scale: 0.9 }} 
-      animate={{ opacity: 1, y: 0, scale: 1 }} 
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      whileHover={{ scale: 1.02, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
-      className="max-w-5xl mx-auto p-6 bg-white shadow-md mt-8 rounded-lg"
-    >
-      <motion.h2 
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-3xl font-semibold text-gray-900"
-      >
-        Tour Highlights
-      </motion.h2>
-      <motion.ul 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ staggerChildren: 0.2, delayChildren: 0.5 }}
-        className="list-disc ml-6 mt-4 text-gray-700 space-y-2"
-      >
+            {/* Title with a pop-in animation */}
+            <motion.h1
+                className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-wide mb-6 drop-shadow-lg"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                Exclusive Private Birding Tours in Costa Rica
+            </motion.h1>
+
+            {/* Subtitle fading in with staggered effect */}
+            <motion.p
+                className="text-lg font-medium max-w-2xl leading-relaxed drop-shadow-md "
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+            >
+                For passionate birders, Costa Rica is a dream destination—home to more than 900 species in some of the most
+                biodiverse ecosystems on the planet. Our <strong className="text-yellow-300">private guided birding tours</strong> are crafted exclusively for
+                the birder community, offering a specialized experience tailored to your interests and goals.
+            </motion.p>
+
+            {/* Call to action button with hover animation */}
+           
+            <Link  to="/contact" className=" bg-yellow-500 hover:bg-yellow-400 text-white font-semibold py-3 px-6 rounded-lg mt-6 drop-shadow-lg"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                🌟 Book Your Adventure Now
+            </Link>
+           
+
+            </motion.div>
+  
+        {/* Personalized Experience Section with Smooth Transition */}
+        <motion.div
+            className="relative flex flex-col items-center text-center max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-yellow-500 to-orange-400 text-white shadow-2xl"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
+        >
+            {/* Floating Feather Icon */}
+            <motion.div
+            className="absolute -top-4 right-4 text-white opacity-70"
+            initial={{ y: -10, rotate: -10, opacity: 0 }}
+            animate={{ y: 0, rotate: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            >
+            <FaFeather size={40} />
+            </motion.div>
+
+            {/* Title with Entrance Animation */}
+            <motion.h2
+            className="text-4xl font-extrabold mb-4 drop-shadow-lg"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            >
+            Personalized Attention & Small Group Experience
+            </motion.h2>
+
+            {/* Subtitle with Slide-in Animation */}
+            <motion.p
+            className="text-lg font-medium leading-relaxed drop-shadow-md"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            >
+            Our tours are limited to a <strong className="text-green-900">maximum of six participants</strong>, ensuring{" "}
+            <strong className="text-green-900">personalized attention</strong> and an intimate birding experience.
+            </motion.p>
+        </motion.div>
+        {/* Tour Packages Section */}
+        <motion.div 
+        className="relative flex flex-col max-w-6xl mx-auto p-6  rounded-3xl bg-gradient-to-r from-yellow-500 to-orange-400 text-white shadow-2xl "
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
+        >
+        <h2 className="text-4xl font-extrabold mb-8 text-center drop-shadow-lg sm:text-3xl">🌿 Exclusive Birding Tours</h2>
+
+        {/** Tour Card Component **/}
         {[
-          "Duration: 10-day guided birdwatching tour",
-          "Locations: Cloud forests, national parks, wetlands",
-          "Difficulty Level: Suitable for all experience levels",
-          "Guides: Professional ornithologists and eco-tourism experts",
-          "Accommodation: Luxury eco-lodges with authentic Costa Rican cuisine"
-        ].map((item, index) => (
-          <motion.li 
-            key={index} 
+            {
+            title: "14-Day Private Birding Tour",
+            days: [
+                "Day 1-2: San Gerardo de Dota – Cloud Forest & Highland Specialties",
+                "Day 3-4: Caribbean Lowlands – Rainforest Birding",
+                "Day 5-6: Caribbean Foothills",
+                "Day 7-8: Arenal Volcano Region",
+                "Day 9-10: Pacific Dry Forest & Mangroves",
+                "Day 11-12: Osa Peninsula",
+                "Day 13-14: Return to San José & Departure",
+            ],
+            },
+            {
+            title: "7-Day Southeast Costa Rica Tour",
+            days: [
+                "Day 1: Arrival in San José – Transfer to a lodge",
+                "Day 2-3: Talamanca Highlands",
+                "Day 4-5: Osa Peninsula",
+                "Day 6: Mangrove Birding",
+                "Day 7: Return to San José & Departure",
+            ],
+            },
+            {
+            title: "7-Day Northwest Costa Rica Tour",
+            days: [
+                "Day 1: Arrival in San José – Transfer to Palo Verde",
+                "Day 2-3: Dry Forest Birding",
+                "Day 4-5: Monteverde Cloud Forest",
+                "Day 6: Coastal Birding",
+                "Day 7: Return to San José & Departure",
+            ],
+            },
+        ].map((tour, index) => (
+            <motion.div
+            key={index}
+            className="bg-white text-gray-900 p-6 rounded-2xl shadow-lg mb-6 hover:shadow-2xl transition-all duration-300 sm:p-4"
+            whileHover={{ scale: 1.03 }}
+            >
+            <h3 className="text-base sm:text-xl md:text-2xl  font-bold mb-3 text-orange-500 flex items-center gap-2 ">
+                <FaMapMarkerAlt className="text-yellow-500" /> {tour.title}
+            </h3>
+            <ul className=" list-inside space-y-2 px-3 text-base sm:text-lg">
+                {tour.days.map((day, idx) => (
+                <motion.li
+                    key={idx}
+                    className="font-medium"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 * idx, duration: 0.5 }}
+                >
+                    {day}
+                </motion.li>
+                ))}
+            </ul>
+            </motion.div>
+        ))}
+        </motion.div>
+        {/* Bird picture Section */}
+        <BirdSlideshow />
+        {/* Pricing Section */}
+        <motion.div 
+        className="mt-6 p-6 md:p-8 rounded-xl bg-gradient-to-r from-yellow-500 to-orange-400 shadow-2xl text-white"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+        <motion.h2 
+            className="text-3xl md:text-4xl font-extrabold mb-4 drop-shadow-lg text-white"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
+            💰 Pricing & Flexibility
+        </motion.h2>
+
+        <motion.p 
+            className="text-lg md:text-xl font-semibold leading-relaxed text-white/90"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: index * 0.2 }}
-          >
-            <strong>{item.split(":")[0]}:</strong> {item.split(":")[1]}
-          </motion.li>
-        ))}
-      </motion.ul>
-    </motion.div>
-
-      {/* Featured Bird Species */}
-      
-      <BirdSlideshow />
-
-      {/* Why Choose Us */}
-      <div className="relative flex justify-center items-center min-h-72 max-w-5xl mx-auto p-6 shadow-md mt-8 rounded-lg sm:min-h-96 md:min-h-[400px] lg:min-h-[500px]">
-      <motion.div
-        initial={{ clipPath: "circle(0% at 50% 50%)", opacity: 0 }}
-        animate={{ clipPath: "circle(100% at 50% 50%)", opacity: 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-        className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 p-6 sm:p-8 md:p-10 lg:p-12 text-white flex flex-col items-center"
-      >
-        <motion.h2
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
         >
-          Why Choose Us?
-        </motion.h2>
-        <motion.ul
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
-          }}
-          className="mt-6 space-y-8 text-center text-sm sm:text-base md:text-xl"
-        >
-          {[ 
-            "Eco-friendly and sustainable tourism practices", 
-            "Small, personalized group sizes for an immersive experience", 
-            "Exclusive birdwatching locations with rare species" 
-          ].map((item, index) => (
-            <motion.li 
-              key={index} 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.3 }}
-              className="bg-white text-blue-600 px-3 py-1 sm:px-4 sm:py-2 rounded-full inline-block shadow-lg"
-            >
-              {item}
-            </motion.li>
-          ))}
-        </motion.ul>
-      </motion.div>
-    </div>
-  
-
-      {/* Pricing Section */}
-      <div className="relative flex justify-center items-center min-h-72 max-w-5xl mx-auto p-6 shadow-md mt-8 rounded-lg overflow-hidden">
-      <motion.div
-        initial={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
-        animate={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-        className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 p-10 text-white flex flex-col items-center justify-center"
-      >
-        <motion.h2
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl font-bold text-center"
-        >
-          Tour Pricing
-        </motion.h2>
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-4 text-lg"
-        >
-          Starting from <span className="font-bold text-2xl">$2,500</span> per person.
+            <strong className="text-white">14-Day Private Birding Tour:</strong> 
+            <span className="text-yellow-300 font-bold ml-2 drop-shadow-lg"> $6,295 USD per person (double occupancy)</span> <br/>
+            
+            <strong className="text-white">7-Day Private Birding Tour:</strong> 
+            <span className="text-yellow-300 font-bold ml-2 drop-shadow-lg"> $3,990 USD per person (double occupancy)</span>
         </motion.p>
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <Link to="/pricing" className="mt-6 inline-block bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-indigo-100 transition">
-            View Full Pricing
-          </Link>
         </motion.div>
-      </motion.div>
-    </div>
+        {/* Contact Section */}
+        <motion.div 
+        className="mt-10 p-6 md:p-8 rounded-xl bg-gradient-to-r from-green-600 to-green-400 shadow-2xl text-white text-center"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+        <motion.h2 
+            className="text-3xl md:text-4xl font-extrabold mb-4 text-white drop-shadow-xl"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
+            🦜 Ready to Begin Your Costa Rican Birding Adventure?
+        </motion.h2>
 
-      {/* Testimonials */}
-      <div className="relative flex justify-center items-center min-h-72 max-w-5xl mx-auto p-6 shadow-md mt-8 rounded-lg overflow-hidden">
-        <motion.div
-          initial={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
-          animate={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 p-10 text-white flex flex-col items-center justify-center"
+        <motion.div 
+            className="text-lg md:text-xl font-medium leading-relaxed text-white/90"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+         
+     
         >
-          <motion.h2
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl font-bold text-center"
-          >
-            What Our Guests Say
-          </motion.h2>
-          <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-4 text-lg"
-          >
-            "An unforgettable experience! The guides were incredibly knowledgeable, and we saw rare species we never expected!" – Sarah M.
-          </motion.p>
+            <Link to='/contact' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className=" hover:text-yellow-400 text-white font-semibold   " >Contact us</Link> today to <strong className="text-yellow-300 font-bold drop-shadow-lg">customize your private birding tour </strong>  
+            and experience Costa Rica’s <span className="text-yellow-200 font-semibold">extraordinary avian diversity </span>  
+            with the guidance of a <span className="text-yellow-300 font-bold">top birding expert</span>.  
         </motion.div>
-      </div>
-
-      {/* FAQ */}
-      <div className="relative flex justify-center items-center min-h-72 max-w-5xl mx-auto p-6 shadow-md mt-8 rounded-lg overflow-hidden">
-        <motion.div
-          initial={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
-          animate={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-green-400 to-teal-500 p-10 text-white flex flex-col items-center justify-center"
-        >
-          <motion.h2
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl font-bold text-center"
-          >
-            Frequently Asked Questions
-          </motion.h2>
-          <motion.details
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-4 border-b border-white pb-2"
-          >
-            <summary className="cursor-pointer text-lg font-medium">What should I bring?</summary>
-            <p className="mt-2">Comfortable clothing, binoculars, camera, and a reusable water bottle.</p>
-          </motion.details>
-          <motion.details
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-4 border-b border-white pb-2"
-          >
-            <summary className="cursor-pointer text-lg font-medium">Is this tour suitable for families?</summary>
-            <p className="mt-2">Yes! We welcome families and customize experiences for all age groups.</p>
-          </motion.details>
         </motion.div>
-      </div>
-
-      {/* Contact & Location */}
-      <div className="relative flex justify-center items-center min-h-72 max-w-5xl mx-auto p-6 shadow-md mt-8 rounded-lg overflow-hidden">
-        <motion.div
-          initial={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
-          animate={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-600 p-10 text-white flex flex-col items-center justify-center"
-        >
-          <motion.h2
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl font-bold text-center"
-          >
-            Get in Touch
-          </motion.h2>
-          <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-4"
-          >
-            Have questions? Reach out to us!
-          </motion.p>
-          <motion.p
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            📍  Costa Rica | 📞 +50685499997 | ✉️ Crbirds31@yahoo.com
-          </motion.p>
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            <Link
-              to="/contact"
-              className="mt-6 mb-6 inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-blue-100 transition"
-            >
-              Contact Us
-            </Link>
-          </motion.div>
-        </motion.div>
-      </div>
     </div>
   );
 };
 
-export default BirdTour;
+export default BirdingTours;

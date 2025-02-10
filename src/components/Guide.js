@@ -93,45 +93,41 @@ const GuiderPage = () => {
         
       </motion.div> 
      
-    </motion.div>
-      
-
+      </motion.div>
       {/* Right Section (Main Content) */}
       <div className="md:w-2/3 flex flex-col justify-center">
-      <motion.h1
-  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-center md:text-left text-gray-900 tracking-tight px-4 md:px-0"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
->
-  <span className="relative inline-block">
-    Passionate about  
-    
-  </span>  
-  <br className="hidden sm:block" />
-  <span className="text-green-600">Creating Great Travel Experiences</span>
-      </motion.h1>
-
+          <motion.h1
+      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-center md:text-left text-gray-900 tracking-tight px-4 md:px-0"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <span className="relative inline-block">
+        Passionate about  
+        
+      </span>  
+      <br className="hidden sm:block" />
+      <span className="text-green-600">Creating Great Travel Experiences</span>
+          </motion.h1>
         {/* Call to Action Buttons */}
         <div className="flex md:justify-start sm:items-center sm:justify-center gap-4 mt-6">
-  {/* WhatsApp Button */}
-  <a
-    href="https://wa.me/50685499997?text=Hi%20there!%20I%20am%20interested%20in%20your%20services."
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-6 py-3 rounded-lg text-white bg-gradient-to-r from-green-500 to-green-700 shadow-lg hover:from-green-600 hover:to-green-800 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
-  >
-    <svg
-      className="w-5 h-5 text-white"
-      fill="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path d="M12 2C6.48 2 2 6.48 2 12c0 2.19.66 4.23 1.79 5.94L2 22l4.25-1.25A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 14.5c-.66 0-1.32-.17-1.94-.5l-.46-.26-2.84.75.75-2.75-.26-.47a4.56 4.56 0 01-.5-1.94c0-2.48 2.02-4.5 4.5-4.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm4.22-2.72l-.72.72a.75.75 0 01-1.06 0l-1.78-1.78a.75.75 0 010-1.06l.72-.72a.75.75 0 011.06 0l1.78 1.78c.3.3.3.78 0 1.06z" />
-    </svg>
-    Talk with Me
-  </a>
-
-  {/* Book Now Button */}
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/50685499997?text=Hi%20there!%20I%20am%20interested%20in%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg text-white bg-gradient-to-r from-green-500 to-green-700 shadow-lg hover:from-green-600 hover:to-green-800 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              <svg
+                className="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 2.19.66 4.23 1.79 5.94L2 22l4.25-1.25A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 14.5c-.66 0-1.32-.17-1.94-.5l-.46-.26-2.84.75.75-2.75-.26-.47a4.56 4.56 0 01-.5-1.94c0-2.48 2.02-4.5 4.5-4.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm4.22-2.72l-.72.72a.75.75 0 01-1.06 0l-1.78-1.78a.75.75 0 010-1.06l.72-.72a.75.75 0 011.06 0l1.78 1.78c.3.3.3.78 0 1.06z" />
+              </svg>
+              Talk with Me
+            </a>
+         {/* Book Now Button */}
   <Link
     to="/schedule"
     className="px-6 py-3 rounded-lg bg-gray-200 text-gray-900 shadow-lg hover:bg-gray-300 hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
