@@ -7,3 +7,11 @@
     min-height: calc(100vh - 68px);
   }
 }
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid #4a5568; /* Adjust color as needed */
+}
+

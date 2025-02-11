@@ -41,7 +41,25 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li
+          <li>
+            <Link
+              to="/birding"
+              className="font-normal text-wrap hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Birding Tour
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
+              className="font-normal text-wrap hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Tours
+            </Link>
+          </li>
+         {/*  <li
             className="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -51,18 +69,18 @@ const Navbar = () => {
             </button>
             {isToursDropdownOpen && (
               <ul className="absolute top-6 left-0 bg-white rounded-lg z-50 shadow-md text-nowrap">
-                <li>
+                {/* <li>
                   <Link
-                    to="/concierge"
+                    to="/birding"
                     className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
                     onClick={() => {
                       window.scrollTo({ top: 0, behavior: "smooth" });
                       handleMouseLeave();
                     }}
                   >
-                    Concierge Tours
+                    Birding Tour
                   </Link>
-                </li>
+                </li> 
                 <li>
                   <Link
                     to="/services"
@@ -75,9 +93,10 @@ const Navbar = () => {
                     Local Tours
                   </Link>
                 </li>
+                
               </ul>
             )}
-          </li>
+          </li> */}
           <li>
             <Link
               to="/transport"
@@ -86,14 +105,24 @@ const Navbar = () => {
             >
               Transport
             </Link>
-          </li>
-          <li>
-            <Link
+          {/* </li>
+          <li> */}
+           {/*  <Link
               to="/schedule"
               className="font-normal hover:underline text-gray-800 hover:text-green-700"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Schedule Now
+            </Link> */}
+          </li>
+         
+            <li>
+            <Link
+               to="/guide"
+              className="font-normal hover:underline text-gray-800 hover:text-green-700"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Guide
             </Link>
           </li>
           <li>
@@ -141,7 +170,33 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
-              <li className="relative">
+              <hr className="w-full bg-black mb-4" />
+              <li>
+                <Link
+                  to="/birding"
+                  className="text-base text-gray-800 font-bold hover:text-green-600"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  Birding Tour
+                </Link>
+              </li>
+              <hr className="w-full bg-black mb-4" />
+              <li>
+                <Link
+                  to="/services"
+                  className="text-base text-gray-800 font-bold hover:text-green-600"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  Tours
+                </Link>
+              </li>
+              {/* <li className="relative">
                 <hr className="w-full bg-black mb-4" />
                 <button
                   className="hover:underline text-gray-800 hover:text-green-700 text-base font-bold"
@@ -151,9 +206,9 @@ const Navbar = () => {
                 </button>
                 {isToursDropdownOpen && (
                   <ul className="absolute top-8 left-12 bg-white rounded-lg z-50 shadow-md ">
-                    <li>
+                    {/* <li>
                       <Link
-                        to="/concierge"
+                        to="/birding"
                         className="block px-2 py-2 hover:bg-gray-100 hover:text-green-700"
                         onClick={() => {
                           window.scrollTo({ top: 0, behavior: "smooth" });
@@ -161,9 +216,9 @@ const Navbar = () => {
                           clickTours();
                         }}
                       >
-                        Concierge Tours
+                       Birding Tour
                       </Link>
-                    </li>
+                    </li> 
                     <li>
                       <Link
                         to="/services"
@@ -178,9 +233,10 @@ const Navbar = () => {
                         Local Tours
                       </Link>
                     </li>
+                    
                   </ul>
                 )}
-              </li>
+              </li> */}
               <hr className="w-full bg-black mb-2" />
               <li>
                 <Link
@@ -194,8 +250,8 @@ const Navbar = () => {
                   Transport
                 </Link>
               </li> 
-              <hr className="w-full bg-black mb-2" />
-              <li>
+              {/*  <hr className="w-full bg-black mb-2" />*/}
+              {/* <li>
                 <Link
                   to="/schedule"
                   className="text-base text-gray-800 font-bold hover:text-green-600"
@@ -206,7 +262,20 @@ const Navbar = () => {
                 >
                   Schedule Now
                 </Link>
-              </li>  
+              </li> */}
+              <hr className="w-full bg-black mb-2" /> 
+              <li>
+                <Link
+                  to="/guide"
+                  className="text-base text-gray-800 font-bold hover:text-green-600"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  Guide
+                </Link>
+              </li>   
               <li className="w-full">
                 <Link
                   to="/contact"

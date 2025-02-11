@@ -182,7 +182,7 @@ const PoasDoka = () => {
             </div>
             
             <div className='mb-4'>
-            <Link to='/schedule' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-10 italic">
+            <Link to='/contact' className="w-full bg-yellow-600 text-white py-2 px-4 m-0 rounded-md hover:bg-yellow-700 sm:m-0 sm:px-20 md:px-8 italic"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               Schedule Now
             </Link>
             </div>

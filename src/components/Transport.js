@@ -4,7 +4,7 @@ const Transport = () => {
   
 
   return (
-    <div className="bg-gray-100 p-6 md:p-12">
+    <div className="bg-[#FAF7F2] p-6 md:p-12">
       {/* Main Transport Content */}
       <header className="text-center mb-8">
         <h1 className="text-4xl font-bold text-green-700 mb-4">EcoRide Transportation</h1>
