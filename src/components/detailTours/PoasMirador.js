@@ -122,7 +122,7 @@ const PoasMirador = () => {
               {showExpect && (
 
                 <div className='pt-2 pl-6 italic'>
-                  <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
+                  <li> Weather may impact visibility at the volcano.</li>
                   <li> Mirador tour will proceed rain or shine </li>
       
                 <li className="text-gray-700 leading-relaxed">
@@ -144,7 +144,7 @@ const PoasMirador = () => {
 
                 <div className='pt-2 pl-6 italic'>
                 <li className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:30 AM.
+                  The tour departs from your hotel at 8:30 AM.
                 </li>
                 <li className="text-gray-700 leading-relaxed">
                   After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. 

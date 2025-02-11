@@ -178,7 +178,7 @@ const PoasVolcano = () => {
               </div>
               {showDuration && (
                 <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
-                  The tour lasts for approximately 4 hoursi with 2.5 hours at the volcano.
+                  The tour lasts for approximately 4 hours with 2.5 hours at the volcano.
                 </p>
               )}
             </div>

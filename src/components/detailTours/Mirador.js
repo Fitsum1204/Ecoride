@@ -46,7 +46,7 @@ const Mirador = () => {
         {/* Introduction */}
         <p className="text-lg  text-left mb-6 pl-3 italic ">
           Discover one of Costa Rica’s hidden birdwatching gems with a private tour to 
-          <strong> Mirador Cinchona</strong>, a serene haven in the highlands where nature flourishes. 
+          <strong> Mirador Cinchona</strong> and <strong> Colonia Del Socorro Sarapiqui</strong>, a serene haven in the highlands where nature flourishes. 
           Led by an expert naturalist, this exclusive experience offers breathtaking views, 
           an incredible variety of bird species, and a tranquil setting for an unforgettable adventure.
         </p>
@@ -113,7 +113,7 @@ const Mirador = () => {
                 </li>
                 <li className="flex items-center">
                   <FaSuitcase className="mr-2 text-gray-600" />
-                  one trip a day: Pick up time 6:00AM
+                  One trip a day: Pick up time 6:00AM
                 </li>
                 <li className="flex items-center">
                   <FaUserTie className="mr-2 text-gray-600" />
@@ -135,11 +135,11 @@ const Mirador = () => {
                   <li>Breakfast included at local soda</li>
                   <li>Feeders attract wide variety of bird species </li>
                   <li>Even more wild varieties near by</li>
-                  <li>Upgrade available for nature hike to stop special species.</li>
+                  <li>Upgrade available for nature hike to spot special species.</li>
                   <b className='text-red-400'>What's not Included</b>
-                  <li>lunch</li>
-                  <li> Gratuities</li>
-                  <li>  Alcoho</li>
+                  <li>Lunch</li>
+                  <li>Gratuities</li>
+                  <li>Alcohol</li>
                 </ul>
                 
               )}
@@ -154,7 +154,7 @@ const Mirador = () => {
               </div>
               {showExpect && (
                 <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
-                  Discover Costa Rica’s birdwatching paradise at Mirador Cinchona. Enjoy scenic views, spot toucans and hummingbirds, and relax at a charming café. Guided by a local expert, this tour offers an unforgettable experience for bird enthusiasts and nature lovers.
+                  Discover Costa Rica’s birdwatching paradise at Mirador Cinchona and Colonia Del Socorro Sarapiqui. Enjoy scenic views, spot toucans and hummingbirds, and relax at a charming café. Guided by a local expert, this tour offers an unforgettable experience for bird enthusiasts and nature lovers.
                 </p>
               )}
             </div>
@@ -169,7 +169,7 @@ const Mirador = () => {
               {showDeparture && (
               
                  <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
-                 The tour departs from San Jose at 6:00 AM. After a scenic drive, you’ll reach the Mirador Cinchona, where the tour begins. The return is around 1:30 PM, ensuring you have plenty of time to enjoy.
+                 The tour departs from your hotel at 6:00 AM. After a scenic drive, you’ll reach the Mirador Cinchona, where the tour begins. The return is around 1:30 PM, ensuring you have plenty of time to enjoy.
                </p>
               )}
             </div>
