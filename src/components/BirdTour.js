@@ -125,7 +125,7 @@ const BirdingTours = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             >
-            Our tours are limited to a <strong className="text-green-900">maximum of six participants</strong>, ensuring{" "}
+            Our tours are limited to a <strong className="text-green-900">maximum of five participants</strong>, ensuring{" "}
             <strong className="text-green-900">personalized attention</strong> and an intimate birding experience.
             </motion.p>
         </motion.div>
@@ -143,34 +143,12 @@ const BirdingTours = () => {
         {/** Tour Card Component **/}
         {[
             {
-            title: "14-Day Private Birding Tour",
-            days: [
-                "Day 1-2: San Gerardo de Dota – Cloud Forest & Highland Specialties",
-                "Day 3-4: Caribbean Lowlands – Rainforest Birding",
-                "Day 5-6: Caribbean Foothills",
-                "Day 7-8: Arenal Volcano Region",
-                "Day 9-10: Pacific Dry Forest & Mangroves",
-                "Day 11-12: Osa Peninsula",
-                "Day 13-14: Return to San José & Departure",
-            ],
-            },
-            {
-            title: "7-Day Southeast Costa Rica Tour",
+            title: "Example 7-Day Central Costa Rica Tour",
             days: [
                 "Day 1: Arrival in San José – Transfer to a lodge",
-                "Day 2-3: Talamanca Highlands",
-                "Day 4-5: Osa Peninsula",
-                "Day 6: Mangrove Birding",
-                "Day 7: Return to San José & Departure",
-            ],
-            },
-            {
-            title: "7-Day Northwest Costa Rica Tour",
-            days: [
-                "Day 1: Arrival in San José – Transfer to Palo Verde",
-                "Day 2-3: Dry Forest Birding",
-                "Day 4-5: Monteverde Cloud Forest",
-                "Day 6: Coastal Birding",
+                "Day 2-3: Paraíso del quetzal",
+                "Day 4-5: San Gerardo de dota",
+                "Day 6: Monteverde Cloud Forest Birding",
                 "Day 7: Return to San José & Departure",
             ],
             },
@@ -223,9 +201,6 @@ const BirdingTours = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
         >
-            <strong className="text-gray-700">14-Day Private Birding Tour:</strong> 
-            <span className="text-yellow-900 font-bold ml-2 drop-shadow-lg"> $6,295 USD per person (double occupancy)</span> <br/>
-            
             <strong className="text-gray-700">7-Day Private Birding Tour:</strong> 
             <span className="text-yellow-900 font-bold ml-2 drop-shadow-lg"> $3,990 USD per person (double occupancy)</span>
         </motion.p>

@@ -75,10 +75,11 @@ const PoasDoka = () => {
                   <li>Transportation to/from </li>
                   <li>Guide</li>
                   <li>Stops at local shops</li>
-                  <li> Lunch included at local restaurant</li>
+                  <li>Lunch included at local restaurant</li>
+                  <li>Tickets to all attractions</li>
                   <b className='text-red-500'>What's not Included</b>
-                  <li> Gratuities</li>
-                  <li>  Alcohol</li>
+                  <li>Gratuities</li>
+                  <li>Alcohol</li>
                 </ul>
                 
               )}
@@ -93,7 +94,7 @@ const PoasDoka = () => {
               </div>
               {showExpect && (
                 <div className='pt-2 pl-6 italic'>
-                  <li> Weather may impact visibility at the volcano.  In some cases, the tour may be canceled and refunded. </li>
+                  <li> Weather may impact visibility at the volcano.</li>
                   <li> Doka tour will proceed rain or shine </li>
                   <li className="text-gray-700 leading-relaxed">
                     Experience the stunning Poás Volcano and delve into Costa Rica's coffee heritage with our combined tour. Enjoy breathtaking views of the volcano's dramatic crater and explore lush coffee fields at Doka Coffee Plantation. Guided by a local expert, this adventure offers an immersive look into Costa Rica's natural wonders and coffee legacy. Perfect for nature lovers and cultural enthusiasts, this journey promises unforgettable memories.
@@ -112,7 +113,7 @@ const PoasDoka = () => {
               {showDeparture && (
                 <ul className="list-disc list-inside text-gray-700 pt-4 pl-6 italic">
                 <li className="text-gray-700 leading-relaxed">
-                  The tour departs from San Jose at 8:30 AM.
+                  The tour departs from your hotel at 8:30 AM.
                 </li>
                 <li className="text-gray-700 leading-relaxed">
                   After a scenic drive, you’ll reach the Poás Volcano National Park, where the tour begins. 

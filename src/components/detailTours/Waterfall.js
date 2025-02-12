@@ -104,7 +104,7 @@ const Waterfall = () => {
                 
                 <li className="flex items-center">
                   <FaClock className="mr-2 text-gray-600" />
-                  Duration: 4 hours 
+                  Duration: 5 hours including transportation
                 </li>
                 <li className="flex items-center">
                   <FaSuitcase className="mr-2 text-gray-600" />
@@ -126,14 +126,11 @@ const Waterfall = () => {
                 <ul className="list-disc list-inside text-gray-700 pt-2 pl-6 italic">
                   <li>Transportation to/from </li>
                   <li>Guide</li>
-                  <li>Zoo</li>
+                  <li>Animal Sanctuary</li>
                   <li>Amazing waterfalls</li>
                   <li>Family friendly bar and swimming</li>
                   <li>Buffet included</li>
-                 
-
                 </ul>
-                
               )}
             </div>
 
@@ -161,7 +158,7 @@ const Waterfall = () => {
               </div>
               {showDeparture && (
                 <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
-                  The tour departs from San Jose at 8:00 AM. After a scenic drive, you’ll reach the La Paz Waterfall Gardens, where the tour begins. The return is around 1:00 PM, ensuring you have plenty of time to enjoy the park and surroundings.
+                  The tour departs from your hotel at 8:00 AM. After a scenic drive, you’ll reach the La Paz Waterfall Gardens, where the tour begins. The return is around 1:00 PM, ensuring you have plenty of time to enjoy the park and surroundings.
                 </p>
               )}
             </div>
@@ -175,7 +172,7 @@ const Waterfall = () => {
               </div>
               {showDuration && (
                 <p className="text-gray-700 leading-relaxed pt-2 pl-5 italic">
-                  Including transport, the tour lasts for approximately 4 hours.
+                  Including transport, the tour lasts for approximately 5 hours.
                 </p>
               )}
             </div>

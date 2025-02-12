@@ -75,6 +75,7 @@ const Doka = () => {
         <div className="mb-0">
           <h2 className="text-xl font-bold mb-4 text-green-600">Why Choose This Tour?</h2>
           <ul className="list-disc pl-10 space-y-2 text-lg italic">
+            <li ><strong className='text-amber-600'>Delicious sample:</strong> Try six different roasting levels.</li>
             <li ><strong className='text-amber-600'>Exclusive Access:</strong> Tour the oldest coffee wet mill in Costa Rica.</li>
             <li><strong className='text-amber-600'>Expert Guidance:</strong> Learn from coffee specialists about every step of production.</li>
             <li><strong className='text-amber-600'>Unforgettable Tasting:</strong> Sample single-origin coffees, including the sought-after Peaberry bean.</li>
@@ -151,7 +152,7 @@ const Doka = () => {
               {showDeparture && (
                 <p className="text-gray-700 leading-relaxed pt-4 pl-6 italic">
                   The tour departs from your hotel 8:00 AM. Return to hotel between 11:00 AM and 12:00 PM
-                  Afternoon tour departs from your hotel 1:00 PM. Return to hotel between 4:00 PM and AM 5:00 PM
+                  Afternoon tour departs from your hotel 1:00 PM. Return to hotel between 4:00 PM and 5:00 PM
                 </p>
               )}
             </div>

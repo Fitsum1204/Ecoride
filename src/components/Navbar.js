@@ -47,7 +47,7 @@ const Navbar = () => {
               className="font-normal text-wrap hover:underline text-gray-800 hover:text-green-700"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              Birding Tour
+              Birdwatching
             </Link>
           </li>
           <li>

@@ -188,7 +188,7 @@ const Sarchi = () => {
               {showDeparture && (
 
     <p className="text-gray-700 leading-relaxed pt-4 pl-6 italic">
-      The tour departs from San Jose at 8:30 AM.
+      The tour departs from your hotel at 8:30 AM.
     </p>
     
 )}
