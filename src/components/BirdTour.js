@@ -125,8 +125,8 @@ const BirdingTours = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             >
-            Our tours are limited to a <strong className="text-green-900">maximum of five participants</strong>, ensuring{" "}
-            <strong className="text-green-900">personalized attention</strong> and an intimate birding experience.
+            Our tours are limited to a <strong className="text-green-500">maximum of five participants</strong>, ensuring{" "}
+            <strong className="text-green-500">personalized attention</strong> and an intimate birding experience.
             </motion.p>
         </motion.div>
         {/* Tour Packages Section */}

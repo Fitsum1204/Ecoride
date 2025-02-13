@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
 import Navbar from './components/Navbar';
 import WhatsAppIcon from './components/WhatsAppIcon';
 import Services from './components/Services';
@@ -24,6 +26,7 @@ const App = () => {
 
   return (
     <Router>
+    
        <Navbar />
       <WhatsAppIcon /> 
      

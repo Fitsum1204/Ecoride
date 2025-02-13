@@ -8,10 +8,10 @@ const Navbar = () => {
 
   // Toggle the mobile menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const clickTours = () => setIsToursDropdownOpen(!isToursDropdownOpen);
+  //const clickTours = () => setIsToursDropdownOpen(!isToursDropdownOpen);
 
   // Show and hide the dropdown menu on hover
-  const handleMouseEnter = () => setIsToursDropdownOpen(true);
+  //const handleMouseEnter = () => setIsToursDropdownOpen(true);
   const handleMouseLeave = () => setIsToursDropdownOpen(false);
 
   return (
@@ -180,7 +180,7 @@ const Navbar = () => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
-                  Birding Tour
+                  Birdwatching
                 </Link>
               </li>
               <hr className="w-full bg-black mb-4" />
