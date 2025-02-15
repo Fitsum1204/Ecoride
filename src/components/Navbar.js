@@ -8,9 +8,9 @@ const Navbar = () => {
 
   // Toggle the mobile menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  //const clickTours = () => setIsToursDropdownOpen(!isToursDropdownOpen);
+ // const clickTours = () => setIsToursDropdownOpen(!isToursDropdownOpen);
 
-  // Show and hide the dropdown menu on hover
+   //Show and hide the dropdown menu on hover
   //const handleMouseEnter = () => setIsToursDropdownOpen(true);
   const handleMouseLeave = () => setIsToursDropdownOpen(false);
 
@@ -59,7 +59,7 @@ const Navbar = () => {
               Tours
             </Link>
           </li>
-         {/*  <li
+          {/* <li
             className="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -69,7 +69,7 @@ const Navbar = () => {
             </button>
             {isToursDropdownOpen && (
               <ul className="absolute top-6 left-0 bg-white rounded-lg z-50 shadow-md text-nowrap">
-                {/* <li>
+                <li>
                   <Link
                     to="/birding"
                     className="block px-4 py-2 hover:bg-gray-100 hover:text-green-700"
@@ -96,7 +96,7 @@ const Navbar = () => {
                 
               </ul>
             )}
-          </li> */}
+          </li>  */}
           <li>
             <Link
               to="/transport"
@@ -143,17 +143,14 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             {isMenuOpen ? (
-              <span className="text-2xl font-bold">&times;</span> // Unicode X
+              <span className="text-2xl font-bold">&times;</span> 
             ) : (
               <div className="w-12 h-12 flex items-center justify-center" aria-label="Menu">
               &#9776;
             </div>
-            
-            
             )}
           </button>
         </div>
-
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="fixed top-24 inset-0 bg-white z-50 flex flex-col items-start p-6 md:hidden">

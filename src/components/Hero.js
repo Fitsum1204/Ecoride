@@ -66,7 +66,7 @@ const Hero = () => {
       </section>
 
       {/* Info Section */}
-      <section id="about" className="flex flex-col lg:flex-row items-center p-4 sm:p-2 md:p-16 md:flex-row lg:px-32 xl:px-64 py-8 gap-8">
+      <section id="about" className="flex flex-col lg:flex-row items-center p-4 sm:p-2 md:p-16 md:flex-row lg:px-32 xl:px-64 py-8 gap-8 bg-[#FAF7F2]">
         <div className="w-full lg:w-1/2 text-left px-4">
           <p className="text-xl font-semibold md:text-sm lg:text-xl text-green-600 mb-4">Explore sustainably</p>
           <h2 className="text-3xl md:text-xl lg:text-3xl font-bold mb-4">

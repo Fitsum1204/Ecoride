@@ -5,10 +5,10 @@ import bird1 from "../assets/birdPictures/b1.jpeg";
 import bird2 from "../assets/birdPictures/b2.jpeg";
 import bird3 from "../assets/birdPictures/b3.jpeg";
 import bird4 from "../assets/birdPictures/b4.jpeg";
-import bird5 from "../assets/birdPictures/b13.jpeg";
+import bird5 from "../assets/birdPictures/b5.jpeg";
 import bird6 from "../assets/birdPictures/b6.jpeg";
 import bird7 from "../assets/birdPictures/b7.jpeg"; 
-import bird8 from "../assets/birdPictures/b13.jpeg";
+import bird8 from "../assets/birdPictures/b8.jpeg";
 import bird9 from "../assets/birdPictures/b9.jpeg";
 import bird10 from "../assets/birdPictures/b10.jpeg";
 import bird11 from "../assets/birdPictures/b11.jpeg";
@@ -52,7 +52,7 @@ const BirdSlideshow = () => {
   }, []);
 
   return (
-    <div className="max-w-5xl mx-auto p-8 bg-yellow-50 shadow-md mt-8 rounded-lg">
+    <div className="max-w-5xl mx-auto p-8 h-   bg-yellow-50 shadow-md mt-8 rounded-lg">
       <h2 className="text-3xl font-semibold text-gray-900 text-center mb-4">
         🦜 Birds You Might Spot
       </h2>
