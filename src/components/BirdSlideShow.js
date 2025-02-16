@@ -8,7 +8,7 @@ import bird4 from "../assets/birdPictures/b4.jpeg";
 import bird5 from "../assets/birdPictures/b5.jpeg";
 import bird6 from "../assets/birdPictures/b6.jpeg";
 import bird7 from "../assets/birdPictures/b7.jpeg"; 
-import bird8 from "../assets/birdPictures/b8.jpeg";
+import bird8 from "../assets/birdPictures/5877746144707200084.jpg";
 import bird9 from "../assets/birdPictures/b9.jpeg";
 import bird10 from "../assets/birdPictures/b10.jpeg";
 import bird11 from "../assets/birdPictures/b11.jpeg";
@@ -39,10 +39,14 @@ const BirdSlideshow = () => {
     const updateSlides = () => {
       if (window.innerWidth < 768) {
         setSlidesToShow(1);
-        setImageHeight("h-64");
-      } else {
+        setImageHeight("h-72");
+      } else if(window.innerWidth > 768 &&window.innerWidth <1000 ) {
+        setSlidesToShow(2);
+        setImageHeight("h-96");
+      }
+      else {
         setSlidesToShow(3);
-        setImageHeight("h-64");
+        setImageHeight("h-96");
       }
     };
 
@@ -52,7 +56,7 @@ const BirdSlideshow = () => {
   }, []);
 
   return (
-    <div className="max-w-5xl mx-auto p-8 h-   bg-yellow-50 shadow-md mt-8 rounded-lg">
+    <div className="max-w-5xl   mx-auto p-8 h-   bg-yellow-50 shadow-md mt-8 rounded-lg">
       <h2 className="text-3xl font-semibold text-gray-900 text-center mb-4">
         🦜 Birds You Might Spot
       </h2>
