@@ -24,8 +24,6 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-col justify-between items-center gap-4">
-         
-
           {/* Social Media Links */}
           <div className="flex gap-4">
             <p className="text-sm text-gray-400">Follow Us on</p>
@@ -65,8 +63,14 @@ const Footer = () => {
               <FontAwesomeIcon icon={faWhatsapp} size="lg" style={{ color: "#ffffff" }} />
             </a>
           </div>
-           {/* Copyright */}
-           <p className="text-sm text-gray-400 text-center md:text-center">
+
+          {/* Phone Number */}
+          <p className="text-sm text-gray-400 text-center md:text-center">
+            Call us at: <a href="tel:+15551234567" className="hover:text-gray-200">+506 8549 9997</a>
+          </p>
+
+          {/* Copyright */}
+          <p className="text-sm text-gray-400 text-center md:text-center">
             © {currentYear} EcoRide. All rights reserved.
           </p>
         </div>

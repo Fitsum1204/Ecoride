@@ -1,140 +1,208 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import 'react-datepicker/dist/react-datepicker.css';
-
 import 'react-time-picker/dist/TimePicker.css';
 import 'react-clock/dist/Clock.css';
 import emailjs from 'emailjs-com';
 
-
 const Contact = () => {
- 
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm(
-            'service_n74av5s', // Replace with your EmailJS Service ID
-            'template_nykb85i', // Replace with your EmailJS Template ID
-            e.target,
-            '2AKXOf1nuT20ctfNo' // Replace with your EmailJS User ID
-          )
-          .then(
-            (result) => {
-              console.log('Email sent successfully:', result.text);
-              alert('Message sent! We will get back to you soon.');
-            },
-            (error) => {
-              console.error('Error sending email:', error.text);
-              alert('Failed to send message. Please try again later.');
-            }
-          );
-    
-        e.target.reset(); // Reset the form after submission
-        };
+  const navigate = useNavigate();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_n74av5s', // Your EmailJS Service ID
+        'template_nykb85i', // Your EmailJS Template ID
+        e.target,
+        '2AKXOf1nuT20ctfNo' // Your EmailJS User ID
+      )
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          navigate('/thank-you');
+        },
+        (error) => {
+          console.error('Error sending email:', error.text);
+          alert('Failed to send message. Please try again.');
+        }
+      );
+    e.target.reset();
+  };
+
+  // Animation variants
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+  };
+
+  const formVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, staggerChildren: 0.2 } },
+  };
+
+  const inputVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+    focus: { scale: 1.02, borderColor: '#10b981', boxShadow: '0 0 10px rgba(16, 185, 129, 0.5)' },
+  };
+
+  const buttonVariants = {
+    hover: { scale: 1.05, backgroundColor: '#059669', boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)' },
+    tap: { scale: 0.95 },
+  };
+
+  const infoVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, staggerChildren: 0.2 } },
+  };
+
   return (
-    <section  className="flex flex-col lg:flex-row p-4 sm:p-6 md:p-16 lg:px-32 xl:px-64 gap-8 bg-gray-50">
-  {/* Contact Form */}
-  <div className="w-full lg:w-1/2">
-    <h3 className="text-lg font-semibold text-green-700 mb-2">Contact Us</h3>
-   
-    <form className="space-y-4" onSubmit={sendEmail}>
-     {/* Name */}
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">
-    Name
-  </label>
-  <input
-    id="name"
-    name="name" // Add this line
-    type="text"
-    required
-    placeholder="Your Name"
-    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-  />
-</div>
-
-{/* Email */}
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">
-    Email
-  </label>
-  <input
-    id="email"
-    name="email" // Add this line
-    type="email"
-    required
-    placeholder="Your Email"
-    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-  />
-</div>
-
-{/* Phone Number */}
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="phone">
-    Phone Number
-  </label>
-  <input
-    id="phone"
-    name="phone" // Add this line
-    type="tel"
-    required
-    placeholder="Your Phone Number"
-    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-  />
-</div>
-
-{/* Message */}
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="message">
-    Message
-  </label>
-  <textarea
-    id="message"
-    name="message" // Add this line
-    rows="4"
-    placeholder="Your Message"
-    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-  ></textarea>
-</div>
-
-     
-      {/* Submit Button */}
-      <button
-        type="submit"
-        className="w-full py-3 px-6 text-white bg-green-700 rounded-lg font-semibold hover:bg-green-800"
+    <motion.section
+      className="flex flex-col lg:flex-row p-6 sm:p-8 md:p-16 lg:px-32 xl:px-64 gap-12 bg-gradient-to-br from-green-50 to-green-100"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={sectionVariants}
+    >
+      {/* Contact Form */}
+      <motion.div
+        className="w-full lg:w-1/2"
+        variants={formVariants}
       >
-        Submit
-      </button>
-    </form>
-  </div>
+        <motion.h3
+          className="text-2xl font-bold text-green-700 mb-6 tracking-wide"
+          variants={inputVariants}
+        >
+          Let’s Connect
+        </motion.h3>
+        <form className="space-y-6" onSubmit={sendEmail}>
+          {/* Name */}
+          <motion.div variants={inputVariants}>
+            <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="name">
+              Name
+            </label>
+            <motion.input
+              id="name"
+              name="name"
+              type="text"
+              required
+              placeholder="Your Name"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-0 focus:border-green-500 bg-white shadow-sm"
+              whileFocus="focus"
+              variants={inputVariants}
+            />
+          </motion.div>
 
-  {/* Get in Touch */}
-  <div id="contactUs"className="w-full lg:w-1/2 bg-white rounded-lg shadow-lg p-6 space-y-6">
-    <h2 className="text-2xl font-bold text-green-700">Get in Touch</h2>
-    <p>
-      <span className="font-semibold">email:</span>{' '}
-      <a href="mailto:yourname@example.com" className="text-green-700 underline hover:text-green-900">
-      Crbirds31@yahoo.com
-      </a>
-    </p>
-    <div>
-      <h3 className="text-lg font-semibold text-gray-700">Working Hours</h3>
-      <p>Monday - Sunday: 8:00 AM - 5:00 PM</p>
-      <p>Birdwatching tour starts : 6:00 AM </p>
-   
-    </div>
-    <h2 className="text-3xl font-bold mb-6">
-  {/* <Link
-    to="/schedule"
-    className="hover:underline text-green-800"
-  >
-    Schedule Your Appointment Today!
-  </Link> */}
-</h2>
+          {/* Email */}
+          <motion.div variants={inputVariants}>
+            <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="email">
+              Email
+            </label>
+            <motion.input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your Email"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-0 focus:border-green-500 bg-white shadow-sm"
+              whileFocus="focus"
+              variants={inputVariants}
+            />
+          </motion.div>
 
-  </div>
-</section>
-  )
-}
+          {/* Phone Number */}
+          <motion.div variants={inputVariants}>
+            <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="phone">
+              Phone Number
+            </label>
+            <motion.input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              placeholder="Your Phone Number"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-0 focus:border-green-500 bg-white shadow-sm"
+              whileFocus="focus"
+              variants={inputVariants}
+            />
+          </motion.div>
 
-export default Contact
+          {/* Message */}
+          <motion.div variants={inputVariants}>
+            <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="message">
+              Message
+            </label>
+            <motion.textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-0 focus:border-green-500 bg-white shadow-sm"
+              whileFocus="focus"
+              variants={inputVariants}
+            />
+          </motion.div>
+
+          {/* Submit Button */}
+          <motion.button
+            type="submit"
+            className="w-full py-4 px-8 text-white bg-green-600 rounded-full font-bold shadow-lg flex items-center justify-center"
+            whileHover="hover"
+            whileTap="tap"
+            variants={buttonVariants}
+            style={{ background: 'linear-gradient(135deg, #10b981, #34d399)' }}
+          >
+            Send Message
+            <motion.span
+              className="ml-2"
+              initial={{ x: -5 }}
+              animate={{ x: 5 }}
+              transition={{ duration: 0.6, repeat: Infinity, repeatType: 'reverse' }}
+            >
+              →
+            </motion.span>
+          </motion.button>
+        </form>
+      </motion.div>
+
+      {/* Get in Touch */}
+      <motion.div
+        id="contactUs"
+        className="w-full lg:w-1/2 bg-white rounded-2xl shadow-xl p-8 space-y-8 relative overflow-hidden"
+        variants={infoVariants}
+      >
+        <motion.h2
+          className="text-3xl font-extrabold text-green-700"
+          variants={inputVariants}
+        >
+          Get in Touch
+        </motion.h2>
+        <motion.p variants={inputVariants}>
+          <span className="font-semibold text-gray-700">Email:</span>{' '}
+          <a
+            href="mailto:Crbirds31@yahoo.com"
+            className="text-green-600 underline hover:text-green-800 transition-colors duration-300"
+          >
+            Crbirds31@yahoo.com
+          </a>
+        </motion.p>
+        <motion.div variants={inputVariants}>
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">Working Hours</h3>
+          <p className="text-gray-600">Monday - Sunday: 8:00 AM - 5:00 PM</p>
+          <p className="text-gray-600">Birdwatching Tours Start: 6:00 AM</p>
+        </motion.div>
+        {/* Decorative Leaf Accent */}
+        <motion.div
+          className="absolute top-0 right-0 w-24 h-24 bg-green-200 rounded-full opacity-20"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1, rotate: 45 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+        />
+      </motion.div>
+    </motion.section>
+  );
+};
+
+export default Contact;
