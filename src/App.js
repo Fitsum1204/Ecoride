@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Navbar from './components/Navbar';
 import WhatsAppIcon from './components/WhatsAppIcon';
@@ -21,7 +21,25 @@ import Schedulewedget from './components/Schedulewedget';
 import GuiderPage from './components/Guide';
 import BirdingTours from './components/BirdTour';
 import ThankYou from './components/ThankYou';
+
+import ReactGA from "react-ga4";
+
+// Initialize Google Analytics
+ReactGA.initialize("G-VQ2280K3B8");
+
+// Tracking component
+const TrackPageViews = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
+
+  return null; 
+};
+
 const App = () => {
+ 
   return (
     <Router>
       {/*Google Analytics script */}
@@ -36,7 +54,7 @@ const App = () => {
           `}
         </script>
       </Helmet>
-
+      <TrackPageViews />      
       <Navbar />
       <WhatsAppIcon />
       <TranslateWidget />

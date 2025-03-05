@@ -6,7 +6,7 @@ import s1 from '../assets/toursImage/Poas Volcano.jpg';
 import s2 from '../assets/detailsPicture/doka3.avif';
 import s3 from '../assets/toursImage/Sarchí-and-Grecia.jpeg'; 
 import s4 from '../assets/detailsPicture/waterfall2.jpg';
-import s5 from '../assets/toursImage/bird.jpeg';
+//import s5 from '../assets/toursImage/bird.jpeg';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -54,13 +54,13 @@ const Services = () => {
       route: "/waterfall",
       description: "Experience the natural beauty and wildlife of Costa Rica like never before with a private tour of the breathtaking La Paz Waterfall Gardens. Guided by a local expert, this exclusive experience takes you through lush rainforest trails to discover stunning waterfalls, vibrant gardens, and an abundance of wildlife. Explore the hummingbird garden, butterfly observatory, and animal sanctuary, where you’ll encounter species native to Costa Rica in a safe and enriching environment. Perfect for nature lovers and families, this personalized tour offers an up-close look at the country's biodiversity while ensuring a relaxed and immersive experience tailored to your group. Let the enchanting sights and sounds of La Paz Waterfall Gardens leave you with memories to treasure forever.",
     },
-    {
+   /*  {
       name: "Private Tour to Mirador Cinchona",
       price: "From $250",
       image: s5,
       route: "/mirador",
       description: "Discover one of Costa Rica’s premier birdwatching hotspots with a private tour to the Mirador Cinchona. Nestled in the scenic highlands, this hidden gem offers breathtaking views and unparalleled opportunities to observe a stunning variety of bird species in their natural habitat. Guided by a local expert, you’ll have the chance to spot toucans, hummingbirds, and other exotic species while learning about their behaviors and habitats. The Mirador’s serene setting, complete with a charming café overlooking the lush landscape, provides the perfect backdrop for a day of relaxation and discovery. Ideal for bird enthusiasts and nature lovers, this personalized tour guarantees an unforgettable glimpse into Costa Rica’s incredible avian diversity.",
-    },
+    }, */
   ];
 
   return (

@@ -68,15 +68,17 @@ const Contact = () => {
     >
       {/* Contact Form */}
       <motion.div
-        className="w-full lg:w-1/2"
+        className="w-full lg:w-3/5"
         variants={formVariants}
       >
-        <motion.h3
-          className="text-2xl font-bold text-green-700 mb-6 tracking-wide"
-          variants={inputVariants}
-        >
-          Let’s Connect
-        </motion.h3>
+       <motion.div
+  className="flex flex-row justify-between items-start text-2xl font-bold"
+  variants={inputVariants}
+>
+  <h3 className='text-green-700 mb-6 tracking-wide text-2xl'>Let’s Connect</h3>
+  <span className='mb-6 text-gray-500 text-2xl'>Michael +506 8549 9997</span>
+</motion.div>
+        
         <form className="space-y-6" onSubmit={sendEmail}>
           {/* Name */}
           <motion.div variants={inputVariants}>
@@ -170,7 +172,7 @@ const Contact = () => {
       {/* Get in Touch */}
       <motion.div
         id="contactUs"
-        className="w-full lg:w-1/2 bg-white rounded-2xl shadow-xl p-8 space-y-8 relative overflow-hidden"
+        className="w-full lg:w-2/5 bg-white rounded-2xl shadow-xl p-8 space-y-8 relative overflow-hidden"
         variants={infoVariants}
       >
         <motion.h2

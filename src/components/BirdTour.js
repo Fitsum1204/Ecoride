@@ -4,7 +4,7 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { FaFeather, FaMapMarkerAlt } from "react-icons/fa";
 import BirdSlideshow from "./BirdSlideShow";
-import video1 from "../assets/v4.mp4";  
+import video1 from "../assets/video1.mp4";  
 import video2 from "../assets/Video2.mp4";
 import video3 from "../assets/video3.mp4"; 
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const BirdingTours = () => {
   return (
     <div className="container max-w-5xl mx-auto p-6 space-y-8">
         {/* Hero Section with Video Slideshow */}
-        <div className="relative w-full aspect-video md:aspect-[16/9] sm:aspect-[4/3]">
+       <div className="relative w-full aspect-[9/16] md:aspect-[16/9] sm:aspect-[4/3]">
                   <Slide 
                     autoplay 
                     transitionDuration={1000} 
@@ -181,58 +181,107 @@ const BirdingTours = () => {
         <BirdSlideshow />
         {/* Pricing Section */}
         <motion.div 
-        className="mt-6 p-6 md:p-8 rounded-xl bg-gradient-to-r from-yellow-50 to-orange-100 shadow-2xl text-gray-300"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mt-6 p-6 md:p-8 rounded-xl bg-gradient-to-r from-yellow-50 to-orange-100 shadow-2xl text-gray-300"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-        <motion.h2 
+          <motion.h2 
             className="text-3xl md:text-4xl font-extrabold mb-4 drop-shadow-lg text-gray-700"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        >
+          >
             💰 Pricing & Flexibility
-        </motion.h2>
+          </motion.h2>
 
-        <motion.p 
+          <motion.p 
             className="text-lg md:text-xl font-semibold leading-relaxed text-white/90"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-        >
+          >
             <strong className="text-gray-700">7-Day Private Birding Tour:</strong> 
-            <span className="text-yellow-900 font-bold ml-2 drop-shadow-lg"> $3,990 USD per person (double occupancy)</span>
-        </motion.p>
+            <span className="text-yellow-900 font-bold ml-2 drop-shadow-lg">Reach out for personalized pricing tailored to your journey</span>
+          </motion.p>
         </motion.div>
+
+        {/* Day Trips Section */}
+        <motion.div 
+          className="relative flex flex-col max-w-6xl mx-auto p-6 rounded-3xl bg-gradient-to-r from-yellow-50 to-orange-100 text-white shadow-2xl"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <h2 className="text-4xl font-extrabold mb-8 text-center drop-shadow-lg sm:text-3xl text-gray-700">🌄 Birdwatching Day Trips</h2>
+
+          <motion.div
+            className="bg-white text-gray-900 p-6 rounded-2xl shadow-lg mb-6 hover:shadow-2xl transition-all duration-300 sm:p-4"
+            whileHover={{ scale: 1.03 }}
+          >
+            <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 text-orange-500 flex items-center gap-2">
+              <FaMapMarkerAlt className="text-yellow-500" /> Destinations for Daily Birdwatching Adventures
+            </h3>
+            <ul className="list-inside space-y-2 px-3 lg:px-12 md:px-12 sm:px-12 text-base sm:text-lg">
+              <motion.li
+                key="mirador"
+                className="font-medium"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 * 0, duration: 0.5 }}
+              >
+                <Link to="/mirador"    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}className="text-blue-400 hover:text-blue-700 font-bold">
+                  Mirador Cinchona Private Birdwatching Tour
+                </Link>
+              </motion.li>
+              {[
+                "Poás Volcano",
+                "Pozo Azul",
+                "La Selva",
+                "Boat Tour at Sarapiqui",
+              ].map((destination, idx) => (
+                <motion.li
+                  key={idx}
+                  className="font-medium"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 * (idx + 1), duration: 0.5 }}
+                >
+                  {destination}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        </motion.div>
+
         {/* Contact Section */}
         <motion.div 
-        className="mt-10 p-6 md:p-8 rounded-xl bg-gradient-to-r from-green-600 to-green-400 shadow-2xl text-white text-center"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mt-10 p-6 md:p-8 rounded-xl bg-gradient-to-r from-green-600 to-green-400 shadow-2xl text-white text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-        <motion.h2 
+          <motion.h2 
             className="text-3xl md:text-4xl font-extrabold mb-4 text-white drop-shadow-xl"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        >
+          >
             🦜 Ready to Begin Your Costa Rican Birding Adventure?
-        </motion.h2>
+          </motion.h2>
 
-        <motion.div 
+          <motion.div 
             className="text-lg md:text-xl font-medium leading-relaxed text-white/90"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-         
-     
-        >
-            <Link to='/contact' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className=" hover:text-yellow-400 text-white font-semibold   " >Contact us</Link> today to <strong className="text-yellow-300 font-bold drop-shadow-lg">customize your private birding tour </strong>  
+          >
+            <Link to='/contact' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className=" hover:text-yellow-400 text-white font-semibold" >Contact us</Link> today to <strong className="text-yellow-300 font-bold drop-shadow-lg">customize your private birding tour </strong>  
             and experience Costa Rica’s <span className="text-yellow-200 font-semibold">extraordinary avian diversity </span>  
             with the guidance of a <span className="text-yellow-300 font-bold">top birding expert</span>.  
-        </motion.div>
+          </motion.div>
         </motion.div>
     </div>
   );
