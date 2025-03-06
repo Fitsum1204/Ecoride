@@ -188,7 +188,8 @@ const Contact = () => {
             className="text-green-600 underline hover:text-green-800 transition-colors duration-300"
           >
             Crbirds31@yahoo.com
-          </a>
+          </a><br/>
+          <span className='font-semibold'>Michael: </span><span className='text-gray-600  '> +506 8549 9997</span>
         </motion.p>
         <motion.div variants={inputVariants}>
           <h3 className="text-xl font-semibold text-gray-700 mb-2">Working Hours</h3>
