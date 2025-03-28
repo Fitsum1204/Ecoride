@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import 'react-time-picker/dist/TimePicker.css';
 import 'react-clock/dist/Clock.css';
 import emailjs from 'emailjs-com';
-
+import flyer from "../assets/flyer.jpeg"; 
 const Contact = () => {
   const navigate = useNavigate();
 
@@ -71,13 +71,13 @@ const Contact = () => {
         className="w-full lg:w-3/5"
         variants={formVariants}
       >
-       <motion.div
-  className="flex flex-row justify-between items-start text-2xl font-bold"
-  variants={inputVariants}
->
-  <h3 className='text-green-700 mb-6 tracking-wide text-2xl'>Let’s Connect</h3>
-  <span className='mb-6 text-gray-500 text-2xl'>Michael +506 8549 9997</span>
-</motion.div>
+        <motion.div
+          className="flex flex-row justify-between items-start text-2xl font-bold"
+          variants={inputVariants}
+        >
+          <h3 className='text-green-700 mb-6 tracking-wide text-2xl'>Let’s Connect</h3>
+          <span className='mb-6 text-gray-500 text-2xl'>Michael +506 8549 9997</span>
+        </motion.div>
         
         <form className="space-y-6" onSubmit={sendEmail}>
           {/* Name */}
@@ -203,7 +203,20 @@ const Contact = () => {
           animate={{ scale: 1, rotate: 45 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         />
+        {/* Added Image */}
+        
+        <motion.img
+          src={flyer}
+          alt="flyer_image"
+          className="  w-full  h-auto opacity-100 "
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+        />
       </motion.div>
+      
+  
+      
     </motion.section>
   );
 };

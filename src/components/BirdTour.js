@@ -8,39 +8,47 @@ import video1 from "../assets/video1.mp4";
 import video2 from "../assets/Video2.mp4";
 import video3 from "../assets/video3.mp4"; 
 import { Link } from "react-router-dom";
-
+import flyer from "../assets/flyer.jpeg"; 
 const videoSlides = [video1, video2, video3];
 const BirdingTours = () => {
   return (
-    <div className="container max-w-5xl mx-auto p-6 space-y-8">
+    <div className="container max-w-5xl mx-auto px-6 space-y-8">
         {/* Hero Section with Video Slideshow */}
-       <div className="relative w-full aspect-[9/16] md:aspect-[16/9] sm:aspect-[4/3]">
-                  <Slide 
-                    autoplay 
-                    transitionDuration={1000} 
-                    autoplaySpeed={4000}
-                    arrows={false} 
-                    pauseOnHover={false}
-                  >
-                    {videoSlides.map((video, index) => (
-                      <div key={index} className="relative w-full h-full">
-                        {/* Video Container */}
-                        <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 aspect ratio */}
-                          <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="absolute top-0 left-0 w-full h-full object-cover"
-                          >
-                            <source src={video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                      </div>
-                    ))}
-                  </Slide>
-        </div>
+        <div className="relative w-full min-h-[300px] md:min-h-[500px]">
+  <Slide 
+    autoplay 
+    transitionDuration={1000} 
+    autoplaySpeed={4000}
+    arrows={false} 
+    pauseOnHover={false}
+  >
+    {videoSlides.map((video, index) => (
+      <div key={index} className="relative w-full h-full">
+        {/* Video Container */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    ))}
+  </Slide>
+         </div>
+
+        <motion.img 
+          src={flyer}
+          alt="flyer_image"
+          className="rounded-lg w-full h-auto max-h-[80vh] object-contain shadow-lg  bg-gradient-to-r from-yellow-50 to-orange-100"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }} // Smooth cubic bezier transition
+        />
+
         {/* Hero Section */}
           <motion.div
             className="relative flex flex-col items-center justify-center text-center  p-6 rounded-2xl bg-gradient-to-r from-green-900 to-green-700 text-white shadow-2xl mt-0"
@@ -57,6 +65,7 @@ const BirdingTours = () => {
                 animate={{ opacity: 0.4 }}
                 transition={{ duration: 1.5 }}
             />
+            
 
             {/* Title with a pop-in animation */}
             <motion.h1

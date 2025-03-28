@@ -2,11 +2,11 @@ import React, { Fragment, useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { motion, useAnimation } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
-import Ecoride from '../assets/EcoRide.png';
+//import Ecoride from '../assets/EcoRide.png';
 import F1 from '../assets/family.jpeg';
 import F2 from '../assets/pexels-simon-robben-55958-614810.jpg';
 import F3 from '../assets/family3.jpeg';
-
+import flyer from "../assets/flyer.jpeg"; 
 
 
 const Hero = () => {
@@ -172,7 +172,7 @@ const Hero = () => {
           viewport={{ once: true }}
         >
           <img
-            src={Ecoride}
+            src={flyer}
             alt="Eco-Friendly Travel"
             className="w-full lg:w-[500px] rounded-2xl shadow-2xl transform  transition-all duration-500"
           />
