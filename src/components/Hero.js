@@ -100,16 +100,17 @@ const Hero = () => {
           <motion.h1
             custom={0}
             variants={textVariants}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-2xl"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-2xl"
           >
-            Explore the World <span className="text-green-300">Sustainably</span>
+           Private Birding & Nature Tours Across <span className="text-green-300">Costa Rica’s Wildest Landscapes </span>
           </motion.h1>
+    
           <motion.p
             custom={1}
             variants={textVariants}
             className="mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-xl font-light leading-relaxed tracking-wide drop-shadow-md"
           >
-          Discover eco-friendly accommodations and unforgettable eco-tourism activities.
+          Birding, Wildlife, and Culture — Tailored Private Tours Just for You.
           </motion.p>
           <motion.button
             variants={buttonVariants}
